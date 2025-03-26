@@ -1,0 +1,31 @@
+
+# Capítulo 3 – Estruturas de Dados
+
+## Vetores / Listas
+
+```{r}
+temperaturas <- c(25.2, 26.1, 27.0, 26.8)
+temperaturas[2]
+```
+
+```{python}
+temperaturas = [25.2, 26.1, 27.0, 26.8]
+print(temperaturas[1])
+```
+
+## Data Frames
+
+```{r}
+dados <- data.frame(
+  dia = 1:4,
+  temperatura = c(25.2, 26.1, 27.0, 26.8)
+)
+```
+
+```{python}
+import pandas as pd
+dados = pd.DataFrame({
+    "dia": [1, 2, 3, 4],
+    "temperatura": [25.2, 26.1, 27.0, 26.8]
+})
+```

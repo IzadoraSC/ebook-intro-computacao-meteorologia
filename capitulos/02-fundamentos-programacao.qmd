@@ -1,0 +1,35 @@
+
+# Capítulo 2 – Fundamentos de Programação
+
+## Variáveis e Tipos de Dados
+
+### Em R:
+```{r}
+nome <- "Maria"
+idade <- 21
+temperatura <- 27.5
+chuva <- TRUE
+```
+
+### Em Python:
+```{python}
+nome = "Maria"
+idade = 21
+temperatura = 27.5
+chuva = True
+```
+
+## Estruturas Condicionais
+
+```{r}
+x <- 25
+if (x > 20) {
+  print("Está quente")
+}
+```
+
+```{python}
+x = 25
+if x > 20:
+    print("Está quente")
+```

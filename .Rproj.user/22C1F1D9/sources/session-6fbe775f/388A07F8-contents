@@ -1,0 +1,29 @@
+
+# Capítulo 1 - Introdução prática à computação para meteorologia
+
+## Exemplo prático em R
+
+```{r}
+dados <- data.frame(
+  data = as.Date('2023-01-01') + 0:6,
+  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
+)
+print(dados)
+plot(dados$data, dados$temperatura, type = "o", col = "blue")
+```
+
+## Exemplo prático em Python
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dados = pd.DataFrame({
+    "data": pd.date_range("2023-01-01", periods=7),
+    "temperatura": [27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8]
+})
+
+print(dados)
+plt.plot(dados["data"], dados["temperatura"], marker="o")
+plt.show()
+```
