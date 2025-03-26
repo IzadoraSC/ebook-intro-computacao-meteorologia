@@ -1,0 +1,122 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introdução à Computação Aplicada às Ciências Atmosféricas",
+    "section": "",
+    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas (Módulo 2), do curso de graduação em Meteorologia da UEMA.\nO objetivo é fornecer uma base sólida em programação com R e Python, aplicada à análise e visualização de dados ambientais e climáticos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apresentação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html",
+    "href": "capitulos/00-cronograma.html",
+    "title": "1  Cronograma Semanal da Disciplina",
+    "section": "",
+    "text": "1.1 Bloco 1 – Fundamentos de Programação (R e Python)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cronograma Semanal da Disciplina</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html#bloco-1-fundamentos-de-programação-r-e-python",
+    "href": "capitulos/00-cronograma.html#bloco-1-fundamentos-de-programação-r-e-python",
+    "title": "1  Cronograma Semanal da Disciplina",
+    "section": "",
+    "text": "Semana\nTema\n\n\n\n\n1\nIntrodução à programação\n\n\n2\nTipos de dados\n\n\n3\nEstruturas de controle\n\n\n4\nFunções",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cronograma Semanal da Disciplina</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html#bloco-2-estruturas-de-dados-e-manipulação",
+    "href": "capitulos/00-cronograma.html#bloco-2-estruturas-de-dados-e-manipulação",
+    "title": "1  Cronograma Semanal da Disciplina",
+    "section": "1.2 Bloco 2 – Estruturas de Dados e Manipulação",
+    "text": "1.2 Bloco 2 – Estruturas de Dados e Manipulação\n\n\n\nSemana\nTema\n\n\n\n\n5\nVetores e listas\n\n\n6\nData frames e tabelas\n\n\n7\nIndexação e filtragem\n\n\n8\nLimpeza de dados",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cronograma Semanal da Disciplina</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html#bloco-3-séries-temporais-e-visualização",
+    "href": "capitulos/00-cronograma.html#bloco-3-séries-temporais-e-visualização",
+    "title": "1  Cronograma Semanal da Disciplina",
+    "section": "1.3 Bloco 3 – Séries Temporais e Visualização",
+    "text": "1.3 Bloco 3 – Séries Temporais e Visualização\n\n\n\nSemana\nTema\n\n\n\n\n9\nDatas e séries temporais\n\n\n10\nEstatísticas básicas\n\n\n11\nVisualização de dados\n\n\n12\nVisualizações interativas",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cronograma Semanal da Disciplina</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html#bloco-4-projeto-aplicado",
+    "href": "capitulos/00-cronograma.html#bloco-4-projeto-aplicado",
+    "title": "1  Cronograma Semanal da Disciplina",
+    "section": "1.4 Bloco 4 – Projeto Aplicado",
+    "text": "1.4 Bloco 4 – Projeto Aplicado\n\n\n\nSemana\nTema\n\n\n\n\n13\nCenarização e modelagem\n\n\n14\nDesenvolvimento de projetos\n\n\n15\nApresentações e encerramento",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cronograma Semanal da Disciplina</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html",
+    "href": "capitulos/01-introducao.html",
+    "title": "3  Capítulo 1 - Introdução prática à computação para meteorologia",
+    "section": "",
+    "text": "3.1 Exemplo prático em R\ndados &lt;- data.frame(\n  data = as.Date('2023-01-01') + 0:6,\n  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)\n)\nprint(dados)\n\n        data temperatura\n1 2023-01-01        27.5\n2 2023-01-02        28.2\n3 2023-01-03        26.9\n4 2023-01-04        29.1\n5 2023-01-05        30.0\n6 2023-01-06        28.4\n7 2023-01-07        27.8\n\nplot(dados$data, dados$temperatura, type = \"o\", col = \"blue\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução prática à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html",
+    "href": "capitulos/02-fundamentos-programacao.html",
+    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "section": "",
+    "text": "4.1 Variáveis e Tipos de Dados",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#variáveis-e-tipos-de-dados",
+    "href": "capitulos/02-fundamentos-programacao.html#variáveis-e-tipos-de-dados",
+    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "section": "",
+    "text": "4.1.1 Em R:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#estruturas-condicionais",
+    "href": "capitulos/02-fundamentos-programacao.html#estruturas-condicionais",
+    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "section": "4.2 Estruturas Condicionais",
+    "text": "4.2 Estruturas Condicionais\n\nx &lt;- 25\nif (x &gt; 20) {\n  print(\"Está quente\")\n}\n\n[1] \"Está quente\"",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-estruturas-dados.html",
+    "href": "capitulos/03-estruturas-dados.html",
+    "title": "5  Capítulo 3 – Estruturas de Dados",
+    "section": "",
+    "text": "5.1 Vetores / Listas\ntemperaturas &lt;- c(25.2, 26.1, 27.0, 26.8)\ntemperaturas[2]\n\n[1] 26.1",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-estruturas-dados.html#data-frames",
+    "href": "capitulos/03-estruturas-dados.html#data-frames",
+    "title": "5  Capítulo 3 – Estruturas de Dados",
+    "section": "5.2 Data Frames",
+    "text": "5.2 Data Frames\n\ndados &lt;- data.frame(\n  dia = 1:4,\n  temperatura = c(25.2, 26.1, 27.0, 26.8)\n)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  }
+]
