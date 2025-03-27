@@ -184,7 +184,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#em-r" id="toc-em-r" class="nav-link" data-scroll-target="#em-r"><span class="header-section-number">4.1.1</span> Em R:</a></li>
   </ul></li>
-  <li><a href="#estruturas-condicionais" id="toc-estruturas-condicionais" class="nav-link" data-scroll-target="#estruturas-condicionais"><span class="header-section-number">4.2</span> Estruturas Condicionais</a></li>
   </ul>
 </nav>
     </div>
@@ -211,22 +210,162 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <ol type="1">
-<li><p>Introdução</p>
-<p>Ao longo da disciplina vamos trabalhar com duas linguagens de programação: R e Python</p>
+<li><p><strong>Introdução</strong></p>
+<p>Ao longo da disciplina vamos trabalhar com duas linguagens de programação: <strong>R e Python</strong></p>
 <p>R é uma linguagem de programação e ambiente de software gratuito, livre e de código aberto (open source).</p>
-<p>Para baixar o R acesse o <a href="https://www.r-project.org">Link</a></p></li>
-<li><p>Ambientes de programação</p>
-<p>São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).</p></li>
-<li></li>
+<p>Para baixar o <strong>R CRAN</strong> acesse o <a href="https://www.r-project.org">Link</a></p>
+<p>Para baixar o <strong>RStudio</strong> acesse o <a href="https://posit.co/download/rstudio-desktop/">Link</a></p>
+<p>Para baixar o <strong>RTools</strong> acesse o <a href="https://cran.r-project.org/bin/windows/Rtools/">Link</a></p></li>
+<li><p><strong>Ambientes de programação</strong></p>
+<p>São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).</p>
+<p>Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)</p></li>
+<li><p>Ambiente RStudio</p>
+<p><img src="..\imagens/fig2.png" class="img-fluid"></p></li>
+<li><p><strong>Começando</strong></p>
+<ol type="1">
+<li><p>Configurando ambiente de trabalho: Tools -&gt; Global Options.</p></li>
+<li><p>Buscar ajuda: <code>help()</code>, <code>??sum</code>, <code>help.search("nome-do-pacote")</code>, etc.</p></li>
+</ol></li>
+<li><p><strong>Alguns símbolos e comandos</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ação</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Faz com que o R ignore o que será digitado após o comando</td>
+<td>#</td>
+</tr>
+<tr class="even">
+<td>Separa dois comandos numa mesma linha</td>
+<td>;</td>
+</tr>
+<tr class="odd">
+<td>Dado ausente</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>Sai do programa</td>
+<td>q()</td>
+</tr>
+<tr class="odd">
+<td>Lista todos os objetos na sessão atual do R</td>
+<td>ls()</td>
+</tr>
+<tr class="even">
+<td>Remove um objeto. Ex.: x</td>
+<td>rm(x)</td>
+</tr>
+<tr class="odd">
+<td>Remove dois objetos. Ex.: x e y</td>
+<td>rm(x, y)</td>
+</tr>
+<tr class="even">
+<td>Concatenar valores (criar vetores)</td>
+<td>c()</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
 </ol>
 <section id="variáveis-tipos-de-dados-e-operadores" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="variáveis-tipos-de-dados-e-operadores"><span class="header-section-number">4.1</span> Variáveis, Tipos de Dados e Operadores</h2>
 <ol type="1">
-<li><p>Variáveis</p>
+<li><p><strong>Variáveis</strong></p>
 <p>Variável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.</p>
 <p>Os dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.</p></li>
-<li><p>Tipos de dados</p></li>
+<li><p><strong>Tipos de dados</strong></p>
+<p>Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.</p>
+<p><em>Tipos de dados (primitivos):</em></p>
+<ul>
+<li><p>INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);</p></li>
+<li><p>FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -&gt; ponto) (positivos ou negativos);</p></li>
+<li><p>BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -&gt; TRUE e FALSE. Também chamados de operadores lógicos;</p></li>
+<li><p>TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.</p></li>
+</ul></li>
+<li><p><strong>Objetos</strong></p>
+<p>Trabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.</p>
+<p>Um objeto é qualquer coisa que pode ser atribuída a uma variável.</p>
+<p><em>Tipos de objetos no R:</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>character</td>
+<td>Textos ou caracteres</td>
+</tr>
+<tr class="even">
+<td>numeric</td>
+<td>Números inteiros ou reais</td>
+</tr>
+<tr class="odd">
+<td>logical</td>
+<td>Verdadeiro ou falso (TRUE/FALSE)</td>
+</tr>
+<tr class="even">
+<td>complex</td>
+<td>Números complexos</td>
+</tr>
+<tr class="odd">
+<td>list</td>
+<td>Combina diferentes tipos num mesmo objeto</td>
+</tr>
+<tr class="even">
+<td>function</td>
+<td>Comandos</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Operadores</strong></p></li>
 </ol>
+<p>Chamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.</p>
+<p>Denominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.</p>
+<p><em>Atalhos:</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Teclas</th>
+<th style="text-align: center;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>Crtl</em> + <em>+</em></td>
+<td style="text-align: center;">Aumenta a letra da interface do RStudio</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Crtl</em> + -</td>
+<td style="text-align: center;">Diminui a letra da interface do RStudio</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Crtl</em> + <em>ENTER</em></td>
+<td style="text-align: center;">Executa uma linha de código</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Crtl</em> + <em>C</em></td>
+<td style="text-align: center;">Comenta um ou mais linhas do Script</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Crtl</em> + Shift + R</td>
+<td style="text-align: center;">Cria uma seção no Script</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Alt</em> + -</td>
+<td style="text-align: center;">Adiciona o símbolo de atribuição <code>-&gt;</code></td>
+</tr>
+</tbody>
+</table>
 <section id="em-r" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="em-r"><span class="header-section-number">4.1.1</span> Em R:</h3>
 <div class="cell">
@@ -250,25 +389,9 @@ Agora faça você mesmo!
 <p>Você pode se basear no exemplo acima.</p>
 </div>
 </div>
-<ol start="3" type="1">
-<li><p>Estruturas de controle</p></li>
-<li><p>Funções</p></li>
-</ol>
-</section>
-</section>
-<section id="estruturas-condicionais" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="estruturas-condicionais"><span class="header-section-number">4.2</span> Estruturas Condicionais</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">25</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">20</span>) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Está quente"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Está quente"</code></pre>
-</div>
-</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
