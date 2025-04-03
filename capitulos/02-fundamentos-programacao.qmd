@@ -1,35 +1,240 @@
-
 # Capítulo 2 – Fundamentos de Programação
 
-## Variáveis e Tipos de Dados
+1.  **Introdução**
 
-### Em R:
+::: text-justify
+```         
+Ao longo da disciplina vamos trabalhar com duas linguagens de programação: **R e Python**
+
+R é uma linguagem de programação e ambiente de software gratuito, livre e de código aberto (open source).
+
+Para baixar o **R CRAN** acesse o [Link](https://www.r-project.org)
+
+Para baixar o **RStudio** acesse o [Link](https://posit.co/download/rstudio-desktop/)
+
+Para baixar o **RTools** acesse o [Link](https://cran.r-project.org/bin/windows/Rtools/)
+```
+:::
+
+2.  **Ambientes de programação**
+
+::: text-justify
+```         
+São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).
+
+Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)
+```
+:::
+
+3.  Ambiente RStudio
+
+![Figura 2. Ambiente do RStudio](/imagens/fig2.png){fig-align="center"}
+
+4.  **Começando**
+
+    1.  Configurando ambiente de trabalho: Tools -\> Global Options.
+
+    2.  Buscar ajuda: `help()`, `??sum`, `help.search("nome-do-pacote")`, etc.
+
+5.  **Alguns símbolos e comandos**
+
+    | Ação                                                      | Comando  |
+    |-----------------------------------------------------------|----------|
+    | Faz com que o R ignore o que será digitado após o comando | \#       |
+    | Separa dois comandos numa mesma linha                     | ;        |
+    | Dado ausente                                              | NA       |
+    | Sai do programa                                           | q()      |
+    | Lista todos os objetos na sessão atual do R               | ls()     |
+    | Remove um objeto. Ex.: x                                  | rm(x)    |
+    | Remove dois objetos. Ex.: x e y                           | rm(x, y) |
+    | Concatenar valores (criar vetores)                        | c()      |
+    | Atribuição de um objeto                                   | -\>      |
+
+## Criando Projeto No RSTUDIO (.RPROJ)
+
+::: text-justify
+Trabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.
+
+O diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.
+
+A definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.
+:::
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+#| include: false
+#| paged-print: false
+
+# A função getwd() pode ser utilizada para verificar o diretório de trabalho atual.
+getwd() 
+
+# A função setwd()  pode ser utilizada para mudar o diretório de trabalho. 
+setwd() 
+## Ex.: setwd('C:/Users/Documentos/R')
+
+## Nota: Na função `setwd()`, devemos usar a barra oblíqua (`/`) para definir o caminho.
+
+
+```
+
+## Variáveis, Tipos de Dados e Operadores
+
+1.  **Variáveis**
+
+::: text-justify
+Variável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.
+
+Os dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.
+:::
+
+![Figura 3. Variáveis](/imagens/fig2-1.png){fig-align="center"}
+
+2.  **Tipos de dados**
+
+::: text-justify
+Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.
+:::
+
+*Tipos de dados (primitivos):*
+
+```         
+-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);
+
+-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\> ponto) (positivos ou negativos);
+
+-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\> TRUE e FALSE. Também chamados de operadores lógicos;
+
+-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.
+```
+
+![Figura 4. Variáveis](/imagens/fig2-2.png){fig-align="center"}
+
+3.  **Objetos**
+
+    Trabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.
+
+    Um objeto é qualquer coisa que pode ser atribuída a uma variável.
+
+    *Tipos de objetos no R:*
+
+    | Tipo      | Descrição                                 |
+    |-----------|-------------------------------------------|
+    | character | Textos ou caracteres                      |
+    | numeric   | Números inteiros ou reais                 |
+    | logical   | Verdadeiro ou falso (TRUE/FALSE)          |
+    | complex   | Números complexos                         |
+    | list      | Combina diferentes tipos num mesmo objeto |
+    | function  | Comandos                                  |
+
+4.  **Operadores**
+
+::: text-justify
+Chamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.
+
+Denominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.
+:::
+
+5.  *Atalhos:*
+
+| Teclas             |                Descrição                |
+|:-------------------|:---------------------------------------:|
+| *Crtl* + *+*       | Aumenta a letra da interface do RStudio |
+| *Crtl* + -         | Diminui a letra da interface do RStudio |
+| *Crtl* + *ENTER*   |       Executa uma linha de código       |
+| *Crtl* + *C*       |   Comenta um ou mais linhas do Script   |
+| *Crtl* + Shift + R |        Cria uma seção no Script         |
+| *Alt* + -          |  Adiciona o símbolo de atribuição `->`  |
+
+### Exemplos:
+
 ```{r}
 nome <- "Maria"
 idade <- 21
 temperatura <- 27.5
 chuva <- TRUE
+
+#Conferindo o tipo de cada objeto:
+class(nome)
+
 ```
 
-### Em Python:
-```{python}
-nome = "Maria"
-idade = 21
-temperatura = 27.5
-chuva = True
-```
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Tente criar objetos com valores diferentes.
 
-## Estruturas Condicionais
+Depois, use o `print()` para imprimir os objetos no console.
+
+Você pode se basear no exemplo acima.
+:::
+
+### Outros comandos importantes:
 
 ```{r}
-x <- 25
-if (x > 20) {
-  print("Está quente")
-}
+#| eval: false
+#| message: false
+#| warning: false
+#| include: false
+#| paged-print: false
+
+#Remover objetos
+remove(nome_do_objeto)
+rm(nome_do_objeto)
+
+#Verificar objetos criado
+ls()
+
+#Verificando diretório (pasta do computador) do seu projeto
+getwd()
+
 ```
 
-```{python}
-x = 25
-if x > 20:
-    print("Está quente")
+## Pacotes
+
+1.  **Pacotes**
+
+::: text-justify
+A linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).
+
+Esses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network ([CRAN R](https://cran.r-project.org)).
+
+Além dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.
+
+Para instalar um pacote do R, podemos usar a função `install.packages("nome_do_pacote")`.
+:::
+
+```{r}
+#| eval: false
+#| include: false
+install.packages("tidyverse")
+install.packages("readxl")
+install.packages("writexl")
+
+install.packages("dados")
+install.packages("openair")
+
+```
+
+:::text-justify
+
+Após a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).
+
+:::
+
+```{r}
+#| eval: false
+#| include: false
+
+library(tidyverse)
+library(readxl)
+library(writexl)
+
+require(dados)
+
+search()   # Retorna todos os pacotes carregados.
+
+ls("package:readxl")   # Lista os comandos do pacote.
+
+tidyverse_packages()   # Lista os pacotes pertencentes ao projeto.
+
 ```

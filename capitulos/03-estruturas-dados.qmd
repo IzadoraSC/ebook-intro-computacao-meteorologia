@@ -1,31 +1,179 @@
-
 # Capítulo 3 – Estruturas de Dados
 
-## Vetores / Listas
+## ![](/imagens/fig3.png){fig-align="center"}
+
+## Vetores
+
+Vertor: é um arranjo linear de dados
 
 ```{r}
 temperaturas <- c(25.2, 26.1, 27.0, 26.8)
 temperaturas[2]
 ```
 
-```{python}
-temperaturas = [25.2, 26.1, 27.0, 26.8]
-print(temperaturas[1])
+
+## Funções (básicas)
+
+Funções base que já existem dentro do programa R
+
+```{r}
+x <- 4
+y <- 6
+sum(x,y)
 ```
+
+```{r}
+# Vetor com temperaturas diárias (em °C)
+temperaturas <- c(27.2, 28.5, 29.0, 26.8, 30.1)
+
+# Média das temperaturas
+mean(temperaturas)
+
+# Temperatura máxima
+max(temperaturas)
+
+# Temperatura mínima
+min(temperaturas)
+
+# Soma total
+sum(temperaturas)
+
+# Número de observações
+length(temperaturas)
+
+# Arredondar a média com 1 casa decimal
+round(mean(temperaturas), 1)
+```
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie um vetor chamado `chuvas` com os valores de precipitação (em mm) de 7 dias consecutivos.
+
+Depois:
+- Calcule a soma total de chuvas
+- Encontre o maior valor de precipitação
+- Arredonde a média com 2 casas decimais
+:::
+
 
 ## Data Frames
 
+Data frames: é uma das estruturas mais importantes para análise de dados.
+
 ```{r}
+## Exemplo 01
 dados <- data.frame(
   dia = 1:4,
   temperatura = c(25.2, 26.1, 27.0, 26.8)
 )
 ```
 
-```{python}
-import pandas as pd
-dados = pd.DataFrame({
-    "dia": [1, 2, 3, 4],
-    "temperatura": [25.2, 26.1, 27.0, 26.8]
-})
+```{r}
+## Exemplo 02
+dados <- data.frame(
+  data = as.Date('2023-01-01') + 0:6,
+  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
+)
+print(dados)
+plot(dados$data, dados$temperatura, type = "o", col = "blue")
+```
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie um `data.frame` chamado `observacoes` com 7 dias de dados contendo: - Data - Umidade relativa (%) - Velocidade do vento (km/h)
+
+Depois: - Calcule a média da umidade - Filtre os dias com vento acima de 15 km/h
+:::
+
+::: {.callout-note icon="book-open" title="Explore"}
+-   Usar `head(dados)` para ver as primeiras linhas
+
+-   Usar `str(dados)` para ver o tipo de cada coluna
+
+-   Usar `summary(dados)` para obter estatísticas básicas
+:::
+
+## Listas
+
+Lista: tipo de objeto que pode conter elementos de diferentes tipos: vetor de caracteres, números, matrizes
+
+```{r}
+# Criando uma lista com informações da estação meteorológica
+estacao <- list(
+  nome = "Estação Chapada das Mesas",
+  codigo = "MA123",
+  localizacao = c(latitude = -7.3, longitude = -46.0),
+  temperaturas = c(28.5, 29.1, 27.8, 30.2),  # em °C
+  precipitacoes = c(2.4, 0.0, 1.1, 5.6),     # em mm
+  status = TRUE
+)
+
+# Acessando elementos da lista
+estacao$nome
+estacao$localizacao["latitude"]
+mean(estacao$temperaturas)
+
+# Atualizando o status
+estacao$status <- FALSE
+```
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie uma lista chamada `cidade` com os seguintes elementos: - Nome da cidade - População estimada - Vetor com as temperaturas médias dos últimos 7 dias - Valor lógico indicando se há estação meteorológica local
+
+Depois, calcule a média das temperaturas dessa cidade!
+:::
+
+## Estruturas de controle
+
+**Estruturas de controle** são blocos de código que **controlam o fluxo de execução** de um programa. Ou seja, elas determinam **quais comandos serão executados**, em **que ordem** e **quantas vezes**.
+
+Elas são fundamentais porque permitem que o código:
+
+-    **Tome decisões** (por exemplo: "Se estiver quente, mostre um aviso de calor");
+
+-   **Repita ações** (por exemplo: "Para cada dia da semana, calcule a média de temperatura");
+
+-   **Reaja** a diferentes situações
+
+| Tipo     | Usado para...                            |
+|----------|------------------------------------------|
+| if, else | tomar decisões                           |
+| for      | repetir uma ação para vários valores     |
+| while    | repetir enquanto uma condição for válida |
+
+```{r}
+#Exemplo com if
+
+x <- 25
+if (x > 20) {
+  print("Está quente")
+}
+```
+
+```{r}
+#Exemplo com if e else
+
+temperatura <- 30
+if (temperatura > 28) {
+  print("Está quente!")
+} else {
+  print("Temperatura agradável.")
+}
+```
+
+```{r}
+#Exemplo com for
+
+dias <- c("Seg", "Ter", "Qua")
+for (dia in dias) {
+  print(paste("Processando:", dia))
+}
+```
+
+```{r}
+#Exemplo com while
+
+x <- 1
+while (x <= 3) {
+  print(x)
+  x <- x + 1
+}
 ```

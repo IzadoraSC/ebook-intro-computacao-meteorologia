@@ -1,22 +1,28 @@
 
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "Introdução à Computação Aplicada às Ciências Atmosféricas"
-  author: "Primeira Turma de Meteorologia - UEMA"
-  date: today
+  author: "Profa. Izadora S. de Carvalho"
+  reader-mode: true
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
   chapters:
     - capitulos/00-cronograma.qmd
     - index.qmd
     - capitulos/01-introducao.qmd
     - capitulos/02-fundamentos-programacao.qmd
     - capitulos/03-estruturas-dados.qmd
+    
+    
 
 format:
   html:
     theme: cosmo
     code-copy: true
     toc: true
-  pdf:
-    documentclass: scrreprt
+  # pdf:
+  #   documentclass: scrreprt

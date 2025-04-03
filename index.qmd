@@ -1,6 +1,8 @@
 
 # Apresentação
 
-Este é um material didático aberto desenvolvido para apoiar o ensino da disciplina **Introdução à Computação Aplicada às Ciências Atmosféricas (Módulo 2)**, do curso de graduação em Meteorologia da UEMA.
+Este é um material didático aberto desenvolvido para apoiar o ensino da disciplina **Introdução à Computação Aplicada às Ciências Atmosféricas**, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.
 
-O objetivo é fornecer uma base sólida em programação com R e Python, aplicada à análise e visualização de dados ambientais e climáticos.
+O objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.
+
+*Este produto está sendo desenvolvido utilizando [Quarto books](https://quarto.org/docs/books).*
