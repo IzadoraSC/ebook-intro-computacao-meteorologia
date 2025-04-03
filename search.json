@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introdução à Computação Aplicada às Ciências Atmosféricas",
     "section": "",
-    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.",
+    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.\nEste produto está sendo desenvolvido utilizando Quarto books.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apresentação</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "capitulos/01-introducao.html",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
     "section": "",
-    "text": "Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos pelo menos olhar para um código e conserguir compreender e interpretar (mais ir além disso não é proibido, inclusive recomendamos).",
+    "text": "Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mais ir além disso não é proíbido, inclusive recomendamos).\n\n\n\nFigura 1. Reflexão",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -64,7 +64,17 @@
     "href": "capitulos/02-fundamentos-programacao.html",
     "title": "4  Capítulo 2 – Fundamentos de Programação",
     "section": "",
-    "text": "4.1 Variáveis, Tipos de Dados e Operadores\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\nAtalhos:",
+    "text": "4.1 Criando Projeto No RSTUDIO (.RPROJ)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
+    "href": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
+    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "section": "",
+    "text": "Trabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.\nO diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.\nA definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -73,8 +83,18 @@
     "objectID": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
     "href": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
     "title": "4  Capítulo 2 – Fundamentos de Programação",
-    "section": "",
-    "text": "Variáveis\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\nTipos de dados\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\nTipos de dados (primitivos):\n\nINT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\nFLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -&gt; ponto) (positivos ou negativos);\nBOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -&gt; TRUE e FALSE. Também chamados de operadores lógicos;\nTEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\nObjetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\nTipos de objetos no R:\n\n\n\nTipo\nDescrição\n\n\n\n\ncharacter\nTextos ou caracteres\n\n\nnumeric\nNúmeros inteiros ou reais\n\n\nlogical\nVerdadeiro ou falso (TRUE/FALSE)\n\n\ncomplex\nNúmeros complexos\n\n\nlist\nCombina diferentes tipos num mesmo objeto\n\n\nfunction\nComandos\n\n\n\nOperadores\n\n\n\n\n\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\nAumenta a letra da interface do RStudio\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\nCrtl + ENTER\nExecuta uma linha de código\n\n\nCrtl + C\nComenta um ou mais linhas do Script\n\n\nCrtl + Shift + R\nCria uma seção no Script\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\n4.1.1 Em R:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.",
+    "section": "4.2 Variáveis, Tipos de Dados e Operadores",
+    "text": "4.2 Variáveis, Tipos de Dados e Operadores\n\nVariáveis\n\n\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\n\n\n\n\nFigura 3. Variáveis\n\n\n\nTipos de dados\n\n\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\n\nTipos de dados (primitivos):\n-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\n\n-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\\&gt; ponto) (positivos ou negativos);\n\n-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\\&gt; TRUE e FALSE. Também chamados de operadores lógicos;\n\n-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\n\n\nFigura 4. Variáveis\n\n\n\nObjetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\nTipos de objetos no R:\n\n\n\nTipo\nDescrição\n\n\n\n\ncharacter\nTextos ou caracteres\n\n\nnumeric\nNúmeros inteiros ou reais\n\n\nlogical\nVerdadeiro ou falso (TRUE/FALSE)\n\n\ncomplex\nNúmeros complexos\n\n\nlist\nCombina diferentes tipos num mesmo objeto\n\n\nfunction\nComandos\n\n\n\nOperadores\n\n\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\n\n\nAtalhos:\n\n\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\nAumenta a letra da interface do RStudio\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\nCrtl + ENTER\nExecuta uma linha de código\n\n\nCrtl + C\nComenta um ou mais linhas do Script\n\n\nCrtl + Shift + R\nCria uma seção no Script\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\n4.2.1 Exemplos:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n#Conferindo o tipo de cada objeto:\nclass(nome)\n\n[1] \"character\"\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.\n\n\n\n\n4.2.2 Outros comandos importantes:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#pacotes",
+    "href": "capitulos/02-fundamentos-programacao.html#pacotes",
+    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "section": "4.3 Pacotes",
+    "text": "4.3 Pacotes\n\nPacotes\n\n\nA linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).\nEsses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network (CRAN R).\nAlém dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.\nPara instalar um pacote do R, podemos usar a função install.packages(\"nome_do_pacote\").\n\n\nApós a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
