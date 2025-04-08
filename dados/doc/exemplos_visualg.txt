@@ -1,0 +1,77 @@
+EXEMPLO 01:
+
+Ler 3 notas, calcular a média e informar se o aluno está aprovado ou reprovado.
+
+Descrição narrativa:
+- Ler três notas
+- Calcular a média
+- Se a média for maior ou igual a 7, mostrar "Aprovado"
+- Caso contrário, mostrar "Reprovado"
+
+
+Pseudocódigo
+
+algoritmo "avaliar_aprovacao"
+var
+   nota1, nota2, nota3, media: real
+inicio
+   escreva("Digite a primeira nota: ")
+   leia(nota1)
+
+   escreva("Digite a segunda nota: ")
+   leia(nota2)
+
+   escreva("Digite a terceira nota: ")
+   leia(nota3)
+
+   media := (nota1 + nota2 + nota3) / 3
+
+   escreval("Média final: ", media)
+
+   se media >= 7 entao
+      escreval("Situação: Aprovado")
+   senao
+      escreval("Situação: Reprovado")
+   fimse
+fimalgoritmo
+
+
+#############################################
+EXEMPLO 02:
+
+algoritmo "media_temperatura"
+var
+   t1, t2, t3, media: real
+inicio
+   escreva("Digite a primeira temperatura: ")
+   leia(t1)
+   escreva("Digite a segunda temperatura: ")
+   leia(t2)
+   escreva("Digite a terceira temperatura: ")
+   leia(t3)
+
+   media := (t1 + t2 + t3) / 3
+
+   escreval("A média das temperaturas é: ", media)
+fimalgoritmo
+
+##############################
+
+PRATICA 01
+
+algoritmo "amplitude_termica"
+var
+   temp_min, temp_max, amplitude: real
+inicio
+   escreva("Digite a temperatura mínima do dia: ")
+   leia(temp_min)
+
+   escreva("Digite a temperatura máxima do dia: ")
+   leia(temp_max)
+
+   amplitude := temp_max - temp_min
+
+   escreval("A amplitude térmica do dia foi: ", amplitude, " °C")
+fimalgoritmo
+
+####################
