@@ -54,7 +54,17 @@
     "href": "capitulos/01-introducao.html",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
     "section": "",
-    "text": "3.1 ✏️ Formas de representar algoritmos\nNão precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).\n## 🧠 O que é um algoritmo?\nUm algoritmo é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.\nNo contexto da Meteorologia, por exemplo, podemos ter algoritmos para:\nExistem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:",
+    "text": "3.1 O que é um algoritmo?\nNão precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).\nUm algoritmo é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.\nNo contexto da Meteorologia, por exemplo, podemos ter algoritmos para:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#o-que-é-um-algoritmo",
+    "href": "capitulos/01-introducao.html#o-que-é-um-algoritmo",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "",
+    "text": "Calcular a média de temperatura de uma semana\nVerificar se um valor de precipitação indica “chuva forte”\nClassificar dias como quentes, amenos ou frios",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -63,8 +73,8 @@
     "objectID": "capitulos/01-introducao.html#formas-de-representar-algoritmos",
     "href": "capitulos/01-introducao.html#formas-de-representar-algoritmos",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "",
-    "text": "3.1.1 📘 1. Descrição narrativa (português estruturado)\n\nExemplo: Calcular a média de três temperaturas:\n\nLeia três temperaturas\nCalcule a média\nMostre o resultado\n\n\n\n\n3.1.2 🧭 2. Fluxograma\n\nUm fluxograma representa graficamente o algoritmo usando formas geométricas (retângulos, losangos, setas).\n\n(Sugestão: você pode usar ferramentas como draw.io para desenhar fluxogramas.)\n\n\n3.1.3 💻 3. Pseudocódigo (Portugol)\n\nLinguagem intermediária entre a linguagem natural e linguagem de programação.\nUtilizaremos o Visualg para executar pseudocódigos.",
+    "section": "3.2 Formas de representar algoritmos",
+    "text": "3.2 Formas de representar algoritmos\nExistem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:\n\n3.2.1 📘 1. Descrição narrativa (português estruturado)\n\nExemplo: Calcular a média de três temperaturas:\n\nLeia três temperaturas\nCalcule a média\nMostre o resultado\n\n\n\n\n3.2.2 🧭 2. Fluxograma\n\nUm fluxograma representa graficamente o algoritmo usando formas geométricas (retângulos, losangos, setas).\n\n(Sugestão: você pode usar ferramentas como draw.io para desenhar fluxogramas.)\n\n\n3.2.3 💻 3. Pseudocódigo (Portugol)\n\nLinguagem intermediária entre a linguagem natural e linguagem de programação.\nUtilizaremos o Visualg para executar pseudocódigos.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -73,8 +83,8 @@
     "objectID": "capitulos/01-introducao.html#exemplo-prático-completo",
     "href": "capitulos/01-introducao.html#exemplo-prático-completo",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.2 💡 Exemplo prático completo",
-    "text": "3.2 💡 Exemplo prático completo\n\n3.2.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.2.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.2.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "section": "3.3 💡 Exemplo prático completo",
+    "text": "3.3 💡 Exemplo prático completo\n\n3.3.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.3.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.3.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -83,8 +93,8 @@
     "objectID": "capitulos/01-introducao.html#prática-proposta",
     "href": "capitulos/01-introducao.html#prática-proposta",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.3 ✍️ Prática proposta",
-    "text": "3.3 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
+    "section": "3.4 ✍️ Prática proposta",
+    "text": "3.4 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
