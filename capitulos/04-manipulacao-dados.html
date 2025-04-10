@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Curso de Meteorologia - UEMA, Profa. Dra. Izadora S. de Carvalho">
-
-<title>Introdução à Computação Aplicada às Ciências Atmosféricas</title>
+<title>6&nbsp; Capítulo 4 – Manipulação de Dados com R – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,29 +17,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./capitulos/01-introducao.html" rel="next">
-<link href="./capitulos/00-cronograma.html" rel="prev">
-<link href="./cover-meteorologia.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../capitulos/03-estruturas-dados.html" rel="prev">
+<link href="../cover-meteorologia.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -69,37 +96,27 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles-meteorologia.css">
+}</script><link rel="stylesheet" href="styles-meteorologia.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Apresentação</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/04-manipulacao-dados.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
+      <a href="../">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
@@ -117,74 +134,66 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/00-cronograma.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/00-cronograma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conteúdo</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Apresentação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/01-introducao.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/01-introducao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/02-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/02-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/03-estruturas-dados.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/03-estruturas-dados.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/04-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/04-manipulacao-dados.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#apresentação" id="toc-apresentação" class="nav-link active" data-scroll-target="#apresentação"><span class="header-section-number">1</span> Apresentação</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
+<li><a href="#importando-dados" id="toc-importando-dados" class="nav-link active" data-scroll-target="#importando-dados"><span class="header-section-number">6.1</span> 📂 1. Importando dados</a></li>
+  <li><a href="#explorando-os-dados" id="toc-explorando-os-dados" class="nav-link" data-scroll-target="#explorando-os-dados"><span class="header-section-number">6.2</span> 🔍 2. Explorando os dados</a></li>
+  <li><a href="#trabalhando-com-linhas-e-colunas" id="toc-trabalhando-com-linhas-e-colunas" class="nav-link" data-scroll-target="#trabalhando-com-linhas-e-colunas"><span class="header-section-number">6.3</span> 📐 3. Trabalhando com Linhas e Colunas</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/04-manipulacao-dados.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introdução à Computação Aplicada às Ciências Atmosféricas</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span>
+</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Curso de Meteorologia - UEMA, Profa. Dra. Izadora S. de Carvalho </p>
-          </div>
-  </div>
     
   
     
@@ -192,21 +201,69 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><p>Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.</p>
+<hr>
+<section id="importando-dados" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="importando-dados">
+<span class="header-section-number">6.1</span> 📂 1. Importando dados</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'readxl' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"dados/TMAX_INMET.xlsx"</span><span class="op">)</span></span>
+<span><span class="co">#head(dados)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [190 × 16] (S3: tbl_df/tbl/data.frame)
+ $ Código         : num [1:190] 82989 83249 82353 83007 82970 ...
+ $ Nome da Estação: chr [1:190] "AGUA BRANCA" "ALAGOINHAS" "ALTAMIRA" "ALTO DA BOA VISTA" ...
+ $ UF             : chr [1:190] "AL" "BA" "PA" "RJ" ...
+ $ Janeiro        : num [1:190] 31.1 33.1 31.6 30.2 32 30.6 33.7 31.9 30.8 28.3 ...
+ $ Fevereiro      : num [1:190] NA 33 31.2 30.6 32 30.8 34.7 32.1 31 28.8 ...
+ $ Março          : num [1:190] 30.7 33.1 31.3 29.1 32.2 30.9 33.7 32.5 31 28.1 ...
+ $ Abril          : num [1:190] 29.5 31.1 31.6 27.5 32.7 30.4 32.6 33 31.5 27.8 ...
+ $ Maio           : num [1:190] 27.2 29.2 32.1 25 33.2 29.6 30.9 32.5 32.2 26 ...
+ $ Junho          : num [1:190] 25.1 27.7 32.9 24.3 33.3 28.6 29.8 32.5 33 25.3 ...
+ $ Julho          : num [1:190] 24.2 27.2 NA 24.1 33.8 27.9 29.6 33.1 33.8 25.5 ...
+ $ Agosto         : num [1:190] 25.2 27.4 34.5 24.6 35.3 27.9 31 35.4 35.1 27.6 ...
+ $ Setembro       : num [1:190] 27.6 28.8 34.8 25.2 36.7 28.4 32.8 36.5 34.8 29 ...
+ $ Outubro        : num [1:190] 30 30.6 34.6 26.3 35.8 29.2 34 35.4 32.9 29.4 ...
+ $ Novembro       : num [1:190] 31.1 31.9 34 26.8 33.5 29.8 32.3 33 31.6 27.9 ...
+ $ Dezembro       : num [1:190] 31.5 32.9 32.9 29.1 32.4 30.2 32.8 32.2 31.1 28.1 ...
+ $ Ano            : num [1:190] NA 30.5 NA 26.9 33.6 29.5 32.3 33.3 32.4 27.7 ...</code></pre>
+</div>
+</div>
+<hr></section><section id="explorando-os-dados" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="explorando-os-dados">
+<span class="header-section-number">6.2</span> 🔍 2. Explorando os dados</h2>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#dim(dados)</span></span>
+<span><span class="co">#summary(dados)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Código"          "Nome da Estação" "UF"              "Janeiro"        
+ [5] "Fevereiro"       "Março"           "Abril"           "Maio"           
+ [9] "Junho"           "Julho"           "Agosto"          "Setembro"       
+[13] "Outubro"         "Novembro"        "Dezembro"        "Ano"            </code></pre>
+</div>
+</div>
+<hr></section><section id="trabalhando-com-linhas-e-colunas" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="trabalhando-com-linhas-e-colunas">
+<span class="header-section-number">6.3</span> 📐 3. Trabalhando com Linhas e Colunas</h2>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Selecionar coluna pelo nome</span></span>
+<span><span class="co">#dados$UF</span></span>
+<span></span>
+<span><span class="co"># Selecionar várias colunas por índice</span></span>
+<span><span class="co">#dados[, c(1, 3)]</span></span>
+<span></span>
+<span><span class="co"># Selecionar linha específica</span></span>
+<span><span class="co">#dados[10, ]</span></span>
+<span></span>
+<span><span class="co"># Célula na linha 5, coluna 3</span></span>
+<span><span class="co">#dados[5, 3]</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-
-<section id="apresentação" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Apresentação</h1><p><img src="cover-meteorologia.png" title="Introdução à Computação Aplicada às Ciências Atmosféricas" class="quarto-cover-image img-fluid"></p>
-<p>Este é um material didático aberto desenvolvido para apoiar o ensino da disciplina <strong>Introdução à Computação Aplicada às Ciências Atmosféricas</strong>, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.</p>
-<p>O objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.</p>
-<p><em>Este produto está sendo desenvolvido utilizando <a href="https://quarto.org/docs/books">Quarto books</a>.</em></p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -622,22 +679,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./capitulos/00-cronograma.html" class="pagination-link" aria-label="Conteúdo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conteúdo</span></span>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../capitulos/03-estruturas-dados.html" class="pagination-link" aria-label="Capítulo 3 – Estruturas de Dados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./capitulos/01-introducao.html" class="pagination-link" aria-label="Capítulo 1 - Introdução à computação para meteorologia">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
 
 
-
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/04-manipulacao-dados.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>
