@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>4&nbsp; Capítulo 2 – Fundamentos de Programação – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
 <style>
 code{white-space: pre-wrap;}
@@ -56,7 +53,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -66,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../capitulos/03-estruturas-dados.html" rel="next">
 <link href="../capitulos/01-introducao.html" rel="prev">
+<link href="../cover-meteorologia.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-542cf50e1f395a1c6267587cc8cc3ecf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -89,50 +85,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
-}</script>
-
-
+}</script><link rel="stylesheet" href="styles-meteorologia.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/02-fundamentos-programacao.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -142,12 +130,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/00-cronograma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conteúdo</span></span></a>
@@ -177,32 +165,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/04-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
+  </div>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#criando-projeto-no-rstudio-.rproj" id="toc-criando-projeto-no-rstudio-.rproj" class="nav-link active" data-scroll-target="#criando-projeto-no-rstudio-.rproj"><span class="header-section-number">4.1</span> Criando Projeto No RSTUDIO (.RPROJ)</a></li>
-  <li><a href="#variáveis-tipos-de-dados-e-operadores" id="toc-variáveis-tipos-de-dados-e-operadores" class="nav-link" data-scroll-target="#variáveis-tipos-de-dados-e-operadores"><span class="header-section-number">4.2</span> Variáveis, Tipos de Dados e Operadores</a>
+<li><a href="#criando-projeto-no-rstudio-.rproj" id="toc-criando-projeto-no-rstudio-.rproj" class="nav-link active" data-scroll-target="#criando-projeto-no-rstudio-.rproj"><span class="header-section-number">4.1</span> Criando Projeto No RSTUDIO (.RPROJ)</a></li>
+  <li>
+<a href="#vari%C3%A1veis-tipos-de-dados-e-operadores" id="toc-variáveis-tipos-de-dados-e-operadores" class="nav-link" data-scroll-target="#vari%C3%A1veis-tipos-de-dados-e-operadores"><span class="header-section-number">4.2</span> Variáveis, Tipos de Dados e Operadores</a>
   <ul class="collapse">
-  <li><a href="#exemplos" id="toc-exemplos" class="nav-link" data-scroll-target="#exemplos"><span class="header-section-number">4.2.1</span> Exemplos:</a></li>
+<li><a href="#exemplos" id="toc-exemplos" class="nav-link" data-scroll-target="#exemplos"><span class="header-section-number">4.2.1</span> Exemplos:</a></li>
   <li><a href="#outros-comandos-importantes" id="toc-outros-comandos-importantes" class="nav-link" data-scroll-target="#outros-comandos-importantes"><span class="header-section-number">4.2.2</span> Outros comandos importantes:</a></li>
-  </ul></li>
-  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes"><span class="header-section-number">4.3</span> Pacotes</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes"><span class="header-section-number">4.3</span> Pacotes</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/02-fundamentos-programacao.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span>
+</h1>
 </div>
 
 
@@ -216,54 +208,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<ol type="1">
+</header><ol type="1">
 <li><strong>Introdução</strong></li>
 </ol>
 <div class="text-justify">
-<pre><code>Ao longo da disciplina vamos trabalhar com duas linguagens de programação: **R e Python**
-
-R é uma linguagem de programação e ambiente de software gratuito, livre e de código aberto (open source).
-
-Para baixar o **R CRAN** acesse o [Link](https://www.r-project.org)
-
-Para baixar o **RStudio** acesse o [Link](https://posit.co/download/rstudio-desktop/)
-
-Para baixar o **RTools** acesse o [Link](https://cran.r-project.org/bin/windows/Rtools/)</code></pre>
+<p>Ao longo da disciplina vamos trabalhar com duas linguagens de programação: R e Python. Porém , vamos abordar nesta primeira versão do ebook somente a linguagem R</p>
+<p>R é uma linguagem de programação e ambiente de software gratuito, livre e de código aberto (open source).</p>
+<p>Para baixar o <strong>R CRAN</strong> acesse o <a href="https://www.r-project.org">Link</a></p>
+<p>Para baixar o <strong>RStudio</strong> acesse o <a href="https://posit.co/download/rstudio-desktop/">Link</a></p>
+<p>Para baixar o <strong>RTools</strong> acesse o <a href="https://cran.r-project.org/bin/windows/Rtools/">Link</a></p>
 </div>
 <ol start="2" type="1">
 <li><strong>Ambientes de programação</strong></li>
 </ol>
 <div class="text-justify">
-<pre><code>São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).
-
-Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)</code></pre>
+<p>São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).</p>
+<p>Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)</p>
 </div>
 <ol start="3" type="1">
 <li>Ambiente RStudio</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="..\imagens/fig2.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 2. Ambiente do RStudio</figcaption>
-</figure>
+<figure class="figure"><p><img src="..\imagens/fig2.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 2. Ambiente do RStudio</figcaption></figure>
 </div>
 <ol start="4" type="1">
-<li><p><strong>Começando</strong></p>
-<ol type="1">
+<li><strong>Começando</strong></li>
+</ol>
+<ul>
 <li><p>Configurando ambiente de trabalho: Tools -&gt; Global Options.</p></li>
-<li><p>Buscar ajuda: <code>help()</code>, <code>??sum</code>, <code>help.search("nome-do-pacote")</code>, etc.</p></li>
-</ol></li>
-<li><p><strong>Alguns símbolos e comandos</strong></p>
+<li><p>Buscar ajuda: <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code>, <code>??sum</code>, <code>help.search("nome-do-pacote")</code>, etc.</p></li>
+</ul>
+<ol start="5" type="1">
+<li>
+<p><strong>Alguns símbolos e comandos</strong></p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Ação</th>
 <th>Comando</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>Faz com que o R ignore o que será digitado após o comando</td>
@@ -302,18 +285,28 @@ Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar
 <td>-&gt;</td>
 </tr>
 </tbody>
-</table></li>
+</table>
+</li>
 </ol>
-<section id="criando-projeto-no-rstudio-.rproj" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="criando-projeto-no-rstudio-.rproj"><span class="header-section-number">4.1</span> Criando Projeto No RSTUDIO (.RPROJ)</h2>
+<section id="criando-projeto-no-rstudio-.rproj" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="criando-projeto-no-rstudio-.rproj">
+<span class="header-section-number">4.1</span> Criando Projeto No RSTUDIO (.RPROJ)</h2>
 <div class="text-justify">
 <p>Trabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.</p>
 <p>O diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.</p>
 <p>A definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.</p>
 </div>
-</section>
-<section id="variáveis-tipos-de-dados-e-operadores" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="variáveis-tipos-de-dados-e-operadores"><span class="header-section-number">4.2</span> Variáveis, Tipos de Dados e Operadores</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># A função getwd() pode ser utilizada para verificar o diretório de trabalho atual.</span></span>
+<span><span class="co">#getwd() </span></span>
+<span></span>
+<span><span class="co"># A função setwd()  pode ser utilizada para mudar o diretório de trabalho. </span></span>
+<span><span class="co">#setwd() </span></span>
+<span><span class="co">## Ex.: setwd('C:/Users/Documentos/R')</span></span>
+<span></span>
+<span><span class="co">## Nota: Na função `setwd()`, devemos usar a barra oblíqua (`/`) para definir o caminho.</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="variáveis-tipos-de-dados-e-operadores" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="variáveis-tipos-de-dados-e-operadores">
+<span class="header-section-number">4.2</span> Variáveis, Tipos de Dados e Operadores</h2>
 <ol type="1">
 <li><strong>Variáveis</strong></li>
 </ol>
@@ -322,10 +315,8 @@ Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar
 <p>Os dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="..\imagens/fig2-1.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 3. Variáveis</figcaption>
-</figure>
+<figure class="figure"><p><img src="..\imagens/fig2-1.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 3. Variáveis</figcaption></figure>
 </div>
 <ol start="2" type="1">
 <li><strong>Tipos de dados</strong></li>
@@ -342,23 +333,20 @@ Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar
 
 -   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.</code></pre>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="..\imagens/fig2-2.png" class="img-fluid figure-img"></p>
-<figcaption>Figura 4. Variáveis</figcaption>
-</figure>
+<figure class="figure"><p><img src="..\imagens/fig2-2.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 4. Tipo de Dados</figcaption></figure>
 </div>
 <ol start="3" type="1">
-<li><p><strong>Objetos</strong></p>
+<li>
+<p><strong>Objetos</strong></p>
 <p>Trabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.</p>
 <p>Um objeto é qualquer coisa que pode ser atribuída a uma variável.</p>
 <p><em>Tipos de objetos no R:</em></p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Tipo</th>
 <th>Descrição</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>character</td>
@@ -385,65 +373,85 @@ Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar
 <td>Comandos</td>
 </tr>
 </tbody>
-</table></li>
+</table>
+</li>
 <li><p><strong>Operadores</strong></p></li>
 </ol>
 <div class="text-justify">
 <p>Chamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.</p>
 <p>Denominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.</p>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\imagens/fig2-3.png" class="img-fluid figure-img"></p>
+<figcaption>Figura 5. Operadores no R (Paradis, 2005, p.25)</figcaption></figure>
+</div>
 <ol start="5" type="1">
-<li><em>Atalhos:</em></li>
+<li><strong>Atalhos</strong></li>
 </ol>
 <table class="caption-top table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Teclas</th>
 <th style="text-align: center;">Descrição</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><em>Crtl</em> + <em>+</em></td>
+<td style="text-align: left;">
+<em>Crtl</em> + <em>+</em>
+</td>
 <td style="text-align: center;">Aumenta a letra da interface do RStudio</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><em>Crtl</em> + -</td>
+<td style="text-align: left;">
+<em>Crtl</em> + -</td>
 <td style="text-align: center;">Diminui a letra da interface do RStudio</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><em>Crtl</em> + <em>ENTER</em></td>
+<td style="text-align: left;">
+<em>Crtl</em> + <em>ENTER</em>
+</td>
 <td style="text-align: center;">Executa uma linha de código</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><em>Crtl</em> + <em>C</em></td>
+<td style="text-align: left;">
+<em>Crtl</em> + <em>C</em>
+</td>
 <td style="text-align: center;">Comenta um ou mais linhas do Script</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><em>Crtl</em> + Shift + R</td>
+<td style="text-align: left;">
+<em>Crtl</em> + <em>Shift</em> + <em>R</em>
+</td>
 <td style="text-align: center;">Cria uma seção no Script</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><em>Alt</em> + -</td>
-<td style="text-align: center;">Adiciona o símbolo de atribuição <code>-&gt;</code></td>
+<td style="text-align: left;">
+<em>Alt</em> + -</td>
+<td style="text-align: center;">Adiciona o símbolo de atribuição <code>-&gt;</code>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+<em>Crtl</em> + <em>Shift</em> + <em>N</em>
+</td>
+<td style="text-align: center;">Criar um novo arquivo Script</td>
 </tr>
 </tbody>
 </table>
-<section id="exemplos" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="exemplos"><span class="header-section-number">4.2.1</span> Exemplos:</h3>
+<section id="exemplos" class="level3" data-number="4.2.1"><h3 data-number="4.2.1" class="anchored" data-anchor-id="exemplos">
+<span class="header-section-number">4.2.1</span> Exemplos:</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nome <span class="ot">&lt;-</span> <span class="st">"Maria"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>idade <span class="ot">&lt;-</span> <span class="dv">21</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>temperatura <span class="ot">&lt;-</span> <span class="fl">27.5</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>chuva <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Conferindo o tipo de cada objeto:</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(nome)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nome</span> <span class="op">&lt;-</span> <span class="st">"Maria"</span></span>
+<span><span class="va">idade</span> <span class="op">&lt;-</span> <span class="fl">21</span></span>
+<span><span class="va">temperatura</span> <span class="op">&lt;-</span> <span class="fl">27.5</span></span>
+<span><span class="va">chuva</span> <span class="op">&lt;-</span> <span class="cn">TRUE</span></span>
+<span></span>
+<span><span class="co">#Conferindo o tipo de cada objeto:</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">nome</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Agora faça você mesmo!">
+<div class="callout callout-style-simple callout-tip callout-titled" title="Agora faça você mesmo!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -454,17 +462,27 @@ Agora faça você mesmo!
 </div>
 <div class="callout-body-container callout-body">
 <p>Tente criar objetos com valores diferentes.</p>
-<p>Depois, use o <code>print()</code> para imprimir os objetos no console.</p>
+<p>Depois, use o <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> para imprimir os objetos no console.</p>
 <p>Você pode se basear no exemplo acima.</p>
 </div>
 </div>
-</section>
-<section id="outros-comandos-importantes" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="outros-comandos-importantes"><span class="header-section-number">4.2.2</span> Outros comandos importantes:</h3>
-</section>
-</section>
-<section id="pacotes" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="pacotes"><span class="header-section-number">4.3</span> Pacotes</h2>
+</section><section id="outros-comandos-importantes" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="outros-comandos-importantes">
+<span class="header-section-number">4.2.2</span> Outros comandos importantes:</h3>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">##ATENÇÃO: remova '#' para tornar a linha executável</span></span>
+<span></span>
+<span><span class="co">##Remover objetos</span></span>
+<span><span class="co">#remove(nome_do_objeto)</span></span>
+<span><span class="co">#rm(nome_do_objeto)</span></span>
+<span></span>
+<span><span class="co">##Verificar objetos criado</span></span>
+<span><span class="co">#ls()</span></span>
+<span></span>
+<span><span class="co">##Verificando diretório (pasta do computador) do seu projeto</span></span>
+<span><span class="co">#getwd()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="pacotes" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="pacotes">
+<span class="header-section-number">4.3</span> Pacotes</h2>
 <ol type="1">
 <li><strong>Pacotes</strong></li>
 </ol>
@@ -474,15 +492,42 @@ Agora faça você mesmo!
 <p>Além dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.</p>
 <p>Para instalar um pacote do R, podemos usar a função <code>install.packages("nome_do_pacote")</code>.</p>
 </div>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">##ATENÇÃO: remova '#' para tornar a linha executável</span></span>
+<span></span>
+<span><span class="co">#install.packages("tidyverse")  #linha executável</span></span>
+<span><span class="co">#install.packages("readxl")   #linha executável</span></span>
+<span><span class="co">#install.packages("writexl")   #linha executável</span></span>
+<span></span>
+<span><span class="co">#install.packages("dados")   #linha executável</span></span>
+<span><span class="co">#install.packages("openair")   #linha executável</span></span>
+<span></span>
+<span><span class="co">##Para instalar mais de um pacote com um comando:</span></span>
+<span></span>
+<span><span class="co">#install.packages(c("ggplot2", "dplyr", "tidyr"))   #linha executável</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="text-justify">
 <p>Após a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).</p>
 </div>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#library(tidyverse)   #linha executável</span></span>
+<span><span class="co">#library(readxl)   #linha executável</span></span>
+<span><span class="co">#library(writexl)   #linha executável</span></span>
+<span></span>
+<span><span class="co">#require(dados)   #outra função para carregar</span></span>
+<span></span>
+<span><span class="co">#search()   # Retorna todos os pacotes carregados.</span></span>
+<span></span>
+<span><span class="co">#ls("package:readxl")   # Lista os comandos do pacote.</span></span>
+<span></span>
+<span><span class="co">#tidyverse_packages()   # Lista os pacotes pertencentes ao projeto.</span></span>
+<span></span>
+<span><span class="co">##Para carregar mais de um pacote com um comando:</span></span>
+<span><span class="co">#library(c("ggplot2", "dplyr", "tidyr"))</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -525,12 +570,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -898,9 +943,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../capitulos/01-introducao.html" class="pagination-link" aria-label="Capítulo 1 - Introdução à computação para meteorologia">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span>
       </a>          
@@ -915,5 +958,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/02-fundamentos-programacao.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>

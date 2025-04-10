@@ -25,3 +25,7 @@
 2.  Limpeza de dados
 
 3.  Linhas e Colunas
+
+## Visualização Gráfica
+
+## Base de Dados

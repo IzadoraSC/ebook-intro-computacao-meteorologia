@@ -50,11 +50,71 @@
     ]
   },
   {
+    "objectID": "capitulos/00-cronograma.html#visualização-gráfica",
+    "href": "capitulos/00-cronograma.html#visualização-gráfica",
+    "title": "1  Conteúdo",
+    "section": "1.4 Visualização Gráfica",
+    "text": "1.4 Visualização Gráfica",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conteúdo</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/00-cronograma.html#base-de-dados",
+    "href": "capitulos/00-cronograma.html#base-de-dados",
+    "title": "1  Conteúdo",
+    "section": "1.5 Base de Dados",
+    "text": "1.5 Base de Dados",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conteúdo</span>"
+    ]
+  },
+  {
     "objectID": "capitulos/01-introducao.html",
     "href": "capitulos/01-introducao.html",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
     "section": "",
-    "text": "Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mais ir além disso não é proíbido, inclusive recomendamos).\n\n\n\nFigura 1. Reflexão",
+    "text": "3.1 O que é um algoritmo?\nNão precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).\nUm algoritmo é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.\nNo contexto da Meteorologia, por exemplo, podemos ter algoritmos para:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#o-que-é-um-algoritmo",
+    "href": "capitulos/01-introducao.html#o-que-é-um-algoritmo",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "",
+    "text": "Calcular a média de temperatura de uma semana\nVerificar se um valor de precipitação indica “chuva forte”\nClassificar dias como quentes, amenos ou frios",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#formas-de-representar-algoritmos",
+    "href": "capitulos/01-introducao.html#formas-de-representar-algoritmos",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "3.2 Formas de representar algoritmos",
+    "text": "3.2 Formas de representar algoritmos\nExistem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:\n\n3.2.1 📘 1. Descrição narrativa (português estruturado)\n\nExemplo: Calcular a média de três temperaturas:\n\nLeia três temperaturas\nCalcule a média\nMostre o resultado\n\n\n\n\n3.2.2 🧭 2. Fluxograma\n\nUm fluxograma representa graficamente o algoritmo usando formas geométricas (retângulos, losangos, setas).\n\n(Sugestão: você pode usar ferramentas como draw.io para desenhar fluxogramas.)\n\n\n3.2.3 💻 3. Pseudocódigo (Portugol)\n\nLinguagem intermediária entre a linguagem natural e linguagem de programação.\nUtilizaremos o Visualg para executar pseudocódigos.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#exemplo-prático",
+    "href": "capitulos/01-introducao.html#exemplo-prático",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "3.3 💡 Exemplo prático",
+    "text": "3.3 💡 Exemplo prático\n\n3.3.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.3.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.3.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#prática-proposta",
+    "href": "capitulos/01-introducao.html#prática-proposta",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "3.4 ✍️ Prática proposta",
+    "text": "3.4 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -62,9 +122,9 @@
   {
     "objectID": "capitulos/02-fundamentos-programacao.html",
     "href": "capitulos/02-fundamentos-programacao.html",
-    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
     "section": "",
-    "text": "4.1 Criando Projeto No RSTUDIO (.RPROJ)",
+    "text": "4.1 Criando Projeto No RSTUDIO (.RPROJ)\n# A função getwd() pode ser utilizada para verificar o diretório de trabalho atual.\n#getwd() \n\n# A função setwd()  pode ser utilizada para mudar o diretório de trabalho. \n#setwd() \n## Ex.: setwd('C:/Users/Documentos/R')\n\n## Nota: Na função `setwd()`, devemos usar a barra oblíqua (`/`) para definir o caminho.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -72,7 +132,7 @@
   {
     "objectID": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
     "href": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
-    "title": "4  Capítulo 2 – Fundamentos de Programação",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
     "section": "",
     "text": "Trabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.\nO diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.\nA definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.",
     "crumbs": [
@@ -82,9 +142,9 @@
   {
     "objectID": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
     "href": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
-    "title": "4  Capítulo 2 – Fundamentos de Programação",
-    "section": "4.2 Variáveis, Tipos de Dados e Operadores",
-    "text": "4.2 Variáveis, Tipos de Dados e Operadores\n\nVariáveis\n\n\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\n\n\n\n\nFigura 3. Variáveis\n\n\n\nTipos de dados\n\n\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\n\nTipos de dados (primitivos):\n-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\n\n-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\\&gt; ponto) (positivos ou negativos);\n\n-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\\&gt; TRUE e FALSE. Também chamados de operadores lógicos;\n\n-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\n\n\nFigura 4. Variáveis\n\n\n\nObjetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\nTipos de objetos no R:\n\n\n\nTipo\nDescrição\n\n\n\n\ncharacter\nTextos ou caracteres\n\n\nnumeric\nNúmeros inteiros ou reais\n\n\nlogical\nVerdadeiro ou falso (TRUE/FALSE)\n\n\ncomplex\nNúmeros complexos\n\n\nlist\nCombina diferentes tipos num mesmo objeto\n\n\nfunction\nComandos\n\n\n\nOperadores\n\n\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\n\n\nAtalhos:\n\n\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\nAumenta a letra da interface do RStudio\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\nCrtl + ENTER\nExecuta uma linha de código\n\n\nCrtl + C\nComenta um ou mais linhas do Script\n\n\nCrtl + Shift + R\nCria uma seção no Script\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\n4.2.1 Exemplos:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n#Conferindo o tipo de cada objeto:\nclass(nome)\n\n[1] \"character\"\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.\n\n\n\n\n4.2.2 Outros comandos importantes:",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "\n4.2 Variáveis, Tipos de Dados e Operadores",
+    "text": "4.2 Variáveis, Tipos de Dados e Operadores\n\nVariáveis\n\n\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\n\n\n\nFigura 3. Variáveis\n\n\nTipos de dados\n\n\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\n\nTipos de dados (primitivos):\n-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\n\n-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\\&gt; ponto) (positivos ou negativos);\n\n-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\\&gt; TRUE e FALSE. Também chamados de operadores lógicos;\n\n-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\n\nFigura 4. Tipo de Dados\n\n\n\nObjetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\nTipos de objetos no R:\n\n\nTipo\nDescrição\n\n\n\ncharacter\nTextos ou caracteres\n\n\nnumeric\nNúmeros inteiros ou reais\n\n\nlogical\nVerdadeiro ou falso (TRUE/FALSE)\n\n\ncomplex\nNúmeros complexos\n\n\nlist\nCombina diferentes tipos num mesmo objeto\n\n\nfunction\nComandos\n\n\n\n\nOperadores\n\n\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\n\n\n\nFigura 5. Operadores no R (Paradis, 2005, p.25)\n\n\nAtalhos\n\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\n\nAumenta a letra da interface do RStudio\n\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\n\nCrtl + ENTER\n\nExecuta uma linha de código\n\n\n\nCrtl + C\n\nComenta um ou mais linhas do Script\n\n\n\nCrtl + Shift + R\n\nCria uma seção no Script\n\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\nCrtl + Shift + N\n\nCriar um novo arquivo Script\n\n\n\n\n4.2.1 Exemplos:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n#Conferindo o tipo de cada objeto:\nclass(nome)\n\n[1] \"character\"\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.\n\n\n\n4.2.2 Outros comandos importantes:\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n##Remover objetos\n#remove(nome_do_objeto)\n#rm(nome_do_objeto)\n\n##Verificar objetos criado\n#ls()\n\n##Verificando diretório (pasta do computador) do seu projeto\n#getwd()",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -92,9 +152,9 @@
   {
     "objectID": "capitulos/02-fundamentos-programacao.html#pacotes",
     "href": "capitulos/02-fundamentos-programacao.html#pacotes",
-    "title": "4  Capítulo 2 – Fundamentos de Programação",
-    "section": "4.3 Pacotes",
-    "text": "4.3 Pacotes\n\nPacotes\n\n\nA linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).\nEsses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network (CRAN R).\nAlém dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.\nPara instalar um pacote do R, podemos usar a função install.packages(\"nome_do_pacote\").\n\n\nApós a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "\n4.3 Pacotes",
+    "text": "4.3 Pacotes\n\nPacotes\n\n\nA linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).\nEsses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network (CRAN R).\nAlém dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.\nPara instalar um pacote do R, podemos usar a função install.packages(\"nome_do_pacote\").\n\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n#install.packages(\"tidyverse\")  #linha executável\n#install.packages(\"readxl\")   #linha executável\n#install.packages(\"writexl\")   #linha executável\n\n#install.packages(\"dados\")   #linha executável\n#install.packages(\"openair\")   #linha executável\n\n##Para instalar mais de um pacote com um comando:\n\n#install.packages(c(\"ggplot2\", \"dplyr\", \"tidyr\"))   #linha executável\n\n\nApós a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).\n\n\n#library(tidyverse)   #linha executável\n#library(readxl)   #linha executável\n#library(writexl)   #linha executável\n\n#require(dados)   #outra função para carregar\n\n#search()   # Retorna todos os pacotes carregados.\n\n#ls(\"package:readxl\")   # Lista os comandos do pacote.\n\n#tidyverse_packages()   # Lista os pacotes pertencentes ao projeto.\n\n##Para carregar mais de um pacote com um comando:\n#library(c(\"ggplot2\", \"dplyr\", \"tidyr\"))",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -102,9 +162,19 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html",
     "href": "capitulos/03-estruturas-dados.html",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
     "section": "",
-    "text": "5.1",
+    "text": "5.1 Tipos de objetos no R",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-estruturas-dados.html#tipos-de-objetos-no-r",
+    "href": "capitulos/03-estruturas-dados.html#tipos-de-objetos-no-r",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "",
+    "text": "Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes).\n\n\n\nFigura 6. Tipo de Dados",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
@@ -112,9 +182,9 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html#vetores",
     "href": "capitulos/03-estruturas-dados.html#vetores",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
-    "section": "5.2 Vetores",
-    "text": "5.2 Vetores\nVertor: é um arranjo linear de dados\n\ntemperaturas &lt;- c(25.2, 26.1, 27.0, 26.8)\ntemperaturas[2]\n\n[1] 26.1",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.2 Vetores",
+    "text": "5.2 Vetores\nVertor: é um arranjo linear de dados\n\n#Criando o vetor\ntemperaturas &lt;- c(25.2, 26.1, 27.0, 26.8)\n#Visualizando\ntemperaturas\n\n[1] 25.2 26.1 27.0 26.8\n\n# Verificando a classe do objeto criado\nclass(temperaturas)\n\n[1] \"numeric\"\n\n# Acessando elementos específicos\ntemperaturas[2]\n\n[1] 26.1\n\n\n\n#Criando o vetor\nsensacoes &lt;- c(\"Frio\", \"Agradável\", \"Quente\", \"Muito Quente\", \"Extremo\")\n#Visualizando\nsensacoes\n\n[1] \"Frio\"         \"Agradável\"    \"Quente\"       \"Muito Quente\" \"Extremo\"     \n\n# Verificando a classe do objeto criado\nclass(sensacoes)\n\n[1] \"character\"\n\n# Acessando elementos específicos\nsensacoes[1]\n\n[1] \"Frio\"\n\nsensacoes[3]\n\n[1] \"Quente\"\n\n\n\n#Criando o vetor\nv1 &lt;- c(\"Frio\", 23, \"Quente\", 32, \"Muito Quente\", 40)\n#Visualizando\nv1\n\n[1] \"Frio\"         \"23\"           \"Quente\"       \"32\"           \"Muito Quente\"\n[6] \"40\"          \n\n# Verificando a classe do objeto criado\nclass(v1)\n\n[1] \"character\"\n\n# Acessando elementos específicos\nv1[1]\n\n[1] \"Frio\"\n\nv1[3]\n\n[1] \"Quente\"",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
@@ -122,9 +192,9 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html#funções-básicas",
     "href": "capitulos/03-estruturas-dados.html#funções-básicas",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
-    "section": "5.3 Funções (básicas)",
-    "text": "5.3 Funções (básicas)\nFunções base que já existem dentro do programa R\n\nx &lt;- 4\ny &lt;- 6\nsum(x,y)\n\n[1] 10\n\n\n\n# Vetor com temperaturas diárias (em °C)\ntemperaturas &lt;- c(27.2, 28.5, 29.0, 26.8, 30.1)\n\n# Média das temperaturas\nmean(temperaturas)\n\n[1] 28.32\n\n# Temperatura máxima\nmax(temperaturas)\n\n[1] 30.1\n\n# Temperatura mínima\nmin(temperaturas)\n\n[1] 26.8\n\n# Soma total\nsum(temperaturas)\n\n[1] 141.6\n\n# Número de observações\nlength(temperaturas)\n\n[1] 5\n\n# Arredondar a média com 1 casa decimal\nround(mean(temperaturas), 1)\n\n[1] 28.3\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um vetor chamado chuvas com os valores de precipitação (em mm) de 7 dias consecutivos.\nDepois: - Calcule a soma total de chuvas - Encontre o maior valor de precipitação - Arredonde a média com 2 casas decimais",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.3 Funções (básicas)",
+    "text": "5.3 Funções (básicas)\nFunções base que já existem dentro do programa RCRAN.\n\n\nFunção\nO que faz\n\n\n\nsum()\nSoma todos os valores\n\n\nmin()\nRetorna o menor valor\n\n\n\nmax()\nRetorna o maior valor\n\n\n\nmean()\nCalcula a média dos valores\n\n\nround()\nArredonda um número para n casas decimais\n\n\nlength()\nInforma quantos valores há no vetor\n\n\nsd()\nCalcula o desvio padrão de uma amostra\n\n\n\n\n\n\n\n\n\nVocê sabia?\n\n\n\nTodas essas funções fazem parte do que chamamos de “base R”. Não precisam de pacotes extras para funcionar.\n\n\n\nx &lt;- 4\ny &lt;- 6\nsum(x,y)\n\n[1] 10\n\n\n\n# Vetor com temperaturas diárias (em °C)\ntemperaturas &lt;- c(27.2, 28.5, 29.0, 26.8, 30.1)\n\n# Média das temperaturas\nmean(temperaturas)\n\n[1] 28.32\n\n# Temperatura máxima\nmax(temperaturas)\n\n[1] 30.1\n\n# Temperatura mínima\nmin(temperaturas)\n\n[1] 26.8\n\n# Soma total\nsum(temperaturas)\n\n[1] 141.6\n\n# Número de observações\nlength(temperaturas)\n\n[1] 5\n\n# Arredondar a média com 1 casa decimal\nround(mean(temperaturas), 1)\n\n[1] 28.3\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um vetor chamado chuvas com os valores de precipitação (em mm) de 7 dias consecutivos.\nDepois:\n\nCalcule a soma total de chuvas\nEncontre o maior valor de precipitação\nArredonde a média com 2 casas decimais",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
@@ -132,9 +202,9 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html#data-frames",
     "href": "capitulos/03-estruturas-dados.html#data-frames",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
-    "section": "5.4 Data Frames",
-    "text": "5.4 Data Frames\nData frames: é uma das estruturas mais importantes para análise de dados.\n\n## Exemplo 01\ndados &lt;- data.frame(\n  dia = 1:4,\n  temperatura = c(25.2, 26.1, 27.0, 26.8)\n)\n\n\n## Exemplo 02\ndados &lt;- data.frame(\n  data = as.Date('2023-01-01') + 0:6,\n  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)\n)\nprint(dados)\n\n        data temperatura\n1 2023-01-01        27.5\n2 2023-01-02        28.2\n3 2023-01-03        26.9\n4 2023-01-04        29.1\n5 2023-01-05        30.0\n6 2023-01-06        28.4\n7 2023-01-07        27.8\n\nplot(dados$data, dados$temperatura, type = \"o\", col = \"blue\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um data.frame chamado observacoes com 7 dias de dados contendo: - Data - Umidade relativa (%) - Velocidade do vento (km/h)\nDepois: - Calcule a média da umidade - Filtre os dias com vento acima de 15 km/h\n\n\n\n\n\n\n\n\nExplore\n\n\n\n\nUsar head(dados) para ver as primeiras linhas\nUsar str(dados) para ver o tipo de cada coluna\nUsar summary(dados) para obter estatísticas básicas",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.4 Data Frames",
+    "text": "5.4 Data Frames\nData frames: é uma das estruturas mais importantes para análise de dados.\n\n## Exemplo 01\ndados &lt;- data.frame(\n  dia = 1:4,\n  temperatura = c(25.2, 26.1, 27.0, 26.8)\n)\n\n\n## Exemplo 02\n\n# Criando um data frame\ndados &lt;- data.frame(\n  data = as.Date('2023-01-01') + 0:6,\n  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)\n)\nprint(dados)\n\n        data temperatura\n1 2023-01-01        27.5\n2 2023-01-02        28.2\n3 2023-01-03        26.9\n4 2023-01-04        29.1\n5 2023-01-05        30.0\n6 2023-01-06        28.4\n7 2023-01-07        27.8\n\nplot(dados$data, dados$temperatura, type = \"o\", col = \"blue\")\n\n\n\n\n\n\n\n\n## Exemplo 03\n\n# Criando um data frame\n\ndados &lt;- data.frame(\n  data = as.Date(\"2025-03-24\") + 0:4,\n  temperatura_min = c(22.1, 21.8, 22.4, 23.0, 21.5),\n  temperatura_max = c(30.2, 29.8, 31.0, 30.5, 29.7),\n  precipitacao = c(0.0, 5.2, 1.0, 0.0, 3.1)\n)\n\n# Visualizando os dados\nprint(dados)\n\n        data temperatura_min temperatura_max precipitacao\n1 2025-03-24            22.1            30.2          0.0\n2 2025-03-25            21.8            29.8          5.2\n3 2025-03-26            22.4            31.0          1.0\n4 2025-03-27            23.0            30.5          0.0\n5 2025-03-28            21.5            29.7          3.1\n\n# Média de temperatura máxima\nmean(dados$temperatura_max)\n\n[1] 30.24\n\n# Filtrando os dias com chuva (precipitação &gt; 0)\ndados_com_chuva &lt;- dados[dados$precipitacao &gt; 0, ]\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um data.frame chamado observacoes com 7 dias de dados contendo:\n\nData\nUmidade relativa (%)\nVelocidade do vento (km/h)\n\nDepois:\n\nCalcule a média da umidade\nFiltre os dias com vento acima de 15 km/h\n\n\n\n\n\n\n\n\n\nExplore\n\n\n\n\nUsar head(dados) para ver as primeiras linhas\nUsar str(dados) para ver o tipo de cada coluna\nUsar summary(dados) para obter estatísticas básicas",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
@@ -142,9 +212,19 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html#listas",
     "href": "capitulos/03-estruturas-dados.html#listas",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
-    "section": "5.5 Listas",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.5 Listas",
     "text": "5.5 Listas\nLista: tipo de objeto que pode conter elementos de diferentes tipos: vetor de caracteres, números, matrizes\n\n# Criando uma lista com informações da estação meteorológica\nestacao &lt;- list(\n  nome = \"Estação Chapada das Mesas\",\n  codigo = \"MA123\",\n  localizacao = c(latitude = -7.3, longitude = -46.0),\n  temperaturas = c(28.5, 29.1, 27.8, 30.2),  # em °C\n  precipitacoes = c(2.4, 0.0, 1.1, 5.6),     # em mm\n  status = TRUE\n)\n\n# Acessando elementos da lista\nestacao$nome\n\n[1] \"Estação Chapada das Mesas\"\n\nestacao$localizacao[\"latitude\"]\n\nlatitude \n    -7.3 \n\nmean(estacao$temperaturas)\n\n[1] 28.9\n\n# Atualizando o status\nestacao$status &lt;- FALSE\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie uma lista chamada cidade com os seguintes elementos: - Nome da cidade - População estimada - Vetor com as temperaturas médias dos últimos 7 dias - Valor lógico indicando se há estação meteorológica local\nDepois, calcule a média das temperaturas dessa cidade!",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-estruturas-dados.html#matrizes-em-r",
+    "href": "capitulos/03-estruturas-dados.html#matrizes-em-r",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.6 Matrizes em R",
+    "text": "5.6 Matrizes em R\nUma matriz é uma estrutura bidimensional (2D) composta por linhas e colunas, onde todos os elementos devem ser do mesmo tipo de dado (geralmente numérico).\n\n\n5.6.1 Criando uma matriz\n\n# Criando uma matriz com temperaturas (3 dias, 4 horários)\nmt_temperatura &lt;- matrix(\n  c(22.1, 24.3, 25.5, 23.0,   # Dia 1\n    21.8, 23.5, 26.2, 24.1,   # Dia 2\n    20.0, 22.4, 24.0, 23.3),  # Dia 3\n  nrow = 3,\n  ncol = 4,\n  byrow = TRUE\n)\n\nmt_temperatura\n\n     [,1] [,2] [,3] [,4]\n[1,] 22.1 24.3 25.5 23.0\n[2,] 21.8 23.5 26.2 24.1\n[3,] 20.0 22.4 24.0 23.3\n\nlength(mt_temperatura)\n\n[1] 12\n\ndim(mt_temperatura)\n\n[1] 3 4\n\n# Nomeando linhas e colunas\nrownames(mt_temperatura) &lt;- c(\"Dia 1\", \"Dia 2\", \"Dia 3\")\ncolnames(mt_temperatura) &lt;- c(\"06h\", \"12h\", \"15h\", \"18h\")\n\n# Visualizar a matriz\nmt_temperatura\n\n       06h  12h  15h  18h\nDia 1 22.1 24.3 25.5 23.0\nDia 2 21.8 23.5 26.2 24.1\nDia 3 20.0 22.4 24.0 23.3\n\n#Acessando elementos da \n# Temperatura do Dia 2 às 15h\nmt_temperatura[\"Dia 2\", \"15h\"]\n\n[1] 26.2\n\n# Todas as temperaturas do Dia 3\nmt_temperatura[\"Dia 3\", ]\n\n 06h  12h  15h  18h \n20.0 22.4 24.0 23.3 \n\n# Todas as temperaturas às 12h\nmt_temperatura[, \"12h\"]\n\nDia 1 Dia 2 Dia 3 \n 24.3  23.5  22.4 \n\n\n\n5.6.2 Aplicando funções\n\n## Realizando operações com matriz\n\n# Média por horário\ncolMeans(mt_temperatura)\n\n     06h      12h      15h      18h \n21.30000 23.40000 25.23333 23.46667 \n\n# Média por dia\nrowMeans(mt_temperatura)\n\n Dia 1  Dia 2  Dia 3 \n23.725 23.900 22.425 \n\n# Temperatura máxima por dia\napply(mt_temperatura, 1, max)\n\nDia 1 Dia 2 Dia 3 \n 25.5  26.2  24.0 \n\n\n\n5.6.3 Prática\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie uma matriz com valores de umidade relativa para 5 dias e 3 horários (manhã, tarde e noite).\nEm seguida, calcule:\n\nA umidade média por horário\nO valor máximo por dia\nQual o menor valor registrado na semana",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
@@ -152,11 +232,51 @@
   {
     "objectID": "capitulos/03-estruturas-dados.html#estruturas-de-controle",
     "href": "capitulos/03-estruturas-dados.html#estruturas-de-controle",
-    "title": "5  Capítulo 3 – Estruturas de Dados",
-    "section": "5.6 Estruturas de controle",
-    "text": "5.6 Estruturas de controle\nEstruturas de controle são blocos de código que controlam o fluxo de execução de um programa. Ou seja, elas determinam quais comandos serão executados, em que ordem e quantas vezes.\nElas são fundamentais porque permitem que o código:\n\nTome decisões (por exemplo: “Se estiver quente, mostre um aviso de calor”);\nRepita ações (por exemplo: “Para cada dia da semana, calcule a média de temperatura”);\nReaja a diferentes situações\n\n\n\n\nTipo\nUsado para…\n\n\n\n\nif, else\ntomar decisões\n\n\nfor\nrepetir uma ação para vários valores\n\n\nwhile\nrepetir enquanto uma condição for válida\n\n\n\n\n#Exemplo com if\n\nx &lt;- 25\nif (x &gt; 20) {\n  print(\"Está quente\")\n}\n\n[1] \"Está quente\"\n\n\n\n#Exemplo com if e else\n\ntemperatura &lt;- 30\nif (temperatura &gt; 28) {\n  print(\"Está quente!\")\n} else {\n  print(\"Temperatura agradável.\")\n}\n\n[1] \"Está quente!\"\n\n\n\n#Exemplo com for\n\ndias &lt;- c(\"Seg\", \"Ter\", \"Qua\")\nfor (dia in dias) {\n  print(paste(\"Processando:\", dia))\n}\n\n[1] \"Processando: Seg\"\n[1] \"Processando: Ter\"\n[1] \"Processando: Qua\"\n\n\n\n#Exemplo com while\n\nx &lt;- 1\nwhile (x &lt;= 3) {\n  print(x)\n  x &lt;- x + 1\n}\n\n[1] 1\n[1] 2\n[1] 3",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.7 Estruturas de controle",
+    "text": "5.7 Estruturas de controle\nEstruturas de controle são blocos de código que controlam o fluxo de execução de um programa. Ou seja, elas determinam quais comandos serão executados, em que ordem e quantas vezes.\nElas são fundamentais porque permitem que o código:\n\nTome decisões (por exemplo: “Se estiver quente, mostre um aviso de calor”);\nRepita ações (por exemplo: “Para cada dia da semana, calcule a média de temperatura”);\nReaja a diferentes situações\n\n\n\nTipo\nUsado para…\n\n\n\nif, else\ntomar decisões\n\n\nfor\nrepetir uma ação para vários valores\n\n\nwhile\nrepetir enquanto uma condição for válida\n\n\n\n\n#Exemplo com if\n\nx &lt;- 25\nif (x &gt; 20) {\n  print(\"Está quente\")\n}\n\n[1] \"Está quente\"\n\n\n\n#Exemplo com if e else\n\ntemperatura &lt;- 30\nif (temperatura &gt; 28) {\n  print(\"Está quente!\")\n} else {\n  print(\"Temperatura agradável.\")\n}\n\n[1] \"Está quente!\"\n\n\n\n#Exemplo com for\n\ndias &lt;- c(\"Seg\", \"Ter\", \"Qua\")\nfor (dia in dias) {\n  print(paste(\"Processando:\", dia))\n}\n\n[1] \"Processando: Seg\"\n[1] \"Processando: Ter\"\n[1] \"Processando: Qua\"\n\n\n\n#Exemplo com while\n\nx &lt;- 1\nwhile (x &lt;= 3) {\n  print(x)\n  x &lt;- x + 1\n}\n\n[1] 1\n[1] 2\n[1] 3",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/03-estruturas-dados.html#funções-criadas",
+    "href": "capitulos/03-estruturas-dados.html#funções-criadas",
+    "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
+    "section": "\n5.8 Funções (criadas)",
+    "text": "5.8 Funções (criadas)\n\nAlém das Funções base já existem dentro do programa RCRAN, nós podemos criar nossas próprias funções para organizar e automatizar processos de análise de dados.\nAs funções são criadas com function().\nPodemos passar quantos argumentos quiser.\nPode usar return() ou deixar o último valor ser retornado automaticamente.\nsapply() é útil para aplicar uma função a vetores/listas.\n\n\n# Função para calcular a amplitude térmica do dia\namplitude_termica &lt;- function(temp_max, temp_min) {\n  return(temp_max - temp_min)\n}\n\n# Usando a função\namplitude_termica(32.5, 21.8)  # resultado: 10.7\n\n[1] 10.7\n\n\n\n# Função que classifica temperaturas como \"Frio\", \"Agradável\" ou \"Quente\"\n\nclassificar_temp &lt;- function(temp) { \n  if (temp &lt; 20) {\n    return(\"Frio\")\n  } else if (temp &lt;= 27) {\n    return(\"Agradável\") \n  } else { \n    return(\"Quente\") \n  }\n}\n\n# Aplicando a função a um vetor\n\nsapply(temperaturas, classificar_temp)\n\n[1] \"Quente\"    \"Quente\"    \"Quente\"    \"Agradável\" \"Quente\"   \n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie uma função chamada avaliar_precipitacao() que receba um valor de chuva (em mm) e retorne:\n\n“Sem chuva” se for 0\n“Chuva leve” se for entre 0 e 5 mm\n“Chuva forte” se for acima de 5 mm\n\nDepois, aplique essa função a um vetor de precipitação com 7 dias.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/04-manipulacao-dados.html",
+    "href": "capitulos/04-manipulacao-dados.html",
+    "title": "\n6  Capítulo 4 – Manipulação de Dados com R\n",
+    "section": "",
+    "text": "6.1 📂 1. Importando dados\nNeste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.\nlibrary(readxl)\n\nWarning: package 'readxl' was built under R version 4.2.3\n\ndados &lt;- read_excel(\"dados/TMAX_INMET.xlsx\")\n#head(dados)\nstr(dados)\n\ntibble [190 × 16] (S3: tbl_df/tbl/data.frame)\n $ Código         : num [1:190] 82989 83249 82353 83007 82970 ...\n $ Nome da Estação: chr [1:190] \"AGUA BRANCA\" \"ALAGOINHAS\" \"ALTAMIRA\" \"ALTO DA BOA VISTA\" ...\n $ UF             : chr [1:190] \"AL\" \"BA\" \"PA\" \"RJ\" ...\n $ Janeiro        : num [1:190] 31.1 33.1 31.6 30.2 32 30.6 33.7 31.9 30.8 28.3 ...\n $ Fevereiro      : num [1:190] NA 33 31.2 30.6 32 30.8 34.7 32.1 31 28.8 ...\n $ Março          : num [1:190] 30.7 33.1 31.3 29.1 32.2 30.9 33.7 32.5 31 28.1 ...\n $ Abril          : num [1:190] 29.5 31.1 31.6 27.5 32.7 30.4 32.6 33 31.5 27.8 ...\n $ Maio           : num [1:190] 27.2 29.2 32.1 25 33.2 29.6 30.9 32.5 32.2 26 ...\n $ Junho          : num [1:190] 25.1 27.7 32.9 24.3 33.3 28.6 29.8 32.5 33 25.3 ...\n $ Julho          : num [1:190] 24.2 27.2 NA 24.1 33.8 27.9 29.6 33.1 33.8 25.5 ...\n $ Agosto         : num [1:190] 25.2 27.4 34.5 24.6 35.3 27.9 31 35.4 35.1 27.6 ...\n $ Setembro       : num [1:190] 27.6 28.8 34.8 25.2 36.7 28.4 32.8 36.5 34.8 29 ...\n $ Outubro        : num [1:190] 30 30.6 34.6 26.3 35.8 29.2 34 35.4 32.9 29.4 ...\n $ Novembro       : num [1:190] 31.1 31.9 34 26.8 33.5 29.8 32.3 33 31.6 27.9 ...\n $ Dezembro       : num [1:190] 31.5 32.9 32.9 29.1 32.4 30.2 32.8 32.2 31.1 28.1 ...\n $ Ano            : num [1:190] NA 30.5 NA 26.9 33.6 29.5 32.3 33.3 32.4 27.7 ...",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/04-manipulacao-dados.html#explorando-os-dados",
+    "href": "capitulos/04-manipulacao-dados.html#explorando-os-dados",
+    "title": "\n6  Capítulo 4 – Manipulação de Dados com R\n",
+    "section": "\n6.2 🔍 2. Explorando os dados",
+    "text": "6.2 🔍 2. Explorando os dados\n\n#dim(dados)\n#summary(dados)\nnames(dados)\n\n [1] \"Código\"          \"Nome da Estação\" \"UF\"              \"Janeiro\"        \n [5] \"Fevereiro\"       \"Março\"           \"Abril\"           \"Maio\"           \n [9] \"Junho\"           \"Julho\"           \"Agosto\"          \"Setembro\"       \n[13] \"Outubro\"         \"Novembro\"        \"Dezembro\"        \"Ano\"",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/04-manipulacao-dados.html#trabalhando-com-linhas-e-colunas",
+    "href": "capitulos/04-manipulacao-dados.html#trabalhando-com-linhas-e-colunas",
+    "title": "\n6  Capítulo 4 – Manipulação de Dados com R\n",
+    "section": "\n6.3 📐 3. Trabalhando com Linhas e Colunas",
+    "text": "6.3 📐 3. Trabalhando com Linhas e Colunas\n\n# Selecionar coluna pelo nome\n#dados$UF\n\n# Selecionar várias colunas por índice\n#dados[, c(1, 3)]\n\n# Selecionar linha específica\n#dados[10, ]\n\n# Célula na linha 5, coluna 3\n#dados[5, 3]",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
     ]
   }
 ]

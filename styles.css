@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Corpo geral */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f8ff; /* azul céu claro */
+  color: #1e1e1e;
+  line-height: 1.7;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #015c92; /* azul profundo */
+}
+
+/* Links */
+a {
+  color: #2a7bbd;
+}
+
+a:hover {
+  color: #1b5f91;
+  text-decoration: underline;
+}
+
+/* Código */
+pre, code {
+  background-color: #e0f1ff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  color: #003b5c;
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+}
+
+/* Blocos de código */
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border-left: 4px solid #2a7bbd;
+}
+
+/* Caixas de alerta */
+.callout {
+  border-left: 5px solid #007d84;
+  background-color: #e6f4f1;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ddeef5;
+  border-right: 1px solid #b5d3e7;
+}
+
+/* Cabeçalho e navegação */
+.navbar, .nav-footer {
+  background-color: #c6e1ef;
+  color: #1e1e1e;
+}
+
+.nav-footer {
+  border-top: 2px solid #99bcd4;
+}
+
+/* Justificar parágrafos */
+p {
+  text-align: justify;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+th, td {
+  border: 1px solid #b3cde0;
+  padding: 0.6em;
+}
+
+th {
+  background-color: #cfe7f5;
+  color: #004466;
+}
+
+/* Citações */
+blockquote {
+  border-left: 4px solid #5595c4;
+  background-color: #f0faff;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: #3a3a3a;
+}

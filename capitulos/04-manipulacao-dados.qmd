@@ -1,0 +1,52 @@
+
+# Capítulo 4 – Manipulação de Dados com R
+
+Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.
+
+---
+
+## 📂 1. Importando dados
+
+```{r}
+
+library(readxl)
+dados <- read_excel("dados/TMAX_INMET.xlsx")
+#head(dados)
+str(dados)
+
+```
+
+
+---
+
+## 🔍 2. Explorando os dados
+
+```{r}
+
+#dim(dados)
+#summary(dados)
+names(dados)
+
+```
+
+---
+
+## 📐 3. Trabalhando com Linhas e Colunas
+
+
+```{r}
+
+# Selecionar coluna pelo nome
+#dados$UF
+
+# Selecionar várias colunas por índice
+#dados[, c(1, 3)]
+
+# Selecionar linha específica
+#dados[10, ]
+
+# Célula na linha 5, coluna 3
+#dados[5, 3]
+
+```
+

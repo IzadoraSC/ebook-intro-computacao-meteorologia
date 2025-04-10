@@ -5,8 +5,11 @@ project:
 
 book:
   title: "Introdução à Computação Aplicada às Ciências Atmosféricas"
-  author: "Profa. Izadora S. de Carvalho"
+  author: "Curso de Meteorologia - UEMA, Profa. Dra. Izadora S. de Carvalho"
+  cover-image: cover-meteorologia.png
+  favicon: cover-meteorologia.png
   reader-mode: true
+  repo-url: https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia
   repo-branch: main
   repo-actions: [edit, issue]
   
@@ -16,13 +19,15 @@ book:
     - capitulos/01-introducao.qmd
     - capitulos/02-fundamentos-programacao.qmd
     - capitulos/03-estruturas-dados.qmd
+    - capitulos/04-manipulacao-dados.qmd
     
-    
+lang: pt    
 
 format:
   html:
     theme: cosmo
-    code-copy: true
-    toc: true
+    css: styles-meteorologia.css
+    code-link: true
+    callout-appearance: simple
   # pdf:
   #   documentclass: scrreprt

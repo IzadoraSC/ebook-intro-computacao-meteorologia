@@ -1,20 +1,75 @@
 # Capítulo 3 – Estruturas de Dados
 
-## ![](/imagens/fig3.png){fig-align="center"}
+## Tipos de objetos no R
+
+::: text-justify
+  Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes). 
+:::
+
+![Figura 6. Tipo de Estrutura de Dados (Objetos)](/imagens/fig3.png){fig-align="center"}
+
 
 ## Vetores
 
 Vertor: é um arranjo linear de dados
 
 ```{r}
+#Criando o vetor
 temperaturas <- c(25.2, 26.1, 27.0, 26.8)
+#Visualizando
+temperaturas
+# Verificando a classe do objeto criado
+class(temperaturas)
+# Acessando elementos específicos
 temperaturas[2]
+
 ```
 
+```{r}
+#Criando o vetor
+sensacoes <- c("Frio", "Agradável", "Quente", "Muito Quente", "Extremo")
+#Visualizando
+sensacoes
+# Verificando a classe do objeto criado
+class(sensacoes)
+
+# Acessando elementos específicos
+sensacoes[1]
+sensacoes[3]
+
+```
+
+```{r}
+#Criando o vetor
+v1 <- c("Frio", 23, "Quente", 32, "Muito Quente", 40)
+#Visualizando
+v1
+# Verificando a classe do objeto criado
+class(v1)
+
+# Acessando elementos específicos
+v1[1]
+v1[3]
+
+```
 
 ## Funções (básicas)
 
-Funções base que já existem dentro do programa R
+Funções base que já existem dentro do programa RCRAN.
+
+| Função   | O que faz                                   |
+|----------|---------------------------------------------|
+| sum()    | Soma todos os valores                       |
+| min()    | Retorna o **menor valor**                   |
+| max()    | Retorna o **maior valor**                   |
+| mean()   | Calcula a **média** dos valores             |
+| round()  | Arredonda um número para `n` casas decimais |
+| length() | Informa quantos valores há no vetor         |
+| sd()     | Calcula o desvio padrão de uma amostra      |
+
+::: {.callout-note icon="book-open" title="Você sabia?"}
+Todas essas funções fazem parte do que chamamos de "base R". Não precisam de pacotes extras para funcionar.
+:::
 
 ```{r}
 x <- 4
@@ -49,11 +104,13 @@ round(mean(temperaturas), 1)
 Crie um vetor chamado `chuvas` com os valores de precipitação (em mm) de 7 dias consecutivos.
 
 Depois:
-- Calcule a soma total de chuvas
-- Encontre o maior valor de precipitação
-- Arredonde a média com 2 casas decimais
-:::
 
+-   Calcule a soma total de chuvas
+
+-   Encontre o maior valor de precipitação
+
+-   Arredonde a média com 2 casas decimais
+:::
 
 ## Data Frames
 
@@ -69,6 +126,8 @@ dados <- data.frame(
 
 ```{r}
 ## Exemplo 02
+
+# Criando um data frame
 dados <- data.frame(
   data = as.Date('2023-01-01') + 0:6,
   temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
@@ -77,10 +136,42 @@ print(dados)
 plot(dados$data, dados$temperatura, type = "o", col = "blue")
 ```
 
-::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
-Crie um `data.frame` chamado `observacoes` com 7 dias de dados contendo: - Data - Umidade relativa (%) - Velocidade do vento (km/h)
+```{r}
+## Exemplo 03
 
-Depois: - Calcule a média da umidade - Filtre os dias com vento acima de 15 km/h
+# Criando um data frame
+
+dados <- data.frame(
+  data = as.Date("2025-03-24") + 0:4,
+  temperatura_min = c(22.1, 21.8, 22.4, 23.0, 21.5),
+  temperatura_max = c(30.2, 29.8, 31.0, 30.5, 29.7),
+  precipitacao = c(0.0, 5.2, 1.0, 0.0, 3.1)
+)
+
+# Visualizando os dados
+print(dados)
+
+# Média de temperatura máxima
+mean(dados$temperatura_max)
+
+# Filtrando os dias com chuva (precipitação > 0)
+dados_com_chuva <- dados[dados$precipitacao > 0, ]
+```
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie um `data.frame` chamado `observacoes` com 7 dias de dados contendo:
+
+-   Data
+
+-   Umidade relativa (%)
+
+-   Velocidade do vento (km/h)
+
+Depois:
+
+-   Calcule a média da umidade
+
+-   Filtre os dias com vento acima de 15 km/h
 :::
 
 ::: {.callout-note icon="book-open" title="Explore"}
@@ -121,13 +212,90 @@ Crie uma lista chamada `cidade` com os seguintes elementos: - Nome da cidade - P
 Depois, calcule a média das temperaturas dessa cidade!
 :::
 
+
+## Matrizes em R
+
+Uma **matriz** é uma estrutura bidimensional (2D) composta por **linhas e colunas**, onde todos os elementos devem ser do **mesmo tipo de dado** (geralmente numérico).
+
+---
+
+### Criando uma matriz
+
+```{r}
+# Criando uma matriz com temperaturas (3 dias, 4 horários)
+mt_temperatura <- matrix(
+  c(22.1, 24.3, 25.5, 23.0,   # Dia 1
+    21.8, 23.5, 26.2, 24.1,   # Dia 2
+    20.0, 22.4, 24.0, 23.3),  # Dia 3
+  nrow = 3,
+  ncol = 4,
+  byrow = TRUE
+)
+
+mt_temperatura
+length(mt_temperatura)
+dim(mt_temperatura)
+
+# Nomeando linhas e colunas
+rownames(mt_temperatura) <- c("Dia 1", "Dia 2", "Dia 3")
+colnames(mt_temperatura) <- c("06h", "12h", "15h", "18h")
+
+# Visualizar a matriz
+mt_temperatura
+
+#Acessando elementos da 
+# Temperatura do Dia 2 às 15h
+mt_temperatura["Dia 2", "15h"]
+
+# Todas as temperaturas do Dia 3
+mt_temperatura["Dia 3", ]
+
+# Todas as temperaturas às 12h
+mt_temperatura[, "12h"]
+
+```
+
+
+### Aplicando funções
+
+```{r}
+## Realizando operações com matriz
+
+# Média por horário
+colMeans(mt_temperatura)
+
+# Média por dia
+rowMeans(mt_temperatura)
+
+# Temperatura máxima por dia
+apply(mt_temperatura, 1, max)
+
+```
+
+### Prática
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie uma matriz com valores de umidade relativa para 5 dias e 3 horários (manhã, tarde e noite).  
+
+Em seguida, calcule:
+
+- A umidade média por horário
+
+- O valor máximo por dia
+
+- Qual o menor valor registrado na semana
+
+:::
+
+---
+
 ## Estruturas de controle
 
 **Estruturas de controle** são blocos de código que **controlam o fluxo de execução** de um programa. Ou seja, elas determinam **quais comandos serão executados**, em **que ordem** e **quantas vezes**.
 
 Elas são fundamentais porque permitem que o código:
 
--    **Tome decisões** (por exemplo: "Se estiver quente, mostre um aviso de calor");
+-   **Tome decisões** (por exemplo: "Se estiver quente, mostre um aviso de calor");
 
 -   **Repita ações** (por exemplo: "Para cada dia da semana, calcule a média de temperatura");
 
@@ -177,3 +345,57 @@ while (x <= 3) {
   x <- x + 1
 }
 ```
+
+## Funções (criadas)
+
+::: text-justify
+Além das Funções base já existem dentro do programa RCRAN, nós podemos criar nossas próprias funções para organizar e automatizar processos de análise de dados.
+
+As funções são criadas com `function().`
+
+Podemos passar quantos argumentos quiser.
+
+Pode usar `return()` ou deixar o último valor ser retornado automaticamente.
+
+`sapply()` é útil para aplicar uma função a vetores/listas.
+:::
+
+```{r}
+# Função para calcular a amplitude térmica do dia
+amplitude_termica <- function(temp_max, temp_min) {
+  return(temp_max - temp_min)
+}
+
+# Usando a função
+amplitude_termica(32.5, 21.8)  # resultado: 10.7
+```
+
+```{r}
+# Função que classifica temperaturas como "Frio", "Agradável" ou "Quente"
+
+classificar_temp <- function(temp) { 
+  if (temp < 20) {
+    return("Frio")
+  } else if (temp <= 27) {
+    return("Agradável") 
+  } else { 
+    return("Quente") 
+  }
+}
+
+# Aplicando a função a um vetor
+
+sapply(temperaturas, classificar_temp)
+```
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie uma função chamada `avaliar_precipitacao()` que receba um valor de chuva (em mm) e retorne:
+
+-   "Sem chuva" se for 0
+
+-   "Chuva leve" se for entre 0 e 5 mm
+
+-   "Chuva forte" se for acima de 5 mm
+
+Depois, aplique essa função a um vetor de precipitação com 7 dias.
+:::

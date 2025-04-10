@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../capitulos/02-fundamentos-programacao.html" rel="next">
 <link href="../index.html" rel="prev">
+<link href="../cover-meteorologia.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-542cf50e1f395a1c6267587cc8cc3ecf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -55,21 +56,22 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
 
+<link rel="stylesheet" href="styles-meteorologia.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -78,13 +80,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/01-introducao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -98,7 +100,8 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -108,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -143,13 +146,38 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capitulos/04-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#o-que-é-um-algoritmo" id="toc-o-que-é-um-algoritmo" class="nav-link active" data-scroll-target="#o-que-é-um-algoritmo"><span class="header-section-number">3.1</span> O que é um algoritmo?</a></li>
+  <li><a href="#formas-de-representar-algoritmos" id="toc-formas-de-representar-algoritmos" class="nav-link" data-scroll-target="#formas-de-representar-algoritmos"><span class="header-section-number">3.2</span> Formas de representar algoritmos</a>
+  <ul class="collapse">
+  <li><a href="#descrição-narrativa-português-estruturado" id="toc-descrição-narrativa-português-estruturado" class="nav-link" data-scroll-target="#descrição-narrativa-português-estruturado"><span class="header-section-number">3.2.1</span> 📘 1. Descrição narrativa (português estruturado)</a></li>
+  <li><a href="#fluxograma" id="toc-fluxograma" class="nav-link" data-scroll-target="#fluxograma"><span class="header-section-number">3.2.2</span> 🧭 2. Fluxograma</a></li>
+  <li><a href="#pseudocódigo-portugol" id="toc-pseudocódigo-portugol" class="nav-link" data-scroll-target="#pseudocódigo-portugol"><span class="header-section-number">3.2.3</span> 💻 3. Pseudocódigo (Portugol)</a></li>
+  </ul></li>
+  <li><a href="#exemplo-prático" id="toc-exemplo-prático" class="nav-link" data-scroll-target="#exemplo-prático"><span class="header-section-number">3.3</span> 💡 Exemplo prático</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-calcular-a-média-de-temperatura-de-3-dias" id="toc-objetivo-calcular-a-média-de-temperatura-de-3-dias" class="nav-link" data-scroll-target="#objetivo-calcular-a-média-de-temperatura-de-3-dias"><span class="header-section-number">3.3.1</span> Objetivo: Calcular a média de temperatura de 3 dias</a></li>
+  <li><a href="#descrição-narrativa" id="toc-descrição-narrativa" class="nav-link" data-scroll-target="#descrição-narrativa"><span class="header-section-number">3.3.2</span> 📘 Descrição narrativa:</a></li>
+  <li><a href="#pseudocódigo-em-portugol-visualg" id="toc-pseudocódigo-em-portugol-visualg" class="nav-link" data-scroll-target="#pseudocódigo-em-portugol-visualg"><span class="header-section-number">3.3.3</span> 💻 Pseudocódigo em Portugol (Visualg):</a></li>
+  </ul></li>
+  <li><a href="#prática-proposta" id="toc-prática-proposta" class="nav-link" data-scroll-target="#prática-proposta"><span class="header-section-number">3.4</span> ✍️ Prática proposta</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/01-introducao.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -173,15 +201,109 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mais ir além disso não é proíbido, inclusive recomendamos).</p>
+<p>Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="..\imagens/fig1.jpg" class="img-fluid figure-img" width="598"></p>
 <figcaption>Figura 1. Reflexão</figcaption>
 </figure>
 </div>
+<hr>
+<section id="o-que-é-um-algoritmo" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="o-que-é-um-algoritmo"><span class="header-section-number">3.1</span> O que é um algoritmo?</h2>
+<p>Um <strong>algoritmo</strong> é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.</p>
+<p>No contexto da Meteorologia, por exemplo, podemos ter algoritmos para:</p>
+<ul>
+<li>Calcular a média de temperatura de uma semana</li>
+<li>Verificar se um valor de precipitação indica “chuva forte”</li>
+<li>Classificar dias como quentes, amenos ou frios</li>
+</ul>
+<hr>
+</section>
+<section id="formas-de-representar-algoritmos" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="formas-de-representar-algoritmos"><span class="header-section-number">3.2</span> Formas de representar algoritmos</h2>
+<p>Existem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:</p>
+<section id="descrição-narrativa-português-estruturado" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="descrição-narrativa-português-estruturado"><span class="header-section-number">3.2.1</span> 📘 1. Descrição narrativa (português estruturado)</h3>
+<blockquote class="blockquote">
+<p>Exemplo: Calcular a média de três temperaturas:</p>
+<ul>
+<li>Leia três temperaturas</li>
+<li>Calcule a média</li>
+<li>Mostre o resultado</li>
+</ul>
+</blockquote>
+</section>
+<section id="fluxograma" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="fluxograma"><span class="header-section-number">3.2.2</span> 🧭 2. Fluxograma</h3>
+<blockquote class="blockquote">
+<p>Um fluxograma representa graficamente o algoritmo usando <strong>formas geométricas</strong> (retângulos, losangos, setas).</p>
+</blockquote>
+<p>(Sugestão: você pode usar ferramentas como <a href="https://draw.io">draw.io</a> para desenhar fluxogramas.)</p>
+</section>
+<section id="pseudocódigo-portugol" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="pseudocódigo-portugol"><span class="header-section-number">3.2.3</span> 💻 3. Pseudocódigo (Portugol)</h3>
+<blockquote class="blockquote">
+<p>Linguagem intermediária entre a linguagem natural e linguagem de programação.<br>
+Utilizaremos o <strong>Visualg</strong> para executar pseudocódigos.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="exemplo-prático" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exemplo-prático"><span class="header-section-number">3.3</span> 💡 Exemplo prático</h2>
+<section id="objetivo-calcular-a-média-de-temperatura-de-3-dias" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="objetivo-calcular-a-média-de-temperatura-de-3-dias"><span class="header-section-number">3.3.1</span> Objetivo: Calcular a média de temperatura de 3 dias</h3>
+</section>
+<section id="descrição-narrativa" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="descrição-narrativa"><span class="header-section-number">3.3.2</span> 📘 Descrição narrativa:</h3>
+<ul>
+<li>Leia três valores de temperatura</li>
+<li>Some os valores</li>
+<li>Divida a soma por 3</li>
+<li>Mostre o resultado</li>
+</ul>
+</section>
+<section id="pseudocódigo-em-portugol-visualg" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="pseudocódigo-em-portugol-visualg"><span class="header-section-number">3.3.3</span> 💻 Pseudocódigo em Portugol (Visualg):</h3>
+<pre class="portugol"><code>algoritmo "media_temperatura"
+var
+   t1, t2, t3, media: real
+inicio
+   escreva("Digite a primeira temperatura: ")
+   leia(t1)
+   escreva("Digite a segunda temperatura: ")
+   leia(t2)
+   escreva("Digite a terceira temperatura: ")
+   leia(t3)
+
+   media := (t1 + t2 + t3) / 3
+
+   escreval("A média das temperaturas é: ", media)
+fimalgoritmo</code></pre>
+<hr>
+</section>
+</section>
+<section id="prática-proposta" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="prática-proposta"><span class="header-section-number">3.4</span> ✍️ Prática proposta</h2>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Agora faça você mesmo!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Agora faça você mesmo!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Crie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,<br>
+calcule a <strong>amplitude térmica</strong> e exiba o resultado.</p>
+<p>Depois, implemente esse algoritmo no Visualg!</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -227,12 +349,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -618,4 +740,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/01-introducao.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>

@@ -1,5 +1,84 @@
 # Capítulo 1 - Introdução à computação para meteorologia
 
-Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mais ir além disso não é proíbido, inclusive recomendamos).
+Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).
 
 ![Figura 1. Reflexão](/imagens/fig1.jpg){fig-align="center" width="598"}
+---
+
+## O que é um algoritmo?
+
+Um **algoritmo** é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.
+
+No contexto da Meteorologia, por exemplo, podemos ter algoritmos para:
+
+- Calcular a média de temperatura de uma semana
+- Verificar se um valor de precipitação indica "chuva forte"
+- Classificar dias como quentes, amenos ou frios
+
+---
+
+## Formas de representar algoritmos
+
+Existem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:
+
+### 📘 1. Descrição narrativa (português estruturado)
+
+> Exemplo: Calcular a média de três temperaturas:
+>
+> - Leia três temperaturas
+> - Calcule a média
+> - Mostre o resultado
+
+### 🧭 2. Fluxograma
+
+> Um fluxograma representa graficamente o algoritmo usando **formas geométricas** (retângulos, losangos, setas).
+
+(Sugestão: você pode usar ferramentas como [draw.io](https://draw.io) para desenhar fluxogramas.)
+
+### 💻 3. Pseudocódigo (Portugol)
+
+> Linguagem intermediária entre a linguagem natural e linguagem de programação.  
+> Utilizaremos o **Visualg** para executar pseudocódigos.
+
+---
+
+## 💡 Exemplo prático
+
+### Objetivo: Calcular a média de temperatura de 3 dias
+
+### 📘 Descrição narrativa:
+- Leia três valores de temperatura
+- Some os valores
+- Divida a soma por 3
+- Mostre o resultado
+
+### 💻 Pseudocódigo em Portugol (Visualg):
+
+```portugol
+algoritmo "media_temperatura"
+var
+   t1, t2, t3, media: real
+inicio
+   escreva("Digite a primeira temperatura: ")
+   leia(t1)
+   escreva("Digite a segunda temperatura: ")
+   leia(t2)
+   escreva("Digite a terceira temperatura: ")
+   leia(t3)
+
+   media := (t1 + t2 + t3) / 3
+
+   escreval("A média das temperaturas é: ", media)
+fimalgoritmo
+```
+
+---
+
+## ✍️ Prática proposta
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,  
+calcule a **amplitude térmica** e exiba o resultado.
+
+Depois, implemente esse algoritmo no Visualg!
+:::
