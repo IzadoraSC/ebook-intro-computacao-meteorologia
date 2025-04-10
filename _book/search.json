@@ -174,7 +174,7 @@
     "href": "capitulos/03-estruturas-dados.html#tipos-de-objetos-no-r",
     "title": "\n5  Capítulo 3 – Estruturas de Dados\n",
     "section": "",
-    "text": "Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes).\n\n\n\nFigura 6. Tipo de Dados",
+    "text": "Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes).\n\n\n\nFigura 6. Tipo de Estrutura de Dados (Objetos)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 3 – Estruturas de Dados</span>"
     ]
