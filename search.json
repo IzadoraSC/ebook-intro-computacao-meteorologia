@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introdução à Computação Aplicada às Ciências Atmosféricas",
     "section": "",
-    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.\nEste produto está sendo desenvolvido utilizando Quarto books.",
+    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.\nColaboradores no desenvolvimento deste projeto:\nEste produto está sendo desenvolvido utilizando Quarto books.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apresentação</span>"
     ]
