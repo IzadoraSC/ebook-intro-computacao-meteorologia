@@ -100,11 +100,21 @@
     ]
   },
   {
-    "objectID": "capitulos/01-introducao.html#exemplo-prático",
-    "href": "capitulos/01-introducao.html#exemplo-prático",
+    "objectID": "capitulos/01-introducao.html#praticando-a-construção-de-algoritmos-visualg",
+    "href": "capitulos/01-introducao.html#praticando-a-construção-de-algoritmos-visualg",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.3 💡 Exemplo prático",
-    "text": "3.3 💡 Exemplo prático\n\n3.3.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.3.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.3.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "section": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)",
+    "text": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)\n\n3.3.1 📘 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n3.3.2 📘 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma := n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#outros-exemplos",
+    "href": "capitulos/01-introducao.html#outros-exemplos",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "3.4 💡 Outros exemplos",
+    "text": "3.4 💡 Outros exemplos\n\n3.4.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.4.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.4.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -113,8 +123,8 @@
     "objectID": "capitulos/01-introducao.html#prática-proposta",
     "href": "capitulos/01-introducao.html#prática-proposta",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.4 ✍️ Prática proposta",
-    "text": "3.4 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
+    "section": "3.5 ✍️ Prática proposta",
+    "text": "3.5 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
