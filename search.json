@@ -104,7 +104,7 @@
     "href": "capitulos/01-introducao.html#praticando-a-construção-de-algoritmos-visualg",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
     "section": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)",
-    "text": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)\n\n3.3.1 📘 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n3.3.2 📘 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma := n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
+    "text": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)\n\n3.3.1 📘 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n3.3.2 📘 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma &lt;- n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -114,7 +114,7 @@
     "href": "capitulos/01-introducao.html#outros-exemplos",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
     "section": "3.4 💡 Outros exemplos",
-    "text": "3.4 💡 Outros exemplos\n\n3.4.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.4.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.4.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "text": "3.4 💡 Outros exemplos\n\n3.4.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.4.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.4.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media &lt;- (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -287,6 +287,86 @@
     "text": "6.3 📐 3. Trabalhando com Linhas e Colunas\n\n# Selecionar coluna pelo nome\n#dados$UF\n\n# Selecionar várias colunas por índice\n#dados[, c(1, 3)]\n\n# Selecionar linha específica\n#dados[10, ]\n\n# Célula na linha 5, coluna 3\n#dados[5, 3]",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html",
+    "href": "capitulos/06-exercicios-fixacao.html",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "",
+    "text": "7.1 🧱 1. Fundamentos da linguagem R\nEste capítulo reúne exercícios práticos para testar seus conhecimentos adquiridos ao longo dos capítulos anteriores. Leia com atenção cada enunciado, analise os trechos de código e escreva suas respostas em um ambiente de programação R.\n1.1 Crie três objetos com os seguintes valores: - Um número inteiro - Um número decimal - Uma palavra (texto)\nDepois, use a função typeof() para verificar o tipo de cada um.\n1.2 O que será exibido ao executar o seguinte código?\n1.3 Qual o resultado da seguinte operação?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#fundamentos-da-linguagem-r",
+    "href": "capitulos/06-exercicios-fixacao.html#fundamentos-da-linguagem-r",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "",
+    "text": "x &lt;- \"30.5\"\nclass(x)\n\nnumeric (b) character (c) double (d) logical\n\n\na &lt;- 5\nb &lt;- 2\na ^ b",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#instalação-e-carregamento-de-pacotes",
+    "href": "capitulos/06-exercicios-fixacao.html#instalação-e-carregamento-de-pacotes",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.2 📦 2. Instalação e carregamento de pacotes",
+    "text": "7.2 📦 2. Instalação e carregamento de pacotes\n2.1 Qual a função do seguinte comando?\ninstall.packages(\"ggplot2\")\n2.2 O código abaixo irá funcionar corretamente? Justifique sua resposta.\ninstall.packages(\"dados\")\nlibrary(DADOS)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#estruturas-de-dados",
+    "href": "capitulos/06-exercicios-fixacao.html#estruturas-de-dados",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.3 📐 3. Estruturas de Dados",
+    "text": "7.3 📐 3. Estruturas de Dados\n3.1 Crie: - Um vetor com os nomes de 5 cidades - Uma matriz com temperaturas registradas em 3 dias e 3 horários - Um data frame com dados de umidade relativa e temperatura média.\n3.2 O que acontece ao executar este código?\nx &lt;- c(3, 5, 7)\nx[4]\n3.3 Complete o código abaixo para acessar a 2ª coluna da matriz:\nmatriz &lt;- matrix(1:9, nrow = 3)\n# ___",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#estruturas-de-controle",
+    "href": "capitulos/06-exercicios-fixacao.html#estruturas-de-controle",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.4 🔁 4. Estruturas de Controle",
+    "text": "7.4 🔁 4. Estruturas de Controle\n4.1 O que será impresso pelo seguinte código?\nx &lt;- 10\nif (x &gt; 5) {\n  print(\"Maior que 5\")\n} else {\n  print(\"Menor ou igual a 5\")\n}\n4.2 Crie um laço for que percorra os números de 1 a 5 e imprima cada número elevado ao quadrado.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#funções",
+    "href": "capitulos/06-exercicios-fixacao.html#funções",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.5 🔧 5. Funções",
+    "text": "7.5 🔧 5. Funções\n5.1 Escreva uma função chamada soma_quadrados() que receba dois números como entrada e retorne a soma dos quadrados deles.\n5.2 Complete o código abaixo para criar uma função que calcule a amplitude térmica do dia:\namplitude_termica &lt;- function(tmax, tmin) {\n  # ________\n}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#manipulação-e-análise-de-dados",
+    "href": "capitulos/06-exercicios-fixacao.html#manipulação-e-análise-de-dados",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.6 📊 6. Manipulação e análise de dados",
+    "text": "7.6 📊 6. Manipulação e análise de dados\n6.1 O que faz a função read_csv()? Qual a diferença em relação ao read.csv()?\n6.2 Dado o seguinte trecho de código:\nlibrary(dplyr)\ndados &lt;- tibble::tibble(\n  dia = c(\"Seg\", \"Ter\", \"Qua\"),\n  temp = c(28.4, 30.1, 27.9)\n)\n\ndados %&gt;%\n  filter(temp &gt; 28)\nO que será retornado?\n6.3 Crie um pequeno conjunto de dados com 5 dias e temperaturas. Depois, use mutate() para criar uma coluna com a classificação: - até 28°C = “Agradável” - acima de 28°C = “Quente”",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#desafio-final",
+    "href": "capitulos/06-exercicios-fixacao.html#desafio-final",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.7 ✍️ Desafio Final",
+    "text": "7.7 ✍️ Desafio Final\nCrie um script que: - Leia um vetor de temperaturas - Calcule a média - Classifique os dias como “quente” se estiverem acima da média - Imprima a lista de classificações",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
     ]
   }
 ]
