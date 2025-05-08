@@ -3,11 +3,10 @@
 ## Tipos de objetos no R
 
 ::: text-justify
-  Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes). 
+Os tipos mais comuns de tipos de objeto são: vetores (vector), data frames (tabelas), listas (list), matrizes (matrix), e array (conjunto de matrizes).
 :::
 
 ![Figura 6. Tipo de Estrutura de Dados (Objetos)](/imagens/fig3.png){fig-align="center"}
-
 
 ## Vetores
 
@@ -212,12 +211,11 @@ Crie uma lista chamada `cidade` com os seguintes elementos: - Nome da cidade - P
 Depois, calcule a média das temperaturas dessa cidade!
 :::
 
-
 ## Matrizes em R
 
 Uma **matriz** é uma estrutura bidimensional (2D) composta por **linhas e colunas**, onde todos os elementos devem ser do **mesmo tipo de dado** (geralmente numérico).
 
----
+------------------------------------------------------------------------
 
 ### Criando uma matriz
 
@@ -255,7 +253,6 @@ mt_temperatura[, "12h"]
 
 ```
 
-
 ### Aplicando funções
 
 ```{r}
@@ -275,19 +272,18 @@ apply(mt_temperatura, 1, max)
 ### Prática
 
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
-Crie uma matriz com valores de umidade relativa para 5 dias e 3 horários (manhã, tarde e noite).  
+Crie uma matriz com valores de umidade relativa para 5 dias e 3 horários (manhã, tarde e noite).
 
 Em seguida, calcule:
 
-- A umidade média por horário
+-   A umidade média por horário
 
-- O valor máximo por dia
+-   O valor máximo por dia
 
-- Qual o menor valor registrado na semana
-
+-   Qual o menor valor registrado na semana
 :::
 
----
+------------------------------------------------------------------------
 
 ## Estruturas de controle
 

@@ -42,7 +42,38 @@ Existem diversas formas de representar algoritmos antes de escrevê-los em uma l
 
 ---
 
-## 💡 Exemplo prático
+## ✏️ Praticando a construção de algoritmos (Visualg)
+
+### 📘 Exemplo 1 – Exibir uma mensagem
+
+```portugol
+algoritmo "exibir_mensagem"
+inicio
+   escreval("Bem-vindo à Meteorologia!")
+fimalgoritmo
+```
+
+### 📘 Exemplo 2 – Somar dois números
+
+```portugol
+algoritmo "soma_simples"
+var
+   n1, n2, soma: inteiro
+inicio
+   escreva("Digite o primeiro número: ")
+   leia(n1)
+
+   escreva("Digite o segundo número: ")
+   leia(n2)
+
+   soma <- n1 + n2
+
+   escreval("A soma é: ", soma)
+fimalgoritmo
+```
+---
+
+## 💡 Outros exemplos
 
 ### Objetivo: Calcular a média de temperatura de 3 dias
 
@@ -66,7 +97,7 @@ inicio
    escreva("Digite a terceira temperatura: ")
    leia(t3)
 
-   media := (t1 + t2 + t3) / 3
+   media <- (t1 + t2 + t3) / 3
 
    escreval("A média das temperaturas é: ", media)
 fimalgoritmo

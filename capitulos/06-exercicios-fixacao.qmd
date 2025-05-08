@@ -1,0 +1,125 @@
+# Capítulo 6 – Exercícios de Fixação
+
+Este capítulo reúne exercícios práticos para testar seus conhecimentos adquiridos ao longo dos capítulos anteriores. Leia com atenção cada enunciado, analise os trechos de código e escreva suas respostas em um ambiente de programação R.
+
+------------------------------------------------------------------------
+
+## 🧱 1. Fundamentos da linguagem R
+
+**1.1** Crie três objetos com os seguintes valores: - Um número inteiro - Um número decimal - Uma palavra (texto)
+
+Depois, use a função `class()` para verificar o tipo de cada um.
+
+**1.2** O que será exibido ao executar o seguinte código?
+
+``` r
+x <- "30.5"
+class(x)
+```
+
+(a) numeric (b) character (c) double (d) logical
+
+**1.3** Qual o resultado da seguinte operação?
+
+``` r
+a <- 5
+b <- 2
+a ^ b
+```
+
+------------------------------------------------------------------------
+
+## 📦 2. Instalação e carregamento de pacotes
+
+**2.1** Qual a função do seguinte comando?
+
+``` r
+install.packages("ggplot2")
+```
+
+**2.2** O código abaixo irá funcionar corretamente? Justifique sua resposta.
+
+``` r
+install.packages("dados")
+library(DADOS)
+```
+
+------------------------------------------------------------------------
+
+## 📐 3. Estruturas de Dados
+
+**3.1** Crie: - Um vetor com os nomes de 5 cidades - Uma matriz com temperaturas registradas em 3 dias e 3 horários - Um data frame com dados de umidade relativa e temperatura média.
+
+**3.2** O que acontece ao executar este código?
+
+``` r
+x <- c(3, 5, 7)
+x[4]
+```
+
+**3.3** Complete o código abaixo para acessar a 2ª coluna da matriz:
+
+``` r
+matriz <- matrix(1:9, nrow = 3)
+# ___
+```
+
+------------------------------------------------------------------------
+
+## 🔁 4. Estruturas de Controle
+
+**4.1** O que será impresso pelo seguinte código?
+
+``` r
+x <- 10
+if (x > 5) {
+  print("Maior que 5")
+} else {
+  print("Menor ou igual a 5")
+}
+```
+
+**4.2** Crie um laço `for` que percorra os números de 1 a 5 e imprima cada número elevado ao quadrado.
+
+------------------------------------------------------------------------
+
+## 🔧 5. Funções
+
+**5.1** Escreva uma função chamada `soma_quadrados()` que receba dois números como entrada e retorne a soma dos quadrados deles.
+
+**5.2** Complete o código abaixo para criar uma função que calcule a amplitude térmica do dia:
+
+``` r
+amplitude_termica <- function(tmax, tmin) {
+  # ________
+}
+```
+
+------------------------------------------------------------------------
+
+## 📊 6. Manipulação e análise de dados
+
+**6.1** O que faz a função `read_csv()`? Qual a diferença em relação ao `read.csv()`?
+
+**6.2** Dado o seguinte trecho de código:
+
+``` r
+library(dplyr)
+dados <- tibble::tibble(
+  dia = c("Seg", "Ter", "Qua"),
+  temp = c(28.4, 30.1, 27.9)
+)
+
+dados %>%
+  filter(temp > 28)
+```
+
+O que será retornado?
+
+**6.3** Crie um pequeno conjunto de dados com 5 dias e temperaturas. Depois, use `mutate()` para criar uma coluna com a classificação: - até 28°C = "Agradável" - acima de 28°C = "Quente"
+
+------------------------------------------------------------------------
+
+## ✍️ Desafio
+
+Crie um script que: - Leia um vetor de temperaturas - Calcule a média - Classifique os dias como “quente” se estiverem acima da média - Imprima a lista de classificações

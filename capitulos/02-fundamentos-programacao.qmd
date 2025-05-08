@@ -1,6 +1,6 @@
 # Capítulo 2 – Fundamentos de Programação
 
-1.  **Introdução**
+##Introdução
 
 ::: text-justify
 Ao longo da disciplina vamos trabalhar com duas linguagens de programação: R e Python. Porém , vamos abordar nesta primeira versão do ebook somente a linguagem R
@@ -14,25 +14,25 @@ Para baixar o **RStudio** acesse o [Link](https://posit.co/download/rstudio-desk
 Para baixar o **RTools** acesse o [Link](https://cran.r-project.org/bin/windows/Rtools/)
 :::
 
-2.  **Ambientes de programação**
+## Ambientes de programação
 
 ::: text-justify
 São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).
 
-Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)
+Neste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes ([VSCode](https://code.visualstudio.com), [Positron](https://positron.posit.co), [Posit Cloud](https://posit.cloud), etc.)
 :::
 
-3.  Ambiente RStudio
+## Ambiente RStudio
 
 ![Figura 2. Ambiente do RStudio](/imagens/fig2.png){fig-align="center"}
 
-4.  **Começando**
+## Começando
 
 -   Configurando ambiente de trabalho: Tools -\> Global Options.
 
 -   Buscar ajuda: `help()`, `??sum`, `help.search("nome-do-pacote")`, etc.
 
-5.  **Alguns símbolos e comandos**
+## Alguns símbolos e comandos
 
     | Ação                                                      | Comando  |
     |-----------------------------------------------------------|----------|
@@ -72,7 +72,7 @@ A definição do diretório de trabalho é uma etapa opcional, mas que pode econ
 
 ## Variáveis, Tipos de Dados e Operadores
 
-1.  **Variáveis**
+###  Variáveis
 
 ::: text-justify
 Variável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.
@@ -82,7 +82,7 @@ Os dados são armazenados temporariamente em variáveis para que sejam processad
 
 ![Figura 3. Variáveis](/imagens/fig2-1.png){fig-align="center"}
 
-2.  **Tipos de dados**
+###Tipos de dados
 
 ::: text-justify
 Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.
@@ -102,7 +102,7 @@ Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles 
 
 ![Figura 4. Tipo de Dados](/imagens/fig2-2.png){fig-align="center"}
 
-3.  **Objetos**
+###Objetos
 
     Trabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.
 
@@ -119,7 +119,7 @@ Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles 
     | list      | Combina diferentes tipos num mesmo objeto |
     | function  | Comandos                                  |
 
-4.  **Operadores**
+###Operadores
 
 ::: text-justify
 Chamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.
@@ -129,7 +129,7 @@ Denominados expressão lógica aquela cujo operadores são lógicos ou relaciona
 
 ![Figura 5. Operadores no R (Paradis, 2005, p.25)](/imagens/fig2-3.png){fig-align="center"}
 
-5.  **Atalhos**
+##Atalhos
 
 | Teclas                 |                Descrição                |
 |:-----------------------|:---------------------------------------:|
@@ -182,7 +182,7 @@ Você pode se basear no exemplo acima.
 
 ## Pacotes
 
-1.  **Pacotes**
+### Pacotes
 
 ::: text-justify
 A linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).

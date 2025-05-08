@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introdução à Computação Aplicada às Ciências Atmosféricas",
     "section": "",
-    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.\nEste produto está sendo desenvolvido utilizando Quarto books.",
+    "text": "1 Apresentação\nEste é um material didático aberto desenvolvido para apoiar o ensino da disciplina Introdução à Computação Aplicada às Ciências Atmosféricas, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.\nO objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.\nColaboradores no desenvolvimento deste projeto:\nEste produto está sendo desenvolvido utilizando Quarto books.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apresentação</span>"
     ]
@@ -100,11 +100,21 @@
     ]
   },
   {
-    "objectID": "capitulos/01-introducao.html#exemplo-prático",
-    "href": "capitulos/01-introducao.html#exemplo-prático",
+    "objectID": "capitulos/01-introducao.html#praticando-a-construção-de-algoritmos-visualg",
+    "href": "capitulos/01-introducao.html#praticando-a-construção-de-algoritmos-visualg",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.3 💡 Exemplo prático",
-    "text": "3.3 💡 Exemplo prático\n\n3.3.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.3.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.3.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media := (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "section": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)",
+    "text": "3.3 ✏️ Praticando a construção de algoritmos (Visualg)\n\n3.3.1 📘 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n3.3.2 📘 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma &lt;- n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/01-introducao.html#outros-exemplos",
+    "href": "capitulos/01-introducao.html#outros-exemplos",
+    "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
+    "section": "3.4 💡 Outros exemplos",
+    "text": "3.4 💡 Outros exemplos\n\n3.4.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n3.4.2 📘 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n3.4.3 💻 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media &lt;- (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -113,8 +123,8 @@
     "objectID": "capitulos/01-introducao.html#prática-proposta",
     "href": "capitulos/01-introducao.html#prática-proposta",
     "title": "3  Capítulo 1 - Introdução à computação para meteorologia",
-    "section": "3.4 ✍️ Prática proposta",
-    "text": "3.4 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
+    "section": "3.5 ✍️ Prática proposta",
+    "text": "3.5 ✍️ Prática proposta\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 1 - Introdução à computação para meteorologia</span>"
     ]
@@ -124,7 +134,47 @@
     "href": "capitulos/02-fundamentos-programacao.html",
     "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
     "section": "",
-    "text": "4.1 Criando Projeto No RSTUDIO (.RPROJ)\n# A função getwd() pode ser utilizada para verificar o diretório de trabalho atual.\n#getwd() \n\n# A função setwd()  pode ser utilizada para mudar o diretório de trabalho. \n#setwd() \n## Ex.: setwd('C:/Users/Documentos/R')\n\n## Nota: Na função `setwd()`, devemos usar a barra oblíqua (`/`) para definir o caminho.",
+    "text": "4.1 Ambientes de programação\n##Introdução",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#ambientes-de-programação",
+    "href": "capitulos/02-fundamentos-programacao.html#ambientes-de-programação",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "",
+    "text": "São plataformas para desenvolver os trabalhos/projetos utilizando linguagem de programação (algumas de acesso pela internet outras instaladas diretamente na máquina (computador).\nNeste material vamos utilizar o RStudio, contudo, você pode explorar e utilizar outros ambientes (VSCode, Positron, Posit Cloud, etc.)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#ambiente-rstudio",
+    "href": "capitulos/02-fundamentos-programacao.html#ambiente-rstudio",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "\n4.2 Ambiente RStudio",
+    "text": "4.2 Ambiente RStudio\n\n\nFigura 2. Ambiente do RStudio",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#começando",
+    "href": "capitulos/02-fundamentos-programacao.html#começando",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "\n4.3 Começando",
+    "text": "4.3 Começando\n\nConfigurando ambiente de trabalho: Tools -&gt; Global Options.\nBuscar ajuda: help(), ??sum, help.search(\"nome-do-pacote\"), etc.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/02-fundamentos-programacao.html#alguns-símbolos-e-comandos",
+    "href": "capitulos/02-fundamentos-programacao.html#alguns-símbolos-e-comandos",
+    "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
+    "section": "\n4.4 Alguns símbolos e comandos",
+    "text": "4.4 Alguns símbolos e comandos\n| Ação                                                      | Comando  |\n|-----------------------------------------------------------|----------|\n| Faz com que o R ignore o que será digitado após o comando | \\#       |\n| Separa dois comandos numa mesma linha                     | ;        |\n| Dado ausente                                              | NA       |\n| Sai do programa                                           | q()      |\n| Lista todos os objetos na sessão atual do R               | ls()     |\n| Remove um objeto. Ex.: x                                  | rm(x)    |\n| Remove dois objetos. Ex.: x e y                           | rm(x, y) |\n| Concatenar valores (criar vetores)                        | c()      |\n| Atribuição de um objeto                                   | -\\&gt;      |",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -133,8 +183,8 @@
     "objectID": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
     "href": "capitulos/02-fundamentos-programacao.html#criando-projeto-no-rstudio-.rproj",
     "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
-    "section": "",
-    "text": "Trabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.\nO diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.\nA definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.",
+    "section": "\n4.5 Criando Projeto No RSTUDIO (.RPROJ)",
+    "text": "4.5 Criando Projeto No RSTUDIO (.RPROJ)\n\nTrabalhar com programação exige um nível de organização, que é importante para manter a eficiência e reprodutibilidade. No R, existem algumas maneiras de aumentar esse nível de organização, como Rprojects e controle do diretório de trabalho.\nO diretório de trabalho é, em suma, a pasta onde o R vai procurar os arquivos na hora de ler informações e vai gravar os arquivos na hora de salvar informações.\nA definição do diretório de trabalho é uma etapa opcional, mas que pode economizar muito tempo no processo de análise de dados.\n\n\n# A função getwd() pode ser utilizada para verificar o diretório de trabalho atual.\n#getwd() \n\n# A função setwd()  pode ser utilizada para mudar o diretório de trabalho. \n#setwd() \n## Ex.: setwd('C:/Users/Documentos/R')\n\n## Nota: Na função `setwd()`, devemos usar a barra oblíqua (`/`) para definir o caminho.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -143,8 +193,8 @@
     "objectID": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
     "href": "capitulos/02-fundamentos-programacao.html#variáveis-tipos-de-dados-e-operadores",
     "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
-    "section": "\n4.2 Variáveis, Tipos de Dados e Operadores",
-    "text": "4.2 Variáveis, Tipos de Dados e Operadores\n\nVariáveis\n\n\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\n\n\n\nFigura 3. Variáveis\n\n\nTipos de dados\n\n\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\n\nTipos de dados (primitivos):\n-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\n\n-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\\&gt; ponto) (positivos ou negativos);\n\n-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\\&gt; TRUE e FALSE. Também chamados de operadores lógicos;\n\n-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\n\nFigura 4. Tipo de Dados\n\n\n\nObjetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\nTipos de objetos no R:\n\n\nTipo\nDescrição\n\n\n\ncharacter\nTextos ou caracteres\n\n\nnumeric\nNúmeros inteiros ou reais\n\n\nlogical\nVerdadeiro ou falso (TRUE/FALSE)\n\n\ncomplex\nNúmeros complexos\n\n\nlist\nCombina diferentes tipos num mesmo objeto\n\n\nfunction\nComandos\n\n\n\n\nOperadores\n\n\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\n\n\n\nFigura 5. Operadores no R (Paradis, 2005, p.25)\n\n\nAtalhos\n\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\n\nAumenta a letra da interface do RStudio\n\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\n\nCrtl + ENTER\n\nExecuta uma linha de código\n\n\n\nCrtl + C\n\nComenta um ou mais linhas do Script\n\n\n\nCrtl + Shift + R\n\nCria uma seção no Script\n\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\nCrtl + Shift + N\n\nCriar um novo arquivo Script\n\n\n\n\n4.2.1 Exemplos:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n#Conferindo o tipo de cada objeto:\nclass(nome)\n\n[1] \"character\"\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.\n\n\n\n4.2.2 Outros comandos importantes:\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n##Remover objetos\n#remove(nome_do_objeto)\n#rm(nome_do_objeto)\n\n##Verificar objetos criado\n#ls()\n\n##Verificando diretório (pasta do computador) do seu projeto\n#getwd()",
+    "section": "\n4.6 Variáveis, Tipos de Dados e Operadores",
+    "text": "4.6 Variáveis, Tipos de Dados e Operadores\n\n4.6.1 Variáveis\n\nVariável: é o elemento que possuí nome e tipo, e guarda dentro de si dados ou informações.\nOs dados são armazenados temporariamente em variáveis para que sejam processados de acordo com as especificações do algoritmo.\n\n\n\nFigura 3. Variáveis\n\n###Tipos de dados\n\nOs dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.\n\nTipos de dados (primitivos):\n-   INT ou número inteiro: valores numéricos inteiros (positivos ou negativos);\n\n-   FLOAT ou o chamado “ponto flutuante”: valores numéricos com casas após a vírgula (obs: em linguagem de programação -\\&gt; ponto) (positivos ou negativos);\n\n-   BOOLEAN ou booleanos: representado apenas por dois valores, “verdadeiro” e “falso” (obs: em linguagem de programação -\\&gt; TRUE e FALSE. Também chamados de operadores lógicos;\n\n-   TEXT: sequências ou cadeias de caracteres, utilizados para manipular textos e/ou outros tipos de dados não numéricos ou booleanos, como hashes de criptografia.\n\n\nFigura 4. Tipo de Dados\n\n###Objetos\nTrabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.\n\nUm objeto é qualquer coisa que pode ser atribuída a uma variável.\n\n*Tipos de objetos no R:*\n\n| Tipo      | Descrição                                 |\n|-----------|-------------------------------------------|\n| character | Textos ou caracteres                      |\n| numeric   | Números inteiros ou reais                 |\n| logical   | Verdadeiro ou falso (TRUE/FALSE)          |\n| complex   | Números complexos                         |\n| list      | Combina diferentes tipos num mesmo objeto |\n| function  | Comandos                                  |\n###Operadores\n\nChamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.\nDenominados expressão lógica aquela cujo operadores são lógicos ou relacionais e cujos operandos são realações ou variávies ou constantes do tipo lógico.\n\n\n\nFigura 5. Operadores no R (Paradis, 2005, p.25)\n\n##Atalhos\n\n\nTeclas\nDescrição\n\n\n\n\nCrtl + +\n\nAumenta a letra da interface do RStudio\n\n\n\nCrtl + -\nDiminui a letra da interface do RStudio\n\n\n\nCrtl + ENTER\n\nExecuta uma linha de código\n\n\n\nCrtl + C\n\nComenta um ou mais linhas do Script\n\n\n\nCrtl + Shift + R\n\nCria uma seção no Script\n\n\n\nAlt + -\nAdiciona o símbolo de atribuição -&gt;\n\n\n\n\nCrtl + Shift + N\n\nCriar um novo arquivo Script\n\n\n\n4.6.2 Exemplos:\n\nnome &lt;- \"Maria\"\nidade &lt;- 21\ntemperatura &lt;- 27.5\nchuva &lt;- TRUE\n\n#Conferindo o tipo de cada objeto:\nclass(nome)\n\n[1] \"character\"\n\n\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nTente criar objetos com valores diferentes.\nDepois, use o print() para imprimir os objetos no console.\nVocê pode se basear no exemplo acima.\n\n\n\n4.6.3 Outros comandos importantes:\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n##Remover objetos\n#remove(nome_do_objeto)\n#rm(nome_do_objeto)\n\n##Verificar objetos criado\n#ls()\n\n##Verificando diretório (pasta do computador) do seu projeto\n#getwd()",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -153,8 +203,8 @@
     "objectID": "capitulos/02-fundamentos-programacao.html#pacotes",
     "href": "capitulos/02-fundamentos-programacao.html#pacotes",
     "title": "\n4  Capítulo 2 – Fundamentos de Programação\n",
-    "section": "\n4.3 Pacotes",
-    "text": "4.3 Pacotes\n\nPacotes\n\n\nA linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).\nEsses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network (CRAN R).\nAlém dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.\nPara instalar um pacote do R, podemos usar a função install.packages(\"nome_do_pacote\").\n\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n#install.packages(\"tidyverse\")  #linha executável\n#install.packages(\"readxl\")   #linha executável\n#install.packages(\"writexl\")   #linha executável\n\n#install.packages(\"dados\")   #linha executável\n#install.packages(\"openair\")   #linha executável\n\n##Para instalar mais de um pacote com um comando:\n\n#install.packages(c(\"ggplot2\", \"dplyr\", \"tidyr\"))   #linha executável\n\n\nApós a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).\n\n\n#library(tidyverse)   #linha executável\n#library(readxl)   #linha executável\n#library(writexl)   #linha executável\n\n#require(dados)   #outra função para carregar\n\n#search()   # Retorna todos os pacotes carregados.\n\n#ls(\"package:readxl\")   # Lista os comandos do pacote.\n\n#tidyverse_packages()   # Lista os pacotes pertencentes ao projeto.\n\n##Para carregar mais de um pacote com um comando:\n#library(c(\"ggplot2\", \"dplyr\", \"tidyr\"))",
+    "section": "\n4.7 Pacotes",
+    "text": "4.7 Pacotes\n\n4.7.1 Pacotes\n\nA linguagem R é composta por um conjunto de pacotes que oferecem as funcionalidades básicas da linguagem. Alguns desses pacotes são base (funções de uso geral) e stats (funções para análises e operações estatísticas).\nEsses pacotes fazem parte da instalação básica do R e estão disponíveis através do Comprehensive R Archive Network (CRAN R).\nAlém dos pacotes da base do R, podemos instalar pacotes (packages) com funcionalidades específicas criadas por colaboradores. A grande maioria desses pacotes também estão disponíveis através do CRAN R, mas alguns estão disponíveis em outras plataformas, como o GitHub.\nPara instalar um pacote do R, podemos usar a função install.packages(\"nome_do_pacote\").\n\n\n##ATENÇÃO: remova '#' para tornar a linha executável\n\n#install.packages(\"tidyverse\")  #linha executável\n#install.packages(\"readxl\")   #linha executável\n#install.packages(\"writexl\")   #linha executável\n\n#install.packages(\"dados\")   #linha executável\n#install.packages(\"openair\")   #linha executável\n\n##Para instalar mais de um pacote com um comando:\n\n#install.packages(c(\"ggplot2\", \"dplyr\", \"tidyr\"))   #linha executável\n\n\nApós a instalação, o pacote deve ser carregado. Podemos usar a função library(nome_do_pacote) ou require(nome_do_pacote).\n\n\n#library(tidyverse)   #linha executável\n#library(readxl)   #linha executável\n#library(writexl)   #linha executável\n\n#require(dados)   #outra função para carregar\n\n#search()   # Retorna todos os pacotes carregados.\n\n#ls(\"package:readxl\")   # Lista os comandos do pacote.\n\n#tidyverse_packages()   # Lista os pacotes pertencentes ao projeto.\n\n##Para carregar mais de um pacote com um comando:\n#library(c(\"ggplot2\", \"dplyr\", \"tidyr\"))",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 2 – Fundamentos de Programação</span>"
     ]
@@ -254,7 +304,7 @@
     "href": "capitulos/04-manipulacao-dados.html",
     "title": "\n6  Capítulo 4 – Manipulação de Dados com R\n",
     "section": "",
-    "text": "6.1 📂 1. Importando dados\nNeste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.\nlibrary(readxl)\n\nWarning: package 'readxl' was built under R version 4.2.3\n\ndados &lt;- read_excel(\"dados/TMAX_INMET.xlsx\")\n#head(dados)\nstr(dados)\n\ntibble [190 × 16] (S3: tbl_df/tbl/data.frame)\n $ Código         : num [1:190] 82989 83249 82353 83007 82970 ...\n $ Nome da Estação: chr [1:190] \"AGUA BRANCA\" \"ALAGOINHAS\" \"ALTAMIRA\" \"ALTO DA BOA VISTA\" ...\n $ UF             : chr [1:190] \"AL\" \"BA\" \"PA\" \"RJ\" ...\n $ Janeiro        : num [1:190] 31.1 33.1 31.6 30.2 32 30.6 33.7 31.9 30.8 28.3 ...\n $ Fevereiro      : num [1:190] NA 33 31.2 30.6 32 30.8 34.7 32.1 31 28.8 ...\n $ Março          : num [1:190] 30.7 33.1 31.3 29.1 32.2 30.9 33.7 32.5 31 28.1 ...\n $ Abril          : num [1:190] 29.5 31.1 31.6 27.5 32.7 30.4 32.6 33 31.5 27.8 ...\n $ Maio           : num [1:190] 27.2 29.2 32.1 25 33.2 29.6 30.9 32.5 32.2 26 ...\n $ Junho          : num [1:190] 25.1 27.7 32.9 24.3 33.3 28.6 29.8 32.5 33 25.3 ...\n $ Julho          : num [1:190] 24.2 27.2 NA 24.1 33.8 27.9 29.6 33.1 33.8 25.5 ...\n $ Agosto         : num [1:190] 25.2 27.4 34.5 24.6 35.3 27.9 31 35.4 35.1 27.6 ...\n $ Setembro       : num [1:190] 27.6 28.8 34.8 25.2 36.7 28.4 32.8 36.5 34.8 29 ...\n $ Outubro        : num [1:190] 30 30.6 34.6 26.3 35.8 29.2 34 35.4 32.9 29.4 ...\n $ Novembro       : num [1:190] 31.1 31.9 34 26.8 33.5 29.8 32.3 33 31.6 27.9 ...\n $ Dezembro       : num [1:190] 31.5 32.9 32.9 29.1 32.4 30.2 32.8 32.2 31.1 28.1 ...\n $ Ano            : num [1:190] NA 30.5 NA 26.9 33.6 29.5 32.3 33.3 32.4 27.7 ...",
+    "text": "6.1 📂 1. Importando dados\nNeste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.\nlibrary(readxl)\ndados &lt;- read_excel(\"dados/TMAX_INMET.xlsx\")\n#head(dados)\nstr(dados)\n\ntibble [190 × 16] (S3: tbl_df/tbl/data.frame)\n $ Código         : num [1:190] 82989 83249 82353 83007 82970 ...\n $ Nome da Estação: chr [1:190] \"AGUA BRANCA\" \"ALAGOINHAS\" \"ALTAMIRA\" \"ALTO DA BOA VISTA\" ...\n $ UF             : chr [1:190] \"AL\" \"BA\" \"PA\" \"RJ\" ...\n $ Janeiro        : num [1:190] 31.1 33.1 31.6 30.2 32 30.6 33.7 31.9 30.8 28.3 ...\n $ Fevereiro      : num [1:190] NA 33 31.2 30.6 32 30.8 34.7 32.1 31 28.8 ...\n $ Março          : num [1:190] 30.7 33.1 31.3 29.1 32.2 30.9 33.7 32.5 31 28.1 ...\n $ Abril          : num [1:190] 29.5 31.1 31.6 27.5 32.7 30.4 32.6 33 31.5 27.8 ...\n $ Maio           : num [1:190] 27.2 29.2 32.1 25 33.2 29.6 30.9 32.5 32.2 26 ...\n $ Junho          : num [1:190] 25.1 27.7 32.9 24.3 33.3 28.6 29.8 32.5 33 25.3 ...\n $ Julho          : num [1:190] 24.2 27.2 NA 24.1 33.8 27.9 29.6 33.1 33.8 25.5 ...\n $ Agosto         : num [1:190] 25.2 27.4 34.5 24.6 35.3 27.9 31 35.4 35.1 27.6 ...\n $ Setembro       : num [1:190] 27.6 28.8 34.8 25.2 36.7 28.4 32.8 36.5 34.8 29 ...\n $ Outubro        : num [1:190] 30 30.6 34.6 26.3 35.8 29.2 34 35.4 32.9 29.4 ...\n $ Novembro       : num [1:190] 31.1 31.9 34 26.8 33.5 29.8 32.3 33 31.6 27.9 ...\n $ Dezembro       : num [1:190] 31.5 32.9 32.9 29.1 32.4 30.2 32.8 32.2 31.1 28.1 ...\n $ Ano            : num [1:190] NA 30.5 NA 26.9 33.6 29.5 32.3 33.3 32.4 27.7 ...",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
     ]
@@ -277,6 +327,86 @@
     "text": "6.3 📐 3. Trabalhando com Linhas e Colunas\n\n# Selecionar coluna pelo nome\n#dados$UF\n\n# Selecionar várias colunas por índice\n#dados[, c(1, 3)]\n\n# Selecionar linha específica\n#dados[10, ]\n\n# Célula na linha 5, coluna 3\n#dados[5, 3]",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 4 – Manipulação de Dados com R</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html",
+    "href": "capitulos/06-exercicios-fixacao.html",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "",
+    "text": "7.1 🧱 1. Fundamentos da linguagem R\nEste capítulo reúne exercícios práticos para testar seus conhecimentos adquiridos ao longo dos capítulos anteriores. Leia com atenção cada enunciado, analise os trechos de código e escreva suas respostas em um ambiente de programação R.\n1.1 Crie três objetos com os seguintes valores: - Um número inteiro - Um número decimal - Uma palavra (texto)\nDepois, use a função class() para verificar o tipo de cada um.\n1.2 O que será exibido ao executar o seguinte código?\n1.3 Qual o resultado da seguinte operação?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#fundamentos-da-linguagem-r",
+    "href": "capitulos/06-exercicios-fixacao.html#fundamentos-da-linguagem-r",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "",
+    "text": "x &lt;- \"30.5\"\nclass(x)\n\nnumeric (b) character (c) double (d) logical\n\n\na &lt;- 5\nb &lt;- 2\na ^ b",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#instalação-e-carregamento-de-pacotes",
+    "href": "capitulos/06-exercicios-fixacao.html#instalação-e-carregamento-de-pacotes",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.2 📦 2. Instalação e carregamento de pacotes",
+    "text": "7.2 📦 2. Instalação e carregamento de pacotes\n2.1 Qual a função do seguinte comando?\ninstall.packages(\"ggplot2\")\n2.2 O código abaixo irá funcionar corretamente? Justifique sua resposta.\ninstall.packages(\"dados\")\nlibrary(DADOS)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#estruturas-de-dados",
+    "href": "capitulos/06-exercicios-fixacao.html#estruturas-de-dados",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.3 📐 3. Estruturas de Dados",
+    "text": "7.3 📐 3. Estruturas de Dados\n3.1 Crie: - Um vetor com os nomes de 5 cidades - Uma matriz com temperaturas registradas em 3 dias e 3 horários - Um data frame com dados de umidade relativa e temperatura média.\n3.2 O que acontece ao executar este código?\nx &lt;- c(3, 5, 7)\nx[4]\n3.3 Complete o código abaixo para acessar a 2ª coluna da matriz:\nmatriz &lt;- matrix(1:9, nrow = 3)\n# ___",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#estruturas-de-controle",
+    "href": "capitulos/06-exercicios-fixacao.html#estruturas-de-controle",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.4 🔁 4. Estruturas de Controle",
+    "text": "7.4 🔁 4. Estruturas de Controle\n4.1 O que será impresso pelo seguinte código?\nx &lt;- 10\nif (x &gt; 5) {\n  print(\"Maior que 5\")\n} else {\n  print(\"Menor ou igual a 5\")\n}\n4.2 Crie um laço for que percorra os números de 1 a 5 e imprima cada número elevado ao quadrado.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#funções",
+    "href": "capitulos/06-exercicios-fixacao.html#funções",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.5 🔧 5. Funções",
+    "text": "7.5 🔧 5. Funções\n5.1 Escreva uma função chamada soma_quadrados() que receba dois números como entrada e retorne a soma dos quadrados deles.\n5.2 Complete o código abaixo para criar uma função que calcule a amplitude térmica do dia:\namplitude_termica &lt;- function(tmax, tmin) {\n  # ________\n}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#manipulação-e-análise-de-dados",
+    "href": "capitulos/06-exercicios-fixacao.html#manipulação-e-análise-de-dados",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.6 📊 6. Manipulação e análise de dados",
+    "text": "7.6 📊 6. Manipulação e análise de dados\n6.1 O que faz a função read_csv()? Qual a diferença em relação ao read.csv()?\n6.2 Dado o seguinte trecho de código:\nlibrary(dplyr)\ndados &lt;- tibble::tibble(\n  dia = c(\"Seg\", \"Ter\", \"Qua\"),\n  temp = c(28.4, 30.1, 27.9)\n)\n\ndados %&gt;%\n  filter(temp &gt; 28)\nO que será retornado?\n6.3 Crie um pequeno conjunto de dados com 5 dias e temperaturas. Depois, use mutate() para criar uma coluna com a classificação: - até 28°C = “Agradável” - acima de 28°C = “Quente”",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/06-exercicios-fixacao.html#desafio",
+    "href": "capitulos/06-exercicios-fixacao.html#desafio",
+    "title": "7  Capítulo 6 – Exercícios de Fixação",
+    "section": "7.7 ✍️ Desafio",
+    "text": "7.7 ✍️ Desafio\nCrie um script que: - Leia um vetor de temperaturas - Calcule a média - Classifique os dias como “quente” se estiverem acima da média - Imprima a lista de classificações",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 6 – Exercícios de Fixação</span>"
     ]
   }
 ]
