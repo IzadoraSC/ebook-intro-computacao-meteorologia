@@ -1,0 +1,176 @@
+---
+title: "Avaliação 1 - R para Meteorologia (2º Período)"
+author: "Profa. Izadora S. de C."
+date: "2025-05-15"
+output: html_document
+---
+
+### Aluno(a):
+
+### 1. Observe os objetos abaixo e indique o tipo de cada objeto utilizando a função especifica para isso **(1,0 pt)**:
+
+``` r
+Temperatura <- 33
+temperatura <- "Quente"
+chuva <- FALSE
+precipitacao <- 40.5
+```
+
+```{r}
+#RESPOSTA:
+
+
+
+#a)  Qual é a classe de Temperatura?
+    
+
+
+#b)  Qual é a classe de temperatura?
+    
+
+
+#c)  Qual é a classe de chuva?
+  
+
+
+#d)  Qual é a classe de precipitacao?
+    
+
+
+```
+
+------------------------------------------------------------------------
+
+### 2. Complete os comandos abaixo **(1,0 pt)**:
+
+a)  Visualizar todos os objetos criados na questão 1:
+
+```{r}
+#RESPOSTA:
+
+
+
+```
+
+b)  Apagar o objeto `temperatura`:
+
+```{r}
+#RESPOSTA:
+
+
+
+```
+
+------------------------------------------------------------------------
+
+### 3. Dado o vetor abaixo, indique o tamanho do vetor e o valor do quarto elemento **(1,0 pt)**:
+
+``` r
+sensacoes <- c("Frio", "Agradável", "Quente", "Muito Quente", "Extremo")
+```
+
+```{r}
+#RESPOSTA
+
+
+
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+### 4. Crie um vetor chamado `Chuvas` com os valores 30, 10, 5, 0, 11, 12 e 30. Depois, realize a soma e a média para obter a precipitação acumulada (soma) e a média de precipitacao **(1,0 pt)**.
+
+```{r}
+#RESPOSTA:
+
+
+
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+### 5. A partir do código abaixo, responda **(1,0 pt)**:
+
+``` r
+tabela_1 <- data.frame(
+  data = as.Date("2025-01-01") + 0:6,
+  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
+)
+```
+
+```{r}
+
+
+#a)  Quantas linhas a tabela possui?
+#RESPOSTA:
+
+
+
+#b)  Qual a temperatura registrada em 2025-01-05?
+#RESPOSTA:
+
+
+```
+
+------------------------------------------------------------------------
+
+### 6. No `data.frame` criado na questão 5, acesse somente os valores da coluna `temperatura` **(1,0 pt)**:
+
+```{r}
+#RESPOSTA:
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+### 7. Com base na matriz criada, acesse o valore da linha 3, coluna 1 e linha 2, coluna 4 **(1,0 pt)**:
+
+```{r}
+matriz_temp <- matrix(
+  c(22.1, 24.3, 25.5, 23.0,   
+    21.8, 23.5, 26.2, 24.1,   
+    20.0, 22.4, 24.0, 23.3),  
+  nrow = 3,
+  ncol = 4,
+  byrow = TRUE
+)
+```
+
+```{r}
+#RESPOSTA
+
+
+
+```
+
+### 8. Com base na matriz criada na questão 7, calcule a média da segunda linha e a média por coluna da matriz **(1,0 pt)**:
+
+```{r}
+#RESPOSTA:
+
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+### 9. Explique com suas próprias palavras o que são *estruturas de controle* em R. Dê exemplos de situações no contexto meteorológico em que elas poderiam ser aplicadas **(1,0 pt)**.
+
+*DIGITE AQUI A SUA RESPOSTA:*
+
+### 10. Qual a vantagem de criar uma função para realizar determinados calculos e processos? Qual o comando no R para criar uma função? **(1,0 pt)**
+
+*DIGITE AQUI A SUA RESPOSTA:*

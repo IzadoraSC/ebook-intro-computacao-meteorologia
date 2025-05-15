@@ -1,0 +1,182 @@
+---
+title: "Avaliação - R para Meteorologia (2º Período)"
+author: "Profa. Izadora S. de Carvalho"
+date: "2025-05-14"
+format: pdf
+editor_options: 
+  chunk_output_type: inline
+---
+
+### 1. Observe os objetos abaixo e indique o tipo de cada objeto utilizando a função especifica para isso **(1,0 pt)**:
+
+``` r
+Temperatura <- 33
+temperatura <- "Quente"
+chuva <- FALSE
+precipitacao <- 40.5
+```
+
+```{r}
+#RESPOSTA:
+
+Temperatura <- 33
+temperatura <- "Quente"
+chuva <- FALSE
+precipitacao <- 40.5
+
+#a)  Qual é a classe de Temperatura?
+    #numeric
+class(Temperatura)
+
+#b)  Qual é a classe de temperatura?
+    #character
+class(temperatura)
+
+#c)  Qual é a classe de chuva?
+    #logical
+class(chuva)
+
+#d)  Qual é a classe de precipitacao?
+    #numeric
+class(precipitacao)
+
+```
+
+------------------------------------------------------------------------
+
+### 2. Complete os comandos abaixo **(1,0 pt)**:
+
+a)  Visualizar todos os objetos criados na questão 1:
+
+```{r}
+#RESPOSTA:
+
+ls()
+
+```
+
+b)  Apagar o objeto `temperatura`:
+
+```{r}
+#RESPOSTA:
+rm(temperatura) #ou
+remove(temperatura)
+
+```
+
+------------------------------------------------------------------------
+
+### 3. Dado o vetor abaixo, indique o tamanho do vetor e o valor do quarto elemento **(1,0 pt)**:
+
+``` r
+sensacoes <- c("Frio", "Agradável", "Quente", "Muito Quente", "Extremo")
+```
+
+```{r}
+#RESPOSTA
+sensacoes <- c("Frio", "Agradável", "Quente", "Muito Quente", "Extremo")
+
+length(sensacoes)
+sensacoes[4]
+
+#Tamanho: 5; Quarto elemento: "Muito Quente"
+
+```
+
+------------------------------------------------------------------------
+
+### 4. Crie um vetor chamado `Chuvas` com os valores 30, 10, 5, 0, 11, 12 e 30. Depois, realize a soma e a média para obter a precipitação acumulada (soma) e a média de precipitacao **(1,0 pt)**.
+
+```{r}
+#RESPOSTA:
+
+Chuvas <- c(30, 10, 5, 0, 11, 12, 30)
+
+sum(Chuvas)
+mean(Chuvas)
+
+#precipitação acumula: 98mm
+#média de precipitação: 14mm
+```
+
+------------------------------------------------------------------------
+
+### 5. A partir do código abaixo, responda **(1,0 pt)**:
+
+``` r
+tabela_1 <- data.frame(
+  data = as.Date("2025-01-01") + 0:6,
+  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
+)
+```
+
+```{r}
+tabela_1 <- data.frame(
+  data = as.Date("2025-01-01") + 0:6,
+  temperatura = c(27.5, 28.2, 26.9, 29.1, 30.0, 28.4, 27.8)
+)
+
+#a)  Quantas linhas a tabela possui?
+#RESPOSTA:
+nrow(tabela_1) #ou
+tabela_1
+# 7 linhas
+
+#b)  Qual a temperatura registrada em 2025-01-05?
+#RESPOSTA:
+#  a temperatura registrada em 2025-01-05 foi 30.0
+
+```
+
+------------------------------------------------------------------------
+
+### 6. No `data.frame` criado na questão 5, acesse somente os valores da coluna `temperatura` **(1,0 pt)**:
+
+```{r}
+#RESPOSTA:
+tabela_1$temperatura
+
+```
+
+------------------------------------------------------------------------
+
+### 7. Com base na matriz criada, acesse o valore da linha 3, coluna 1 e linha 2, coluna 4 **(1,0 pt)**:
+
+```{r}
+matriz_temp <- matrix(
+  c(22.1, 24.3, 25.5, 23.0,   
+    21.8, 23.5, 26.2, 24.1,   
+    20.0, 22.4, 24.0, 23.3),  
+  nrow = 3,
+  ncol = 4,
+  byrow = TRUE
+)
+```
+
+```{r}
+#RESPOSTA
+matriz_temp[3,1]
+matriz_temp[2,4]
+
+```
+
+### 8. Com base na matriz criada na questão 7, calcule a média da segunda linha e a média por coluna da matriz **(1,0 pt)**:
+
+```{r}
+#RESPOSTA:
+#média da segunda linha
+mean(matriz_temp[2, ])
+#média por linha da matriz
+colMeans(matriz_temp)
+
+```
+
+------------------------------------------------------------------------
+
+### 9. Explique com suas próprias palavras o que são *estruturas de controle* em R. Dê exemplos de situações no contexto meteorológico em que elas poderiam ser aplicadas **(1,0 pt)**.
+
+*DIGITE AQUI A SUA RESPOSTA:* **Gabarito sugerido:** Estruturas de controle permitem que o código tome decisões com base em condições. Por exemplo, classificar dias como "quentes" ou "frios" com base na temperatura.
+
+### 10. Qual a vantagem de criar uma função para realizar determinados calculos e processos? Qual o comando no R para criar uma função? **(1,0 pt)**
+
+*DIGITE AQUI A SUA RESPOSTA:* **Gabarito sugerido:** Facilita a reutilização e a padronização dos cálculos e processos além de melhorar a automatização das tarefas. `function`
