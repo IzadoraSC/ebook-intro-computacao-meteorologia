@@ -1,0 +1,418 @@
+---
+title: "Aula 22-05-2025"
+author: "Profª. Izadora S. de C."
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Manipulação de Dados com R
+
+Etapas e processos relacionados a manipulação de dados no R
+
+-   Carregar dados;
+
+-   Explorar a estrutura e tipo dos dados;
+
+-   Limpeza e tratamento dos dados;
+
+-   Análise Exploratória.
+
+**Pacotes necessário:**
+
+1.  `tidyverse` (`dplyr` e `ggplot2`) : para manipulação e visualização de dados de forma eficiente.
+
+2.  `lubridate` : para facilitar o trabalho com datas.
+
+```{r warning=FALSE}
+# Instale os pacotes se necessário
+# install.packages(c("tidyverse", "lubridate"))
+
+library(tidyverse)
+library(lubridate)
+
+```
+
+```{r}
+# Tabela de dados
+
+library(tidyverse)
+library(lubridate)
+
+dados_meteorologicos <- tibble(
+  data = seq.Date(from = as.Date("2024-01-01"),
+                  to = as.Date("2024-12-31"), by = "day"),
+  temperatura_max = rnorm(366, mean = 30, sd = 5),
+  temperatura_min = rnorm(366, mean = 20, sd = 5),
+  precipitacao = rpois(366, lambda = 5)
+)
+
+```
+
+```{r}
+# Visualizar as primeiras (6) linhas da tabela criada
+head(dados_meteorologicos)
+
+# Visualizar as últimas (10) linhas da tabela criada
+tail(dados_meteorologicos, 10)
+```
+
+```{r}
+# Verificar estrutura
+#str
+#glimpse
+
+str(dados_meteorologicos)
+
+glimpse(dados_meteorologicos)
+```
+
+```{r}
+# Resumo estatístico
+#summary()
+summary(dados_meteorologicos)
+
+# install.packages(skimr)
+library(skimr)
+skim(dados_meteorologicos)
+
+```
+
+**Principais funções para manipulação de dados:**
+
+-   `select()`: para selecionar variáveis;
+
+-   `filter()`: para filtrar observações;
+
+-   `arrange()`: para classificar variáveis;
+
+-   `mutate()`: para criar e transformar variáveis;
+
+-   `group_by()`: para agrupar observações;
+
+-   `summarise()`: para resumir os dados com medidas estatísticas descritivas.
+
+**Fluxo de trabalho com *pipe***
+
+Aprimorando fluxo de trabalho com *pipe* `%>%` ou `|>` (atalho: Crtl + Shift + M). Com o *pipe* é possível o encadeamento de várias funções, eliminando a necessidade de criar objetos para armazenar resultados intermediários. Sendo assim, uma ferramenta poderosa para melhorar o fluxo de trabalho na análise e manipulação de dados.
+
+```{r}
+#Sem pipe
+sqrt(sum(1:50))
+
+#Com pipe
+1:50 |> 
+  sum() |> 
+  sqrt()
+```
+
+**Aplicando principais funções de manipulação:**
+
+```{r}
+
+# Selecionar apenas as colunas de data e temperatura máxima
+#select()
+
+#sem pipe
+dados_temMax <- select(dados_meteorologicos, data, temperatura_max)
+
+dados_temMax
+
+#com pipe %>%
+dados_temMin <- dados_meteorologicos %>%
+  select(data, temperatura_min)
+
+dados_temMin
+```
+
+```{r}
+# Filtrar dias com precipitação acima de 10 mm
+#filter()
+
+dados_meteorologicos %>%
+  filter(precipitacao > 5)
+
+# Filtrar dados de janeiro
+dados_meteorologicos %>%
+  filter(month(data) == 1)
+
+#AGORA VOCÊ
+#Filtre os dados de julho
+
+```
+
+```{r}
+# Ordenar os dados pela temperatura máxima, da maior para a menor
+#arrange()
+dados_meteorologicos %>%
+  arrange(desc(temperatura_max))
+
+# Ordenar pelas datas mais recentes
+dados_meteorologicos %>%
+  arrange(desc(data))
+
+#ajuda sobre a função
+??arrange
+
+
+#AGORA VOCÊ
+# Ordenar os dados pela temperatura mínima, da menor para a maior
+
+
+```
+
+```{r}
+# Criar uma nova coluna com a média diária de temperatura
+#mutate()
+dados_meteorologicos %>%
+  mutate(temp_media = (temperatura_max + temperatura_min) / 2)
+
+# Adicionar o mês como nova coluna
+dados_meteorologicos %>%
+  mutate(mes = month(data, label = TRUE))
+
+#AGORA VOCÊ
+# Adicionar o ano como nova coluna
+
+
+#Renomeando colunas
+# rename()
+dados_meteorologicos %>%
+  rename('chuva'=precipitacao)
+
+```
+
+```{r}
+# Precipitação total por mês
+#group_by() e #summarise()
+
+dados_meteorologicos %>%
+  mutate(mes = month(data, label = TRUE)) %>%
+  group_by(mes) %>%
+  summarise(precipitacao_total = sum(precipitacao))
+
+# Temperatura máxima média por trimestre
+dados_meteorologicos %>%
+  mutate(trimestre = quarter(data)) %>%
+  group_by(trimestre) %>%
+  summarise(temp_max_media = mean(temperatura_max))
+```
+
+```{r}
+
+# Calcular temperatura média diária e total de chuva por mês, ordenando por maior chuva
+dados_meteorologicos %>%
+  mutate(temp_media = (temperatura_max + temperatura_min) / 2,
+         mes = month(data, label = TRUE)) %>%
+  group_by(mes) %>%
+  summarise(
+    media_temp = mean(temp_media),
+    chuva_total = sum(precipitacao)
+  ) %>%
+  arrange(desc(chuva_total))
+```
+
+### **Trabalhando com datas com o pacote** `lubridate` :
+
+**No R, datas são tratadas como um tipo especial de objeto, como classe date. Há várias formas de criar objetos dessa classe com o pacote** `lubridate`.
+
+```{r}
+# Usando a função as_date():
+data <- as_date('2024-12-20')
+class(data)
+
+
+#Agora crie um Objeto com a data de hoje
+
+
+```
+
+**A função** `as_date()` **assume que a ordem segue o padrão da língua inglesa:**
+
+-   ano-mês-dia (ymd).
+
+**No pacote** `lubridate`, **existem funções para todas as ordens possíveis:**
+
+-   `ymd()`, `dmy()`, `mdy()`, `myd()`, `ydm()` etc.
+
+```{r}
+
+ymd('2024-12-20')
+dmy('20-12-2024')
+dmy('20122024')
+```
+
+**Se for trabalhar com data e horário, basta usar as funções do tipo:**
+
+-   `ymd_h()`, `ymd_hm()`, `ymd_hms()`.
+
+```{r}
+
+ymd_hms(20241220093010)
+
+```
+
+**O pacote 'lubridate' fornece diversas funções para extrair os componentes de um objeto da classe date.**
+
+1.  year() - extrai o ano.
+
+2.  month() - extrai o mês.
+
+3.  day() - extrai o dia.
+
+4.  hour() - extrai a hora.
+
+5.  minute() - extrai os minutos.
+
+6.  second() - extrai os segundos.
+
+```{r}
+# Exemplos:
+year(data)
+month(data)
+day(data)
+```
+
+**Para criar uma sequência de datas, podemos usar a função `seq.Date()` da base do R em combinação com funções do pacote 'lubridate':**
+
+```{r}
+# Primeiro, vamos definir a data inicial e final.
+data_inicial <- ymd('2025-01-01')
+data_final <- today()   # A função today() do pacote 'lubridate' 
+                        #retorna a data atual no formato Date.
+```
+
+```{r}
+# Criando uma sequência de datas diária.
+
+seq_diaria <- seq(data_inicial, data_final, by = 'day')
+
+# print(seq_diaria)
+```
+
+```{r}
+# Criar a sequência de datas mensal.
+
+seq_mensal <- seq(data_inicial, data_final, by = 'month')
+
+print(seq_mensal)
+```
+
+### Análise Exploratória.
+
+Visualizações
+
+```{r}
+# Dados agrupados por mês
+precip_mensal <- dados_meteorologicos %>%
+  mutate(mes = month(data, label = TRUE)) %>%
+  group_by(mes) %>%
+  summarise(precipitacao_total = sum(precipitacao))
+
+precip_mensal
+```
+
+```{r}
+# Gráfico de barras
+
+#r base
+str(precip_mensal)
+
+barplot(height = precip_mensal$precipitacao_total,
+        names.arg = precip_mensal$mes,
+        col = "lightblue",
+        main = "Precipitação Total por Mês (Base R)",
+        xlab = "Mês",
+        ylab = "Precipitação (mm)")
+```
+
+```{r}
+#com ggplot2
+ggplot(precip_mensal) +
+  geom_col(aes(x = mes, y = precipitacao_total),
+           fill ="steelblue") +
+  labs(title = "Precipitação Total por Mês",
+       x = "Mês", y = "Precipitação (mm)") +
+  theme_classic()
+```
+
+```{r}
+
+ggplot(precip_mensal) +
+  geom_bar(aes(x = mes, y = precipitacao_total),
+           fill ="steelblue", colour='black', 
+           stat = 'identity') +
+  scale_y_continuous(expand = c(0,0)) +
+  labs(title = "Precipitação Total por Mês",
+       x = "Mês", y = "Precipitação (mm)") +
+  theme_classic()
+```
+
+```{r}
+#Tabela com temperatura média diária e total de chuva por mês, ordenando por maior chuva
+
+tab_1 <- dados_meteorologicos %>%
+  mutate(temp_media = (temperatura_max + temperatura_min) / 2,
+         mes = month(data, label = TRUE)) %>%
+  group_by(mes) %>%
+  summarise(
+    media_temp = mean(temp_media),
+    chuva_total = sum(precipitacao)
+  ) %>%
+  arrange(desc(chuva_total))
+
+View(tab_1)
+
+```
+
+```{r}
+
+ggplot()
+```
+
+```{r}
+#Carregando pacotes
+library(dados)
+library(ggplot2)
+
+
+#Tabela de dados de clima
+df_clima <- clima
+str(df_clima)
+names(df_clima)
+
+# Criando histograma com distribuição por temperatura (ºC)
+
+#R base
+hist(x = df_clima$temperatura)
+
+# Criando histograma com distribuição por temperatura (ºC)
+ggplot(df_clima, aes(x = temperatura)) +
+  geom_histogram(fill = "skyblue", colour = 'black') +
+  #geom_histogram(aes(y = ..density..), fill = "skyblue", color = "black", bins = 30) +
+  #geom_density(alpha = 0.7, fill = "orange") +
+  labs(title = "Histograma com sobreposição de gráfico de distribuição para temperatura (C)",
+       x = "Temperatura (C)",
+       y = "Densidade")
+```
+
+# Trabalhando com outros exemplos
+
+Códigos:
+
+-   Estacoes_INMET_ANA.R
+
+-   Temperatura_sup_mar.R
+
+-   Analise_serires_temporais.R
+
+-   Normal_climatologica.R
+
+-   Heatmap_ENOS.R
+
+-   Grafico_Temp_Precip.R
