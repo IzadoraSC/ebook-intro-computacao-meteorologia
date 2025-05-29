@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Curso de Meteorologia - UEMA, Profa. Dra. Izadora S. de Carvalho">
 
-<title>Introdução à Computação Aplicada às Ciências Atmosféricas</title>
+<title>8&nbsp; Capítulo 7 – Fundamentos de Programação com Python – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./capitulos/cap1-introducao.html" rel="next">
-<link href="./cover_meteo300dpi.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../capitulos/cap6-exercicios-fixacao.html" rel="prev">
+<link href="../cover_meteo300dpi.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -83,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Apresentação</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/cap7-fundamentos-python.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 7 – Fundamentos de Programação com Python</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -98,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
+      <a href="../">Introdução à Computação Aplicada às Ciências Atmosféricas</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
@@ -118,49 +151,49 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Apresentação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap1-introducao.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap1-introducao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap2-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap2-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap3-estruturas-dados.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap3-estruturas-dados.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap4-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap4-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap5-dados_vetoriais.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap5-dados_vetoriais.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap6-exercicios-fixacao.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap6-exercicios-fixacao.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo 6 – Exercícios de Fixação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./capitulos/cap7-fundamentos-python.html" class="sidebar-item-text sidebar-link">
+  <a href="../capitulos/cap7-fundamentos-python.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 7 – Fundamentos de Programação com Python</span></span></a>
   </div>
 </li>
@@ -174,28 +207,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#apresentação" id="toc-apresentação" class="nav-link active" data-scroll-target="#apresentação"><span class="header-section-number">1</span> Apresentação</a></li>
+  <li><a href="#introdução-à-linguagem-python" id="toc-introdução-à-linguagem-python" class="nav-link active" data-scroll-target="#introdução-à-linguagem-python"><span class="header-section-number">8.1</span> 1. Introdução à Linguagem Python</a></li>
+  <li><a href="#tipos-de-dados-básicos" id="toc-tipos-de-dados-básicos" class="nav-link" data-scroll-target="#tipos-de-dados-básicos"><span class="header-section-number">8.2</span> 🔢 2. Tipos de Dados Básicos</a></li>
+  <li><a href="#estruturas-de-dados" id="toc-estruturas-de-dados" class="nav-link" data-scroll-target="#estruturas-de-dados"><span class="header-section-number">8.3</span> 📦 3. Estruturas de Dados</a>
+  <ul class="collapse">
+  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="header-section-number">8.3.1</span> 🔹 Listas</a></li>
+  <li><a href="#dicionários" id="toc-dicionários" class="nav-link" data-scroll-target="#dicionários"><span class="header-section-number">8.3.2</span> 🔹 Dicionários</a></li>
+  </ul></li>
+  <li><a href="#estruturas-de-controle" id="toc-estruturas-de-controle" class="nav-link" data-scroll-target="#estruturas-de-controle"><span class="header-section-number">8.4</span> 🔁 4. Estruturas de Controle</a>
+  <ul class="collapse">
+  <li><a href="#condicional-if-elif-else" id="toc-condicional-if-elif-else" class="nav-link" data-scroll-target="#condicional-if-elif-else"><span class="header-section-number">8.4.1</span> Condicional (<code>if</code>, <code>elif</code>, <code>else</code>)</a></li>
+  <li><a href="#repetição-for" id="toc-repetição-for" class="nav-link" data-scroll-target="#repetição-for"><span class="header-section-number">8.4.2</span> Repetição (<code>for</code>)</a></li>
+  </ul></li>
+  <li><a href="#criando-funções" id="toc-criando-funções" class="nav-link" data-scroll-target="#criando-funções"><span class="header-section-number">8.5</span> 🔧 5. Criando Funções</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/cap7-fundamentos-python.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introdução à Computação Aplicada às Ciências Atmosféricas</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 7 – Fundamentos de Programação com Python</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Curso de Meteorologia - UEMA, Profa. Dra. Izadora S. de Carvalho </p>
-          </div>
-  </div>
     
   
     
@@ -206,13 +245,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="apresentação" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Apresentação</h1><p><img src="cover_meteo300dpi.png" title="Introdução à Computação Aplicada às Ciências Atmosféricas" class="quarto-cover-image img-fluid"></p>
-<p>Este é um material didático aberto desenvolvido para apoiar o ensino da disciplina <strong>Introdução à Computação Aplicada às Ciências Atmosféricas</strong>, do curso de graduação em Meteorologia da UEMA - São Luís-MA, Brasil.</p>
-<p>O objetivo é fornecer uma base sólida em programação com R, aplicada à análise e visualização de dados ambientais e climáticos.</p>
-<p><span style="color: red;"><em>Colaboradores no desenvolvimento deste projeto:</em></span></p>
-<p><em>Este produto está sendo desenvolvido utilizando <a href="https://quarto.org/docs/books">Quarto books</a>.</em></p>
+<p>Neste capítulo, vamos introduzir a linguagem Python com foco nos conceitos essenciais para a análise de dados em Meteorologia e Ciências Atmosféricas.</p>
+<hr>
+<section id="introdução-à-linguagem-python" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="introdução-à-linguagem-python"><span class="header-section-number">8.1</span> 1. Introdução à Linguagem Python</h2>
+<p>Python é uma linguagem de programação de alto nível, muito utilizada em ciência de dados, modelagem numérica, meteorologia, processamento de imagens, e aprendizado de máquina.</p>
+<p><strong>Características principais:</strong> - Simples e legível - Interpretada (sem necessidade de compilação) - Ampla comunidade científica e bibliotecas</p>
+<hr>
+</section>
+<section id="tipos-de-dados-básicos" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="tipos-de-dados-básicos"><span class="header-section-number">8.2</span> 🔢 2. Tipos de Dados Básicos</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Números inteiros e decimais</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span>           <span class="co"># int</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">3.14</span>        <span class="co"># float</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Texto (string)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>nome <span class="op">=</span> <span class="st">"UEMA"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Booleanos</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>chovendo <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando os tipos</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(a))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(nome))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="estruturas-de-dados" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="estruturas-de-dados"><span class="header-section-number">8.3</span> 📦 3. Estruturas de Dados</h2>
+<section id="listas" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="listas"><span class="header-section-number">8.3.1</span> 🔹 Listas</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>temperaturas <span class="op">=</span> [<span class="fl">25.3</span>, <span class="fl">27.8</span>, <span class="fl">30.1</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperaturas[<span class="dv">0</span>])       <span class="co"># Acessa o primeiro elemento</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperaturas[<span class="op">-</span><span class="dv">1</span>])      <span class="co"># Último elemento</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dicionários" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="dicionários"><span class="header-section-number">8.3.2</span> 🔹 Dicionários</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>estacao <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"nome"</span>: <span class="st">"Primavera"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"chuva_mm"</span>: <span class="dv">120</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dias_quentes"</span>: <span class="dv">20</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(estacao[<span class="st">"chuva_mm"</span>])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="estruturas-de-controle" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="estruturas-de-controle"><span class="header-section-number">8.4</span> 🔁 4. Estruturas de Controle</h2>
+<section id="condicional-if-elif-else" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="condicional-if-elif-else"><span class="header-section-number">8.4.1</span> Condicional (<code>if</code>, <code>elif</code>, <code>else</code>)</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> <span class="dv">29</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> temp <span class="op">&lt;</span> <span class="dv">18</span>:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Frio"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> temp <span class="op">&lt;=</span> <span class="dv">28</span>:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Agradável"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Quente"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="repetição-for" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="repetição-for"><span class="header-section-number">8.4.2</span> Repetição (<code>for</code>)</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> t <span class="kw">in</span> temperaturas:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(t)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="criando-funções" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="criando-funções"><span class="header-section-number">8.5</span> 🔧 5. Criando Funções</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> amplitude_termica(tmax, tmin):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tmax <span class="op">-</span> tmin</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(amplitude_termica(<span class="fl">31.4</span>, <span class="fl">22.8</span>))  <span class="co"># Resultado: 8.6</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -637,11 +739,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../capitulos/cap6-exercicios-fixacao.html" class="pagination-link" aria-label="Capítulo 6 – Exercícios de Fixação">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo 6 – Exercícios de Fixação</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./capitulos/cap1-introducao.html" class="pagination-link" aria-label="Capítulo 1 - Introdução à computação para meteorologia">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -649,4 +751,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/cap7-fundamentos-python.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>
