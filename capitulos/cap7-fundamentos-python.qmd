@@ -57,6 +57,8 @@ print(type(nome))
 ## Estruturas de Dados
 
 ### Listas
+- aplicada para dados como coordenadas geográficas. Ex.: (-15,-45).
+- quando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).
 
 ```python
 temperaturas = [25.3, 27.8, 30.1]
@@ -65,7 +67,7 @@ print(temperaturas[-1])      # Último elemento
 ```
 
 ### Dicionários
-
+Exemplos: usado em paleta de cores, metadados de imagens
 ```python
 estacao = {
     "nome": "Primavera",
@@ -74,9 +76,42 @@ estacao = {
 }
 print(estacao["chuva_mm"])
 ```
+### Tuplas
+- aplicada para dados como coordenadas geográficas. Ex.: (-15,-45).
+- quando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).
 
----
+```python
+y = (1,2,4,6,8)
+print(y)
+type(y)
+```
+### Array
 
+Usado para representar imagens (bidimensional).
+
+Forma de estrutura mais importante para se trabalhar nos processamentos de imagens de satélite.
+
+```python
+import numpy as np
+
+arr = np.array([1,2,3,4,5,6,7,8])
+type(arr)
+
+arr = np.array([[1,2,3,4,5,6,7,8], [8,7,6,5,4,3,2,1]])
+
+print(arr)
+
+arr = np.array([1,2,3,4,5,6,7,8])
+
+arr[-1]
+
+#Calculos
+arr.min()
+arr.mean()
+
+np.median(arr)
+
+```
 ## Estruturas de Controle
 
 ### Condicional (`if`, `elif`, `else`)
@@ -107,5 +142,5 @@ for t in temperaturas:
 def amplitude_termica(tmax, tmin):
     return tmax - tmin
 
-print(amplitude_termica(31.4, 22.8))  # Resultado: 8.6
+print(amplitude_termica(31.4, 22.8))
 ```
