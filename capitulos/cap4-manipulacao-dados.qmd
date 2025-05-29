@@ -9,6 +9,7 @@ Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar 
 ```{r}
 
 library(readxl)
+library(dplyr)
 
 #Normais Climatológicas (1991-2020) de Temperatura Máxima
 #Mensal obtidas do INMET
