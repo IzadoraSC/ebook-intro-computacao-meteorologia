@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>6&nbsp; Capítulo 5 – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
+<title>6&nbsp; Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../capitulos/cap6-exercicios-fixacao.html" rel="next">
+<link href="../capitulos/cap7-fundamentos-python.html" rel="next">
 <link href="../capitulos/cap4-manipulacao-dados.html" rel="prev">
 <link href="../cover_meteo300dpi.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/cap5-dados_vetoriais.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/cap5-dados_vetoriais.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -144,43 +144,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap1-introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo - Introdução à computação para meteorologia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap2-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo – Fundamentos de Programação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap3-estruturas-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo – Estruturas de Dados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap4-manipulacao-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo – Manipulação de Dados com R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap5-dados_vetoriais.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../capitulos/cap6-exercicios-fixacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo 6 – Exercícios de Fixação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap7-fundamentos-python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 7 – Fundamentos de Programação com Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo – Fundamentos de Programação com Python</span></span></a>
   </div>
 </li>
     </ul>
@@ -191,17 +185,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Índice</h2>
    
   <ul>
-<li><a href="#o-que-s%C3%A3o-dados-vetoriais" id="toc-o-que-são-dados-vetoriais" class="nav-link active" data-scroll-target="#o-que-s%C3%A3o-dados-vetoriais"><span class="header-section-number">6.1</span> 1. O que são dados vetoriais?</a></li>
-  <li><a href="#instalando-e-carregando-o-pacote-geobr" id="toc-instalando-e-carregando-o-pacote-geobr" class="nav-link" data-scroll-target="#instalando-e-carregando-o-pacote-geobr"><span class="header-section-number">6.2</span> 2. Instalando e carregando o pacote <code>geobr</code></a></li>
-  <li><a href="#carregando-dados-geogr%C3%A1ficos" id="toc-carregando-dados-geográficos" class="nav-link" data-scroll-target="#carregando-dados-geogr%C3%A1ficos"><span class="header-section-number">6.3</span> ️3. Carregando dados geográficos</a></li>
-  <li><a href="#mapa-tem%C3%A1tico-com-precipita%C3%A7%C3%A3o" id="toc-mapa-temático-com-precipitação" class="nav-link" data-scroll-target="#mapa-tem%C3%A1tico-com-precipita%C3%A7%C3%A3o"><span class="header-section-number">6.4</span> 5. Mapa temático com precipitação</a></li>
-  <li><a href="#pr%C3%A1tica-sugerida" id="toc-prática-sugerida" class="nav-link" data-scroll-target="#pr%C3%A1tica-sugerida"><span class="header-section-number">6.5</span> ✍️ Prática sugerida</a></li>
+<li><a href="#o-que-s%C3%A3o-dados-vetoriais" id="toc-o-que-são-dados-vetoriais" class="nav-link active" data-scroll-target="#o-que-s%C3%A3o-dados-vetoriais"><span class="header-section-number">6.1</span> O que são dados vetoriais?</a></li>
+  <li><a href="#instalando-e-carregando-o-pacote-geobr" id="toc-instalando-e-carregando-o-pacote-geobr" class="nav-link" data-scroll-target="#instalando-e-carregando-o-pacote-geobr"><span class="header-section-number">6.2</span> Instalando e carregando o pacote <code>geobr</code></a></li>
+  <li><a href="#carregando-dados-geogr%C3%A1ficos" id="toc-carregando-dados-geográficos" class="nav-link" data-scroll-target="#carregando-dados-geogr%C3%A1ficos"><span class="header-section-number">6.3</span> Carregando dados geográficos</a></li>
+  <li><a href="#simulando-dados-meteorol%C3%B3gicos-por-munic%C3%ADpio" id="toc-simulando-dados-meteorológicos-por-município" class="nav-link" data-scroll-target="#simulando-dados-meteorol%C3%B3gicos-por-munic%C3%ADpio"><span class="header-section-number">6.4</span> Simulando dados meteorológicos por município</a></li>
+  <li><a href="#mapa-tem%C3%A1tico-com-precipita%C3%A7%C3%A3o" id="toc-mapa-temático-com-precipitação" class="nav-link" data-scroll-target="#mapa-tem%C3%A1tico-com-precipita%C3%A7%C3%A3o"><span class="header-section-number">6.5</span> Mapa temático com precipitação</a></li>
+  <li><a href="#pr%C3%A1tica" id="toc-prática" class="nav-link" data-scroll-target="#pr%C3%A1tica"><span class="header-section-number">6.6</span> ✍️ Prática</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/cap5-dados_vetoriais.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span>
+<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span>
 </h1>
 </div>
 
@@ -216,10 +211,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>Este capítulo apresenta o uso de dados espaciais vetoriais com o pacote <code>geobr</code>, integrando com dados climáticos simulados ou observados em território brasileiro.</p>
+</header><p>Este capítulo apresenta o uso de dados espaciais vetoriais com o pacote <code>geobr</code>, integrando com dados climáticos simulados ou observados.</p>
 <hr>
 <section id="o-que-são-dados-vetoriais" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="o-que-são-dados-vetoriais">
-<span class="header-section-number">6.1</span> 1. O que são dados vetoriais?</h2>
+<span class="header-section-number">6.1</span> O que são dados vetoriais?</h2>
 <p>Dados vetoriais representam feições geográficas com pontos, linhas ou polígonos. No contexto meteorológico, podemos utilizar mapas vetoriais para:</p>
 <ul>
 <li>Visualizar estações meteorológicas por município (pontos)</li>
@@ -227,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Mapear regiões com chuvas intensas ou secas (polígonos)</li>
 </ul>
 <hr></section><section id="instalando-e-carregando-o-pacote-geobr" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="instalando-e-carregando-o-pacote-geobr">
-<span class="header-section-number">6.2</span> 2. Instalando e carregando o pacote <code>geobr</code>
+<span class="header-section-number">6.2</span> Instalando e carregando o pacote <code>geobr</code>
 </h2>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># install.packages("geobr")</span></span>
@@ -244,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr></section><section id="carregando-dados-geográficos" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="carregando-dados-geográficos">
-<span class="header-section-number">6.3</span> ️3. Carregando dados geográficos</h2>
+<span class="header-section-number">6.3</span> Carregando dados geográficos</h2>
 <p>Vamos carregar o mapa dos municípios do Maranhão:</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">maranhao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ipeagit.github.io/geobr/reference/read_municipality.html">read_municipality</a></span><span class="op">(</span>code_muni <span class="op">=</span> <span class="st">"MA"</span>, year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -259,8 +254,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<hr>
-<p>##️ 4. Simulando dados meteorológicos por município</p>
+<hr></section><section id="simulando-dados-meteorológicos-por-município" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="simulando-dados-meteorológicos-por-município">
+<span class="header-section-number">6.4</span> Simulando dados meteorológicos por município</h2>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span><span class="va">chuva_mensal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
@@ -271,8 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co"># Unir com o dado geográfico</span></span>
 <span><span class="va">maranhao_clima</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">maranhao</span>, <span class="va">chuva_mensal</span>, by <span class="op">=</span> <span class="st">"code_muni"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="mapa-temático-com-precipitação" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="mapa-temático-com-precipitação">
-<span class="header-section-number">6.4</span> 5. Mapa temático com precipitação</h2>
+<hr></section><section id="mapa-temático-com-precipitação" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="mapa-temático-com-precipitação">
+<span class="header-section-number">6.5</span> Mapa temático com precipitação</h2>
 <div class="cell">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">maranhao_clima</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">precipitacao_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -287,15 +282,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<hr></section><section id="prática-sugerida" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="prática-sugerida">
-<span class="header-section-number">6.5</span> ✍️ Prática sugerida</h2>
-<div class="callout callout-style-simple callout-tip callout-titled" title="Agora pratique!">
+<hr></section><section id="prática" class="level2" data-number="6.6"><h2 data-number="6.6" class="anchored" data-anchor-id="prática">
+<span class="header-section-number">6.6</span> ✍️ Prática</h2>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Agora faça você mesmo!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Agora pratique!
+Agora faça você mesmo!
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -725,13 +720,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../capitulos/cap4-manipulacao-dados.html" class="pagination-link" aria-label="Capítulo 4 – Manipulação de Dados com R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span>
+      <a href="../capitulos/cap4-manipulacao-dados.html" class="pagination-link" aria-label="Capítulo – Manipulação de Dados com R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo – Manipulação de Dados com R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../capitulos/cap6-exercicios-fixacao.html" class="pagination-link" aria-label="Capítulo 6 – Exercícios de Fixação">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo 6 – Exercícios de Fixação</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../capitulos/cap7-fundamentos-python.html" class="pagination-link" aria-label="Capítulo – Fundamentos de Programação com Python">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo – Fundamentos de Programação com Python</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

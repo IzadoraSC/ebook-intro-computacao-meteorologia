@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>5&nbsp; Capítulo 4 – Manipulação de Dados com R – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
+<title>5&nbsp; Capítulo – Manipulação de Dados com R – Introdução à Computação Aplicada às Ciências Atmosféricas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/cap4-manipulacao-dados.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../capitulos/cap4-manipulacao-dados.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo – Manipulação de Dados com R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -144,43 +144,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap1-introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo 1 - Introdução à computação para meteorologia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo - Introdução à computação para meteorologia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap2-fundamentos-programacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo 2 – Fundamentos de Programação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo – Fundamentos de Programação</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap3-estruturas-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo – Estruturas de Dados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap4-manipulacao-dados.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo – Manipulação de Dados com R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap5-dados_vetoriais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../capitulos/cap6-exercicios-fixacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo 6 – Exercícios de Fixação</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../capitulos/cap7-fundamentos-python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 7 – Fundamentos de Programação com Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Capítulo – Fundamentos de Programação com Python</span></span></a>
   </div>
 </li>
     </ul>
@@ -191,16 +185,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Índice</h2>
    
   <ul>
-<li><a href="#importando-dados" id="toc-importando-dados" class="nav-link active" data-scroll-target="#importando-dados"><span class="header-section-number">5.1</span> 1. Importando dados</a></li>
-  <li><a href="#explorando-os-dados" id="toc-explorando-os-dados" class="nav-link" data-scroll-target="#explorando-os-dados"><span class="header-section-number">5.2</span> 2. Explorando os dados</a></li>
-  <li><a href="#trabalhando-com-linhas-e-colunas" id="toc-trabalhando-com-linhas-e-colunas" class="nav-link" data-scroll-target="#trabalhando-com-linhas-e-colunas"><span class="header-section-number">5.3</span> 3. Trabalhando com Linhas e Colunas</a></li>
-  <li><a href="#renomeando-criando-deletando-colunas" id="toc-renomeando-criando-deletando-colunas" class="nav-link" data-scroll-target="#renomeando-criando-deletando-colunas"><span class="header-section-number">5.4</span> 4. Renomeando, criando, deletando colunas</a></li>
+<li><a href="#importando-dados" id="toc-importando-dados" class="nav-link active" data-scroll-target="#importando-dados"><span class="header-section-number">5.1</span> Importando dados</a></li>
+  <li><a href="#explorando-os-dados" id="toc-explorando-os-dados" class="nav-link" data-scroll-target="#explorando-os-dados"><span class="header-section-number">5.2</span> Explorando os dados</a></li>
+  <li><a href="#trabalhando-com-linhas-e-colunas" id="toc-trabalhando-com-linhas-e-colunas" class="nav-link" data-scroll-target="#trabalhando-com-linhas-e-colunas"><span class="header-section-number">5.3</span> Trabalhando com Linhas e Colunas</a></li>
+  <li><a href="#renomeando-criando-deletando-colunas" id="toc-renomeando-criando-deletando-colunas" class="nav-link" data-scroll-target="#renomeando-criando-deletando-colunas"><span class="header-section-number">5.4</span> Renomeando, criando, deletando colunas</a></li>
+  <li><a href="#pr%C3%A1tica" id="toc-prática" class="nav-link" data-scroll-target="#pr%C3%A1tica"><span class="header-section-number">5.5</span> ✍️ Prática</a></li>
+  <li><a href="#gerando-gr%C3%A1fico-de-pontos" id="toc-gerando-gráfico-de-pontos" class="nav-link" data-scroll-target="#gerando-gr%C3%A1fico-de-pontos"><span class="header-section-number">5.6</span> Gerando gráfico de pontos</a></li>
+  <li><a href="#pr%C3%A1tica-1" id="toc-prática-1" class="nav-link" data-scroll-target="#pr%C3%A1tica-1"><span class="header-section-number">5.7</span> ✍️ Prática</a></li>
+  <li><a href="#gerando-gr%C3%A1fico-de-barras" id="toc-gerando-gráfico-de-barras" class="nav-link" data-scroll-target="#gerando-gr%C3%A1fico-de-barras"><span class="header-section-number">5.8</span> Gerando gráfico de barras</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/edit/main/capitulos/cap4-manipulacao-dados.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/IzadoraSC/ebook-intro-computacao-meteorologia/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 4 – Manipulação de Dados com R</span>
+<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo – Manipulação de Dados com R</span>
 </h1>
 </div>
 
@@ -218,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header><p>Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.</p>
 <hr>
 <section id="importando-dados" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="importando-dados">
-<span class="header-section-number">5.1</span> 1. Importando dados</h2>
+<span class="header-section-number">5.1</span> Importando dados</h2>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -284,7 +282,7 @@ Anexando pacote: 'dplyr'</code></pre>
 </div>
 </div>
 <hr></section><section id="explorando-os-dados" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="explorando-os-dados">
-<span class="header-section-number">5.2</span> 2. Explorando os dados</h2>
+<span class="header-section-number">5.2</span> Explorando os dados</h2>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#dim(dados_nc)</span></span>
 <span><span class="co">#summary(dados_nc)</span></span>
@@ -363,7 +361,7 @@ Anexando pacote: 'dplyr'</code></pre>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">.</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">.</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr></section><section id="trabalhando-com-linhas-e-colunas" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="trabalhando-com-linhas-e-colunas">
-<span class="header-section-number">5.3</span> 3. Trabalhando com Linhas e Colunas</h2>
+<span class="header-section-number">5.3</span> Trabalhando com Linhas e Colunas</h2>
 <div class="cell">
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Selecionar coluna pelo nome</span></span>
 <span><span class="co"># dados$UF</span></span>
@@ -378,7 +376,7 @@ Anexando pacote: 'dplyr'</code></pre>
 <span><span class="co">#dados[5, 3]</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr></section><section id="renomeando-criando-deletando-colunas" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="renomeando-criando-deletando-colunas">
-<span class="header-section-number">5.4</span> 4. Renomeando, criando, deletando colunas</h2>
+<span class="header-section-number">5.4</span> Renomeando, criando, deletando colunas</h2>
 <div class="cell">
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Renomeando coluna</span></span>
 <span><span class="va">TMAX_INMET</span> <span class="op">&lt;-</span> <span class="va">dados_nc</span> <span class="op">|&gt;</span> </span>
@@ -470,24 +468,37 @@ Anexando pacote: 'dplyr'</code></pre>
 # ℹ 62 more rows</code></pre>
 </div>
 </div>
+</section><section id="prática" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="prática">
+<span class="header-section-number">5.5</span> ✍️ Prática</h2>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Agora faça você mesmo!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Agora faça você mesmo!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Filtrar os dados para o MA</li>
+</ul>
+</div>
+</div>
+</section><section id="gerando-gráfico-de-pontos" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="gerando-gráfico-de-pontos">
+<span class="header-section-number">5.6</span> Gerando gráfico de pontos</h2>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#FAÇA VOCÊ</span></span>
-<span><span class="co"># Filtrar os dados para o MA</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Organizando ordem dos meses</span></span>
+<span></span>
+<span><span class="va">TMAX_SP</span> <span class="op">&lt;-</span></span>
+<span>   <span class="va">TMAX_SP</span> <span class="op">|&gt;</span></span>
+<span>   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Meses <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">Meses</span>,</span>
+<span>                         levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Jan'</span>, <span class="st">'Fev'</span>, <span class="st">'Mar'</span>, <span class="st">'Abr'</span>, <span class="st">'Mai'</span>,</span>
+<span>                                    <span class="st">'Jun'</span>,<span class="st">'Jul'</span>, <span class="st">'Ago'</span>, <span class="st">'Set'</span>, <span class="st">'Out'</span>,</span>
+<span>                                    <span class="st">'Nov'</span>, <span class="st">'Dez'</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Gerando gráfico de pontos </span></span>
-<span></span>
-<span><span class="co">#Organizando ordem dos meses</span></span>
-<span></span>
-<span><span class="co"># TMAX_SP &lt;- </span></span>
-<span><span class="co">#   TMAX_SP |&gt; </span></span>
-<span><span class="co">#   mutate(Meses = factor(Meses, </span></span>
-<span><span class="co">#                         levels = c('Jan', 'Fev', 'Mar', 'Abr', 'Mai',</span></span>
-<span><span class="co">#                                    'Jun','Jul', 'Ago', 'Set', 'Out', </span></span>
-<span><span class="co">#                                    'Nov', 'Dez')))</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">paleta_cor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html">colorRampPalette</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'red'</span>, <span class="st">'blue'</span>, <span class="st">'goldenrod'</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">paleta_cor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html">colorRampPalette</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'red'</span>, <span class="st">'blue'</span>, <span class="st">'goldenrod'</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">g1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">TMAX_SP</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Meses</span>, y <span class="op">=</span> <span class="va">Tmax</span>, color <span class="op">=</span> <span class="va">Meses</span><span class="op">)</span>,</span>
@@ -498,17 +509,32 @@ Anexando pacote: 'dplyr'</code></pre>
 <span><span class="va">g1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="cap4-manipulacao-dados_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="cap4-manipulacao-dados_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#FAÇA VOCÊ</span></span>
-<span><span class="co"># Gerar gráfico para os dados do MA</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="prática-1" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="prática-1">
+<span class="header-section-number">5.7</span> ✍️ Prática</h2>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Agora faça você mesmo!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Agora faça você mesmo!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Gerar gráfico para os dados do MA</li>
+</ul>
+</div>
+</div>
+</section><section id="gerando-gráfico-de-barras" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="gerando-gráfico-de-barras">
+<span class="header-section-number">5.8</span> Gerando gráfico de barras</h2>
 <div class="cell">
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#</span></span>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#</span></span>
 <span><span class="va">TMAX_UF</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="va">TMAX_longer</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">UF</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -534,7 +560,7 @@ Anexando pacote: 'dplyr'</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">TMAX_UF</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">UF</span>, <span class="va">Tmax_anual</span><span class="op">)</span>,</span>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">TMAX_UF</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">UF</span>, <span class="va">Tmax_anual</span><span class="op">)</span>,</span>
 <span>                    y <span class="op">=</span> <span class="va">Tmax_anual</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -545,11 +571,11 @@ Anexando pacote: 'dplyr'</code></pre>
 <span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="cap4-manipulacao-dados_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="cap4-manipulacao-dados_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 136
  $ line                            :List of 6
@@ -1277,13 +1303,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../capitulos/cap3-estruturas-dados.html" class="pagination-link" aria-label="Capítulo 3 – Estruturas de Dados">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 3 – Estruturas de Dados</span></span>
+      <a href="../capitulos/cap3-estruturas-dados.html" class="pagination-link" aria-label="Capítulo – Estruturas de Dados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo – Estruturas de Dados</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../capitulos/cap5-dados_vetoriais.html" class="pagination-link" aria-label="Capítulo 5 – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo 5 – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../capitulos/cap5-dados_vetoriais.html" class="pagination-link" aria-label="Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Capítulo – Dados Vetoriais com o pacote <code>geobr</code> e integração com dados meteorológicos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
