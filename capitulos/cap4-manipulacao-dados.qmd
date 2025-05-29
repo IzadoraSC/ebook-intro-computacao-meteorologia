@@ -10,6 +10,7 @@ Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar 
 
 library(readxl)
 library(dplyr)
+library(tidyr)
 
 #Normais Climatológicas (1991-2020) de Temperatura Máxima
 #Mensal obtidas do INMET
@@ -165,6 +166,8 @@ TMAX_SP
 ```
 
 ```{r}
+#| message: true
+#| warning: false
 paleta_cor <- colorRampPalette(c('red', 'blue', 'goldenrod'))
 
 g1 <- ggplot(data = TMAX_SP) +
@@ -174,11 +177,41 @@ g1 <- ggplot(data = TMAX_SP) +
   theme_classic()
 
 g1
+
 ```
+
 
 ```{r}
 #FAÇA VOCÊ
 # Gerar gráfico para os dados do MA
 
+```
+
+
+```{r}
+#
+TMAX_UF <- 
+  TMAX_longer |> 
+  group_by(UF) |> 
+  summarise(Tmax_anual = mean(Tmax, na.rm = T))
+
+
+TMAX_UF
+```
+
+
+
+```{r}
+
+ggplot(TMAX_UF, aes(x = reorder(UF, Tmax_anual),
+                    y = Tmax_anual)) +
+  geom_col(fill = "lightblue") +
+  scale_y_continuous(expand = c(0,0)) +
+  labs(title = "Temperatura Média Anual por Estado",
+       x = "Estado (UF)", y = "Temperatura Média Anual (°C)") +
+  theme(
+    axis.text.x = element_text(angle = 45)
+  )
+  theme_bw()
 
 ```
