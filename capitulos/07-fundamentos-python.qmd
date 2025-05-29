@@ -1,0 +1,103 @@
+
+# Capítulo 7 – Fundamentos de Programação com Python
+
+Neste capítulo, vamos introduzir a linguagem Python com foco nos conceitos essenciais para a análise de dados em Meteorologia e Ciências Atmosféricas.
+
+---
+
+## 🐍 1. Introdução à Linguagem Python
+
+Python é uma linguagem de programação de alto nível, muito utilizada em ciência de dados, modelagem numérica, meteorologia computacional e aprendizado de máquina.
+
+**Características principais:**
+- Simples e legível
+- Interpretada (sem necessidade de compilação)
+- Ampla comunidade científica e bibliotecas
+
+---
+
+## 🔢 2. Tipos de Dados Básicos
+
+```python
+# Números inteiros e decimais
+a = 5           # int
+b = 3.14        # float
+
+# Texto (string)
+nome = "UEMA"
+
+# Booleanos
+chovendo = True
+
+# Verificando os tipos
+print(type(a))
+print(type(nome))
+```
+
+---
+
+## 📦 3. Estruturas de Dados
+
+### 🔹 Listas
+
+```python
+temperaturas = [25.3, 27.8, 30.1]
+print(temperaturas[0])       # Acessa o primeiro elemento
+print(temperaturas[-1])      # Último elemento
+```
+
+### 🔹 Dicionários
+
+```python
+estacao = {
+    "nome": "Primavera",
+    "chuva_mm": 120,
+    "dias_quentes": 20
+}
+print(estacao["chuva_mm"])
+```
+
+---
+
+## 🔁 4. Estruturas de Controle
+
+### Condicional (`if`, `elif`, `else`)
+
+```python
+temp = 29
+
+if temp < 18:
+    print("Frio")
+elif temp <= 28:
+    print("Agradável")
+else:
+    print("Quente")
+```
+
+### Repetição (`for`)
+
+```python
+for t in temperaturas:
+    print(t)
+```
+
+---
+
+## 🔧 5. Criando Funções
+
+```python
+def amplitude_termica(tmax, tmin):
+    return tmax - tmin
+
+print(amplitude_termica(31.4, 22.8))  # Resultado: 8.6
+```
+
+---
+
+## ✍️ Prática proposta
+
+::: {.callout-tip icon="pencil" title="Agora pratique com Python!"}
+1. Crie uma lista com temperaturas mínimas de 7 dias.
+2. Calcule a média dessas temperaturas.
+3. Crie uma função que classifique cada valor como "frio", "agradável" ou "quente".
+:::

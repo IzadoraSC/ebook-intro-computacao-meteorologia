@@ -1,0 +1,73 @@
+# Capítulo 5 – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos
+
+Este capítulo apresenta o uso de dados espaciais vetoriais com o pacote `geobr`, integrando com dados climáticos simulados ou observados em território brasileiro.
+
+------------------------------------------------------------------------
+
+## 1. O que são dados vetoriais?
+
+Dados vetoriais representam feições geográficas com pontos, linhas ou polígonos. No contexto meteorológico, podemos utilizar mapas vetoriais para:
+
+-   Visualizar estações meteorológicas por município (pontos)
+-   Cruzar dados climáticos com unidades da federação (polígonos)
+-   Mapear regiões com chuvas intensas ou secas (polígonos)
+
+------------------------------------------------------------------------
+
+## 2. Instalando e carregando o pacote `geobr`
+
+``` {r}
+# install.packages("geobr")
+library(geobr)
+library(ggplot2)
+```
+
+------------------------------------------------------------------------
+
+## ️3. Carregando dados geográficos
+
+Vamos carregar o mapa dos municípios do Maranhão:
+
+``` {r}
+maranhao <- read_municipality(code_muni = "MA", year = 2020)
+plot(maranhao$geom)
+
+```
+
+------------------------------------------------------------------------
+
+##️ 4. Simulando dados meteorológicos por município
+
+``` {r}
+set.seed(123)
+chuva_mensal <- data.frame(
+  code_muni = maranhao$code_muni,
+  precipitacao_mm = round(runif(nrow(maranhao), 50, 300), 1)
+)
+
+# Unir com o dado geográfico
+maranhao_clima <- merge(maranhao, chuva_mensal, by = "code_muni")
+```
+
+------------------------------------------------------------------------
+
+## 5. Mapa temático com precipitação
+
+``` {r}
+ggplot(data = maranhao_clima) +
+  geom_sf(aes(fill = precipitacao_mm)) +
+  scale_fill_viridis_c(option = "C") +
+  labs(title = "Precipitação média simulada (mm) por município - MA",
+       fill = "mm/mês") +
+  theme_minimal()
+```
+
+------------------------------------------------------------------------
+
+## ✍️ Prática sugerida
+
+::: {.callout-tip icon="pencil" title="Agora pratique!"}
+1.  Carregue os limites do seu estado de interesse com `read_municipality()`.
+2.  Simule dados de temperatura média.
+3.  Crie um mapa temático com `ggplot2` usando `geom_sf()`.
+:::

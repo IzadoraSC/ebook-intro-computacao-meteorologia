@@ -14,21 +14,25 @@ book:
   repo-actions: [edit, issue]
   
   chapters:
-    - capitulos/00-cronograma.qmd
+    #- capitulos/00-cronograma.qmd
     - index.qmd
-    - capitulos/01-introducao.qmd
-    - capitulos/02-fundamentos-programacao.qmd
-    - capitulos/03-estruturas-dados.qmd
-    - capitulos/04-manipulacao-dados.qmd
-    - capitulos/06-exercicios-fixacao.qmd
+    - capitulos/cap1-introducao.qmd
+    - capitulos/cap2-fundamentos-programacao.qmd
+    - capitulos/cap3-estruturas-dados.qmd
+    - capitulos/cap4-manipulacao-dados.qmd
+    - capitulos/cap5-dados_vetoriais.qmd
+    - capitulos/cap6-exercicios-fixacao.qmd
+    - capitulos/cap7-fundamentos-python.qmd
     
 lang: pt    
 
 format:
   html:
     theme: cosmo
-    css: styles-meteorologia.css
+    css: styles.css
     code-link: true
     callout-appearance: simple
   # pdf:
   #   documentclass: scrreprt
+
+editor: visual

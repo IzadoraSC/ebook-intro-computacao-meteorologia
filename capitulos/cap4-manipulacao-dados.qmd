@@ -1,0 +1,183 @@
+# Capítulo 4 – Manipulação de Dados com R
+
+Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.
+
+------------------------------------------------------------------------
+
+## 1. Importando dados
+
+```{r}
+
+library(readxl)
+
+#Normais Climatológicas (1991-2020) de Temperatura Máxima
+#Mensal obtidas do INMET
+
+dados_nc <- read_excel("dados/TMAX_INMET.xlsx")
+#head(dados_nc)
+str(dados_nc)
+
+```
+
+------------------------------------------------------------------------
+
+## 2. Explorando os dados
+
+```{r}
+
+#dim(dados_nc)
+#summary(dados_nc)
+names(dados_nc)
+
+```
+
+**Valores Faltante (NA)**
+
+```{r}
+#Verificar de tem valores NA
+# any(is.na(dados_nc))
+
+#Contar quantos valores NA existem no total
+sum(is.na(dados_nc))
+
+#Verificar o número de NAs por coluna
+colSums(is.na(dados_nc))
+
+#ver linhas que contêm pelo menos um NA
+dados_nc  |> 
+  filter(if_any(everything(), is.na))
+```
+
+```{r}
+# Remover valores NA
+
+#De linhas
+dados_limpos <- dados_nc  |> 
+  drop_na()
+
+#De colunas específica
+dados_limpos <- dados_nc  |> 
+  drop_na(Janeiro, Fevereiro)
+```
+
+```{r}
+#Substituir (imputar) valores NA
+
+#Substituir NAs por zero
+dados_preenchidos <- dados_nc  |> 
+  mutate(across(everything(), ~replace_na(.x, 0)))
+
+#Substituir NAs por média da variável
+dados_preenchidos2 <- dados_nc  |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.), mean(., na.rm = TRUE), .)))
+```
+
+------------------------------------------------------------------------
+
+## 3. Trabalhando com Linhas e Colunas
+
+```{r}
+
+# Selecionar coluna pelo nome
+# dados$UF
+
+# Selecionar várias colunas por índice
+# dados[, c(1,3)]
+
+# Selecionar linha específica
+# dados[10, ]
+
+# Célula na linha 5, coluna 3
+#dados[5, 3]
+
+```
+
+------------------------------------------------------------------------
+
+## 4. Renomeando, criando, deletando colunas
+
+```{r}
+# Renomeando coluna
+TMAX_INMET <- dados_nc |> 
+  rename(
+    Estacao = `Nome da Estação`,
+    Jan = Janeiro,
+    Fev = Fevereiro,
+    Mar = Março,
+    Abr = Abril,
+    Mai = Maio,
+    Jun = Junho,
+    Jul = Julho,
+    Ago = Agosto,
+    Set = Setembro,
+    Out = Outubro,
+    Nov = Novembro,
+    Dez = Dezembro
+  )
+TMAX_INMET
+```
+
+```{r}
+# Pivotando 
+
+TMAX_longer <- 
+  TMAX_INMET |> 
+  dplyr::mutate(Ano = NULL) |> 
+  tidyr::pivot_longer(
+    cols = Jan:Dez,      
+    names_to = 'Meses',  
+    values_to = 'Tmax'
+  )
+TMAX_longer
+```
+
+```{r}
+
+# Filtrando os dados UF == SP 
+
+TMAX_SP <- 
+  TMAX_longer |> 
+  dplyr::filter(UF == 'SP')
+
+TMAX_SP
+```
+
+```{r}
+#FAÇA VOCÊ
+# Filtrar os dados para o MA
+
+
+```
+
+```{r}
+# Gerando gráfico de pontos 
+
+#Organizando ordem dos meses
+
+# TMAX_SP <- 
+#   TMAX_SP |> 
+#   mutate(Meses = factor(Meses, 
+#                         levels = c('Jan', 'Fev', 'Mar', 'Abr', 'Mai',
+#                                    'Jun','Jul', 'Ago', 'Set', 'Out', 
+#                                    'Nov', 'Dez')))
+
+```
+
+```{r}
+paleta_cor <- colorRampPalette(c('red', 'blue', 'goldenrod'))
+
+g1 <- ggplot(data = TMAX_SP) +
+  geom_point(aes(x = Meses, y = Tmax, color = Meses),
+             shape = 18, size = 3)+
+  scale_color_manual(values = paleta_cor(12)) +
+  theme_classic()
+
+g1
+```
+
+```{r}
+#FAÇA VOCÊ
+# Gerar gráfico para os dados do MA
+
+
+```

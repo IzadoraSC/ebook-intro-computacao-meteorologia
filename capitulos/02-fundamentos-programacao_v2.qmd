@@ -1,0 +1,84 @@
+
+# Capítulo 2 – Fundamentos de Programação
+
+## 🧠 O que é um algoritmo?
+
+Um **algoritmo** é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.
+
+---
+
+## ✏️ Exemplos Básicos em Portugol (Visualg)
+
+### 📘 Exemplo 1 – Exibir uma mensagem
+
+```portugol
+algoritmo "exibir_mensagem"
+inicio
+   escreval("Bem-vindo à Meteorologia!")
+fimalgoritmo
+```
+
+### 📘 Exemplo 2 – Somar dois números
+
+```portugol
+algoritmo "soma_simples"
+var
+   n1, n2, soma: inteiro
+inicio
+   escreva("Digite o primeiro número: ")
+   leia(n1)
+
+   escreva("Digite o segundo número: ")
+   leia(n2)
+
+   soma := n1 + n2
+
+   escreval("A soma é: ", soma)
+fimalgoritmo
+```
+
+### 📘 Exemplo 3 – Calcular média de duas temperaturas
+
+```portugol
+algoritmo "media_temperaturas"
+var
+   t1, t2, media: real
+inicio
+   escreva("Digite a primeira temperatura: ")
+   leia(t1)
+
+   escreva("Digite a segunda temperatura: ")
+   leia(t2)
+
+   media := (t1 + t2) / 2
+
+   escreval("A média das temperaturas é: ", media)
+fimalgoritmo
+```
+
+### 📘 Exemplo 4 – Verificar se número é positivo ou negativo
+
+```portugol
+algoritmo "verificar_sinal"
+var
+   numero: real
+inicio
+   escreva("Digite um número: ")
+   leia(numero)
+
+   se numero >= 0 entao
+      escreval("O número é positivo.")
+   senao
+      escreval("O número é negativo.")
+   fimse
+fimalgoritmo
+```
+
+---
+
+## ✍️ Prática sugerida
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+Crie um algoritmo que leia duas temperaturas (mínima e máxima) e calcule a **amplitude térmica** do dia.  
+Depois, exiba o resultado com uma mensagem explicativa.
+:::
