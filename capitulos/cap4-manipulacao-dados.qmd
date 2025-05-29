@@ -11,6 +11,7 @@ Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar 
 library(readxl)
 library(dplyr)
 library(tidyr)
+library(tidyverse)
 
 #Normais Climatológicas (1991-2020) de Temperatura Máxima
 #Mensal obtidas do INMET
