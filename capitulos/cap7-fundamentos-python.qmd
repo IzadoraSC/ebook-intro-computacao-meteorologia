@@ -1,22 +1,39 @@
 
-# Capítulo 7 – Fundamentos de Programação com Python
+# Capítulo – Fundamentos de Programação com Python
 
-Neste capítulo, vamos introduzir a linguagem Python com foco nos conceitos essenciais para a análise de dados em Meteorologia e Ciências Atmosféricas.
 
----
+## Introdução à Linguagem Python
 
-## 1. Introdução à Linguagem Python
+A linguagem Python foi desenvolvida por Guido van Rossum, e lançanda no início da década de 1990. Python é uma linguagem de alto nível interpretada, de código aberto e próposito geral. Sendo utilizada em vários setores como ciência de dados, matemática, geografia, física, medicina, *big data*, *machine learning*, detre outras.
 
-Python é uma linguagem de programação de alto nível, muito utilizada em ciência de dados, modelagem numérica, meteorologia, processamento de imagens, e aprendizado de máquina.
+Python é uma linguagem multiplataforma, funciona em diferentes ambientes e sistemas operacionais, como Android, IOS, Linux, Windows e na **nuvem**.
+
+Para executar um programa escrito em Python, é preciso tê-lo instalado em seu computador, assim como também é necessário ter ferramentas para a escrita e execução de códigos. Essas ferramentas são chamadas de ambiente de desenvolvimento integrado (IDE, *integrated development environmen*t), com várias opções gratuitas (VSCode, Spyder, Positron).
+
+A plataforma Google Colab ou Colaboratory (este que você está acessando), permite que você escreva e execute códigos em Python no navegador, sem que seja "necessário" configurar ferramentas, além de possuir acesso gratuito à GPUs e compoartilhamento facilitado.
 
 **Características principais:**
 - Simples e legível
 - Interpretada (sem necessidade de compilação)
 - Ampla comunidade científica e bibliotecas
+- Multiplataforma
+
+A linguagem Python, como a maioria das linguagens de programação, é formada por:
+- comandos;
+- tipos de dados;
+- variáveis;
+- expressões;
+- estrutura de dados;
+- funções;
+- bibliotecas (pacostes).
+
+Os arquivos (scripts, códigos) criado para executar no computador, devem ter a extensão **.py** (scrip_01.py) e necessitam que o interpretador da linguagem Python esteja instalado no computador que será utilizado.
+
+Em plataformas como o Google Colaboratory estes arquivos terão a extensão **.ipynb** (scrip_01.ipynb), denominados notebooks.
 
 ---
 
-## 🔢 2. Tipos de Dados Básicos
+## Tipos de Dados Básicos
 
 ```python
 # Números inteiros e decimais
@@ -24,7 +41,7 @@ a = 5           # int
 b = 3.14        # float
 
 # Texto (string)
-nome = "UEMA"
+nome = "Meteorologia"
 
 # Booleanos
 chovendo = False
@@ -32,13 +49,14 @@ chovendo = False
 # Verificando os tipos
 print(type(a))
 print(type(nome))
+
 ```
 
 ---
 
-## 📦 3. Estruturas de Dados
+## Estruturas de Dados
 
-### 🔹 Listas
+### Listas
 
 ```python
 temperaturas = [25.3, 27.8, 30.1]
@@ -46,7 +64,7 @@ print(temperaturas[0])       # Acessa o primeiro elemento
 print(temperaturas[-1])      # Último elemento
 ```
 
-### 🔹 Dicionários
+### Dicionários
 
 ```python
 estacao = {
@@ -59,7 +77,7 @@ print(estacao["chuva_mm"])
 
 ---
 
-## 🔁 4. Estruturas de Controle
+## Estruturas de Controle
 
 ### Condicional (`if`, `elif`, `else`)
 
@@ -83,7 +101,7 @@ for t in temperaturas:
 
 ---
 
-## 🔧 5. Criando Funções
+## Criando Funções
 
 ```python
 def amplitude_termica(tmax, tmin):

@@ -1,10 +1,10 @@
-# Capítulo 5 – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos
+# Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos
 
-Este capítulo apresenta o uso de dados espaciais vetoriais com o pacote `geobr`, integrando com dados climáticos simulados ou observados em território brasileiro.
+Este capítulo apresenta o uso de dados espaciais vetoriais com o pacote `geobr`, integrando com dados climáticos simulados ou observados.
 
 ------------------------------------------------------------------------
 
-## 1. O que são dados vetoriais?
+## O que são dados vetoriais?
 
 Dados vetoriais representam feições geográficas com pontos, linhas ou polígonos. No contexto meteorológico, podemos utilizar mapas vetoriais para:
 
@@ -14,9 +14,9 @@ Dados vetoriais representam feições geográficas com pontos, linhas ou polígo
 
 ------------------------------------------------------------------------
 
-## 2. Instalando e carregando o pacote `geobr`
+## Instalando e carregando o pacote `geobr`
 
-``` {r}
+```{r}
 # install.packages("geobr")
 library(geobr)
 library(ggplot2)
@@ -24,11 +24,11 @@ library(ggplot2)
 
 ------------------------------------------------------------------------
 
-## ️3. Carregando dados geográficos
+## Carregando dados geográficos
 
 Vamos carregar o mapa dos municípios do Maranhão:
 
-``` {r}
+```{r}
 maranhao <- read_municipality(code_muni = "MA", year = 2020)
 plot(maranhao$geom)
 
@@ -36,9 +36,9 @@ plot(maranhao$geom)
 
 ------------------------------------------------------------------------
 
-##️ 4. Simulando dados meteorológicos por município
+## Simulando dados meteorológicos por município
 
-``` {r}
+```{r}
 set.seed(123)
 chuva_mensal <- data.frame(
   code_muni = maranhao$code_muni,
@@ -51,9 +51,9 @@ maranhao_clima <- merge(maranhao, chuva_mensal, by = "code_muni")
 
 ------------------------------------------------------------------------
 
-## 5. Mapa temático com precipitação
+## Mapa temático com precipitação
 
-``` {r}
+```{r}
 ggplot(data = maranhao_clima) +
   geom_sf(aes(fill = precipitacao_mm)) +
   scale_fill_viridis_c(option = "C") +
@@ -64,9 +64,9 @@ ggplot(data = maranhao_clima) +
 
 ------------------------------------------------------------------------
 
-## ✍️ Prática sugerida
+## ✍️ Prática
 
-::: {.callout-tip icon="pencil" title="Agora pratique!"}
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 1.  Carregue os limites do seu estado de interesse com `read_municipality()`.
 2.  Simule dados de temperatura média.
 3.  Crie um mapa temático com `ggplot2` usando `geom_sf()`.

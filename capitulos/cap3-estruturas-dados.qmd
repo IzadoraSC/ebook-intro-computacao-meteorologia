@@ -1,4 +1,4 @@
-# Capítulo 3 – Estruturas de Dados
+# Capítulo – Estruturas de Dados
 
 ## Tipos de objetos no R
 
@@ -99,6 +99,8 @@ length(temperaturas)
 round(mean(temperaturas), 1)
 ```
 
+## ✍️ Prática
+
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 Crie um vetor chamado `chuvas` com os valores de precipitação (em mm) de 7 dias consecutivos.
 
@@ -157,6 +159,8 @@ mean(dados$temperatura_max)
 dados_com_chuva <- dados[dados$precipitacao > 0, ]
 ```
 
+## ✍️ Prática
+
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 Crie um `data.frame` chamado `observacoes` com 7 dias de dados contendo:
 
@@ -204,6 +208,8 @@ mean(estacao$temperaturas)
 # Atualizando o status
 estacao$status <- FALSE
 ```
+
+## ✍️ Prática
 
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 Crie uma lista chamada `cidade` com os seguintes elementos: - Nome da cidade - População estimada - Vetor com as temperaturas médias dos últimos 7 dias - Valor lógico indicando se há estação meteorológica local
@@ -269,7 +275,7 @@ apply(mt_temperatura, 1, max)
 
 ```
 
-### Prática
+### ✍️ Prática
 
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 Crie uma matriz com valores de umidade relativa para 5 dias e 3 horários (manhã, tarde e noite).

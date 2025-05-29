@@ -1,4 +1,4 @@
-# Capítulo 1 - Introdução à computação para meteorologia
+# Capítulo - Introdução à computação para meteorologia
 
 Não precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).
 
@@ -21,7 +21,7 @@ No contexto da Meteorologia, por exemplo, podemos ter algoritmos para:
 
 Existem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:
 
-### 📘 1. Descrição narrativa (português estruturado)
+### 1. Descrição narrativa (português estruturado)
 
 > Exemplo: Calcular a média de três temperaturas:
 >
@@ -29,22 +29,22 @@ Existem diversas formas de representar algoritmos antes de escrevê-los em uma l
 > - Calcule a média
 > - Mostre o resultado
 
-### 🧭 2. Fluxograma
+### Fluxograma
 
 > Um fluxograma representa graficamente o algoritmo usando **formas geométricas** (retângulos, losangos, setas).
 
 (Sugestão: você pode usar ferramentas como [draw.io](https://draw.io) para desenhar fluxogramas.)
 
-### 💻 3. Pseudocódigo (Portugol)
+### Pseudocódigo (Portugol)
 
 > Linguagem intermediária entre a linguagem natural e linguagem de programação.  
 > Utilizaremos o **Visualg** para executar pseudocódigos.
 
 ---
 
-## ✏️ Praticando a construção de algoritmos (Visualg)
+## Praticando a construção de algoritmos (Visualg)
 
-### 📘 Exemplo 1 – Exibir uma mensagem
+### Exemplo 1 – Exibir uma mensagem
 
 ```portugol
 algoritmo "exibir_mensagem"
@@ -53,7 +53,7 @@ inicio
 fimalgoritmo
 ```
 
-### 📘 Exemplo 2 – Somar dois números
+### Exemplo 2 – Somar dois números
 
 ```portugol
 algoritmo "soma_simples"
@@ -73,17 +73,17 @@ fimalgoritmo
 ```
 ---
 
-## 💡 Outros exemplos
+## Outros exemplos
 
 ### Objetivo: Calcular a média de temperatura de 3 dias
 
-### 📘 Descrição narrativa:
+### Descrição narrativa:
 - Leia três valores de temperatura
 - Some os valores
 - Divida a soma por 3
 - Mostre o resultado
 
-### 💻 Pseudocódigo em Portugol (Visualg):
+### Pseudocódigo em Portugol (Visualg):
 
 ```portugol
 algoritmo "media_temperatura"
@@ -105,7 +105,7 @@ fimalgoritmo
 
 ---
 
-## ✍️ Prática proposta
+## ✍️ Prática
 
 ::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
 Crie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,  

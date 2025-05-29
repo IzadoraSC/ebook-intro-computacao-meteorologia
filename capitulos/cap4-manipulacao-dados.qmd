@@ -1,10 +1,10 @@
-# Capítulo 4 – Manipulação de Dados com R
+# Capítulo – Manipulação de Dados com R
 
 Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar dados meteorológicos utilizando o R.
 
 ------------------------------------------------------------------------
 
-## 1. Importando dados
+## Importando dados
 
 ```{r}
 
@@ -24,7 +24,7 @@ str(dados_nc)
 
 ------------------------------------------------------------------------
 
-## 2. Explorando os dados
+## Explorando os dados
 
 ```{r}
 
@@ -77,7 +77,7 @@ dados_preenchidos2 <- dados_nc  |>
 
 ------------------------------------------------------------------------
 
-## 3. Trabalhando com Linhas e Colunas
+## Trabalhando com Linhas e Colunas
 
 ```{r}
 
@@ -97,7 +97,7 @@ dados_preenchidos2 <- dados_nc  |>
 
 ------------------------------------------------------------------------
 
-## 4. Renomeando, criando, deletando colunas
+## Renomeando, criando, deletando colunas
 
 ```{r}
 # Renomeando coluna
@@ -145,29 +145,28 @@ TMAX_SP <-
 TMAX_SP
 ```
 
+## ✍️ Prática
+
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+-   Filtrar os dados para o MA
+:::
+
+## Gerando gráfico de pontos
+
 ```{r}
-#FAÇA VOCÊ
-# Filtrar os dados para o MA
-
-
-```
-
-```{r}
-# Gerando gráfico de pontos 
-
+#| warning: false
 #Organizando ordem dos meses
 
-# TMAX_SP <- 
-#   TMAX_SP |> 
-#   mutate(Meses = factor(Meses, 
-#                         levels = c('Jan', 'Fev', 'Mar', 'Abr', 'Mai',
-#                                    'Jun','Jul', 'Ago', 'Set', 'Out', 
-#                                    'Nov', 'Dez')))
-
+TMAX_SP <-
+   TMAX_SP |>
+   mutate(Meses = factor(Meses,
+                         levels = c('Jan', 'Fev', 'Mar', 'Abr', 'Mai',
+                                    'Jun','Jul', 'Ago', 'Set', 'Out',
+                                    'Nov', 'Dez')))
 ```
 
 ```{r}
-#| message: true
+#| message: false
 #| warning: false
 paleta_cor <- colorRampPalette(c('red', 'blue', 'goldenrod'))
 
@@ -181,13 +180,13 @@ g1
 
 ```
 
+## ✍️ Prática
 
-```{r}
-#FAÇA VOCÊ
-# Gerar gráfico para os dados do MA
+::: {.callout-tip icon="pencil" title="Agora faça você mesmo!"}
+-   Gerar gráfico para os dados do MA
+:::
 
-```
-
+## Gerando gráfico de barras
 
 ```{r}
 #
@@ -199,8 +198,6 @@ TMAX_UF <-
 
 TMAX_UF
 ```
-
-
 
 ```{r}
 

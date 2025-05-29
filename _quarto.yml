@@ -21,7 +21,7 @@ book:
     - capitulos/cap3-estruturas-dados.qmd
     - capitulos/cap4-manipulacao-dados.qmd
     - capitulos/cap5-dados_vetoriais.qmd
-    - capitulos/cap6-exercicios-fixacao.qmd
+    #- capitulos/cap6-exercicios-fixacao.qmd
     - capitulos/cap7-fundamentos-python.qmd
     
 lang: pt    

@@ -1,6 +1,6 @@
-# Capítulo 2 – Fundamentos de Programação
+# Capítulo – Fundamentos de Programação
 
-##Introdução
+## Introdução
 
 ::: text-justify
 Ao longo da disciplina vamos trabalhar com duas linguagens de programação: R e Python. Porém , vamos abordar nesta primeira versão do ebook somente a linguagem R
@@ -82,7 +82,7 @@ Os dados são armazenados temporariamente em variáveis para que sejam processad
 
 ![Figura 3. Variáveis](/imagens/fig2-1.png){fig-align="center"}
 
-###Tipos de dados
+### Tipos de dados
 
 ::: text-justify
 Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles representam uma unidade ou um elemento de informação que pode ser acessado através de um identificador - por exemplo, uma variável.
@@ -102,7 +102,7 @@ Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles 
 
 ![Figura 4. Tipo de Dados](/imagens/fig2-2.png){fig-align="center"}
 
-###Objetos
+### Objetos
 
     Trabalhamos, em linguagem R, com objetos que podem ser gerados ou manipulados.
 
@@ -119,7 +119,7 @@ Os dados (e seus diversos tipos) são os blocos básicos da programação. Eles 
     | list      | Combina diferentes tipos num mesmo objeto |
     | function  | Comandos                                  |
 
-###Operadores
+### Operadores
 
 ::: text-justify
 Chamamos de operadores aritméticos o conjuntos de símbolos que representam as operações básicas da matemática.
@@ -129,7 +129,7 @@ Denominados expressão lógica aquela cujo operadores são lógicos ou relaciona
 
 ![Figura 5. Operadores no R (Paradis, 2005, p.25)](/imagens/fig2-3.png){fig-align="center"}
 
-##Atalhos
+## Atalhos
 
 | Teclas                 |                Descrição                |
 |:-----------------------|:---------------------------------------:|

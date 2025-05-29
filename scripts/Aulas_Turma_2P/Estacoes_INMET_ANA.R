@@ -103,7 +103,7 @@ leaflet(estacoes_rhn_func) %>%
   ) %>%
   addLegend(
     position = "bottomright",
-    title = "Estações RHN",
+    title = "Estações ANA",
     colors = "blue",
     labels = "Estação Hidrometeorológica",
     opacity = 0.7
