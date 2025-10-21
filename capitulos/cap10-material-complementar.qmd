@@ -1,0 +1,21 @@
+# Capítulo – Informações Complementares
+
+Este capítulo apresenta recomendações complementares de pacotes, funções, referências.
+
+------------------------------------------------------------------------
+
+## Aplicações com Machine Learning utilizando R
+
+Com o pacote `mlr3`, link para acessar material: [aqui](https://mlr3book.mlr-org.com/chapters/chapter1/introduction_and_overview.html).
+
+Com `tidymodels`, link para acessar material: [aqui](https://www.tmwr.org).
+
+## Pacote `broom`
+
+Para gerar tabelas organizadas com os resultados de modelos estatísticos (lm, nls, t.test). Link para acesso: [aqui](https://broom.tidymodels.org/articles/broom.html).
+
+## Referências
+
+-   [R para Ciência de Dados (2ª edição)](https://pt.r4ds.hadley.nz/missing-values.html)
+
+-   
