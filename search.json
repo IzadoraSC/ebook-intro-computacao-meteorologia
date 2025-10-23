@@ -14,7 +14,7 @@
     "href": "capitulos/cap1-introducao.html",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
     "section": "",
-    "text": "2.1 O que é um algoritmo?\nNão precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).\nUm algoritmo é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.\nNo contexto da Meteorologia, por exemplo, podemos ter algoritmos para:",
+    "text": "2.1\nNão precisamos nos tornar programadores profissionais ao final da disciplina. Porém, precisamos ao menos olhar para um código e conserguir compreender e interpretar (mas ir além disso não é proíbido, inclusive recomendamos).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -23,8 +23,8 @@
     "objectID": "capitulos/cap1-introducao.html#o-que-é-um-algoritmo",
     "href": "capitulos/cap1-introducao.html#o-que-é-um-algoritmo",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
-    "section": "",
-    "text": "Calcular a média de temperatura de uma semana\nVerificar se um valor de precipitação indica “chuva forte”\nClassificar dias como quentes, amenos ou frios",
+    "section": "2.2 O que é um algoritmo?",
+    "text": "2.2 O que é um algoritmo?\nUm algoritmo é uma sequência finita de passos lógicos bem definidos para resolver um problema ou realizar uma tarefa.\nNo contexto da Meteorologia, por exemplo, podemos ter algoritmos para:\n\nCalcular a média de temperatura de uma semana\nVerificar se um valor de precipitação indica “chuva forte”\nClassificar dias como quentes, amenos ou frios",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -33,8 +33,8 @@
     "objectID": "capitulos/cap1-introducao.html#formas-de-representar-algoritmos",
     "href": "capitulos/cap1-introducao.html#formas-de-representar-algoritmos",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
-    "section": "2.2 Formas de representar algoritmos",
-    "text": "2.2 Formas de representar algoritmos\nExistem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:\n\n2.2.1 1. Descrição narrativa (português estruturado)\n\nExemplo: Calcular a média de três temperaturas:\n\nLeia três temperaturas\nCalcule a média\nMostre o resultado\n\n\n\n\n2.2.2 Fluxograma\n\nUm fluxograma representa graficamente o algoritmo usando formas geométricas (retângulos, losangos, setas).\n\n(Sugestão: você pode usar ferramentas como draw.io para desenhar fluxogramas.)\n\n\n2.2.3 Pseudocódigo (Portugol)\n\nLinguagem intermediária entre a linguagem natural e linguagem de programação.\nUtilizaremos o Visualg para executar pseudocódigos.",
+    "section": "2.3 Formas de representar algoritmos",
+    "text": "2.3 Formas de representar algoritmos\nExistem diversas formas de representar algoritmos antes de escrevê-los em uma linguagem de programação. As principais são:\n\n2.3.1 1. Descrição narrativa (português estruturado)\n\nExemplo: Calcular a média de três temperaturas:\n\nLeia três temperaturas\nCalcule a média\nMostre o resultado\n\n\n\n\n2.3.2 Fluxograma\n\nUm fluxograma representa graficamente o algoritmo usando formas geométricas (retângulos, losangos, setas).\n\n(Sugestão: você pode usar ferramentas como draw.io para desenhar fluxogramas.)\n\n\n2.3.3 Pseudocódigo (Portugol)\n\nLinguagem intermediária entre a linguagem natural e linguagem de programação.\nUtilizaremos o Visualg para executar pseudocódigos.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -43,8 +43,8 @@
     "objectID": "capitulos/cap1-introducao.html#praticando-a-construção-de-algoritmos-visualg",
     "href": "capitulos/cap1-introducao.html#praticando-a-construção-de-algoritmos-visualg",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
-    "section": "2.3 Praticando a construção de algoritmos (Visualg)",
-    "text": "2.3 Praticando a construção de algoritmos (Visualg)\n\n2.3.1 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n2.3.2 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma &lt;- n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
+    "section": "2.4 Praticando a construção de algoritmos (Visualg)",
+    "text": "2.4 Praticando a construção de algoritmos (Visualg)\n\n2.4.1 Exemplo 1 – Exibir uma mensagem\nalgoritmo \"exibir_mensagem\"\ninicio\n   escreval(\"Bem-vindo à Meteorologia!\")\nfimalgoritmo\n\n\n2.4.2 Exemplo 2 – Somar dois números\nalgoritmo \"soma_simples\"\nvar\n   n1, n2, soma: inteiro\ninicio\n   escreva(\"Digite o primeiro número: \")\n   leia(n1)\n\n   escreva(\"Digite o segundo número: \")\n   leia(n2)\n\n   soma &lt;- n1 + n2\n\n   escreval(\"A soma é: \", soma)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -53,8 +53,8 @@
     "objectID": "capitulos/cap1-introducao.html#outros-exemplos",
     "href": "capitulos/cap1-introducao.html#outros-exemplos",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
-    "section": "2.4 Outros exemplos",
-    "text": "2.4 Outros exemplos\n\n2.4.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n2.4.2 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n2.4.3 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media &lt;- (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
+    "section": "2.5 Outros exemplos",
+    "text": "2.5 Outros exemplos\n\n2.5.1 Objetivo: Calcular a média de temperatura de 3 dias\n\n\n2.5.2 Descrição narrativa:\n\nLeia três valores de temperatura\nSome os valores\nDivida a soma por 3\nMostre o resultado\n\n\n\n2.5.3 Pseudocódigo em Portugol (Visualg):\nalgoritmo \"media_temperatura\"\nvar\n   t1, t2, t3, media: real\ninicio\n   escreva(\"Digite a primeira temperatura: \")\n   leia(t1)\n   escreva(\"Digite a segunda temperatura: \")\n   leia(t2)\n   escreva(\"Digite a terceira temperatura: \")\n   leia(t3)\n\n   media &lt;- (t1 + t2 + t3) / 3\n\n   escreval(\"A média das temperaturas é: \", media)\nfimalgoritmo",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -63,8 +63,8 @@
     "objectID": "capitulos/cap1-introducao.html#prática",
     "href": "capitulos/cap1-introducao.html#prática",
     "title": "2  Capítulo - Introdução à computação para meteorologia",
-    "section": "2.5 ✍️ Prática",
-    "text": "2.5 ✍️ Prática\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
+    "section": "2.6 ✍️ Prática",
+    "text": "2.6 ✍️ Prática\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\nCrie um algoritmo em pseudocódigo que leia a temperatura mínima e máxima do dia,\ncalcule a amplitude térmica e exiba o resultado.\nDepois, implemente esse algoritmo no Visualg!",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo - Introdução à computação para meteorologia</span>"
     ]
@@ -374,129 +374,169 @@
     "href": "capitulos/cap4-manipulacao-dados.html#prática-2",
     "title": "\n5  Capítulo – Manipulação de Dados com R\n",
     "section": "\n5.9 ✍️ Prática",
-    "text": "5.9 ✍️ Prática\nAcessando planilha .csv\n\n#Acessando tabela dos dados\n\nSao_Luis &lt;- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'\n\n\nImperatriz &lt;- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'\n\n\n#Lendo os dados\n\ndf_slz &lt;- read.csv2(\n  file = Sao_Luis,\n  na = 'null',\n  skip = 10\n)\n\nhead(df_slz)\n\n  Data.Medicao EVAPORACAO.DO.PICHE..DIARIA.mm. INSOLACAO.TOTAL..DIARIO.h.\n1   1991-01-01                             0.8                        3.6\n2   1991-01-02                             1.4                        5.8\n3   1991-01-03                             2.6                        7.6\n4   1991-01-04                             2.8                        9.7\n5   1991-01-05                             1.0                        4.3\n6   1991-01-06                             2.5                        7.7\n  PRECIPITACAO.TOTAL..DIARIO.mm. TEMPERATURA.MAXIMA..DIARIA..C.\n1                            1.6                           31.1\n2                           16.6                           31.5\n3                            0.3                           32.1\n4                            3.0                           32.5\n5                            0.0                           33.1\n6                           68.3                           32.7\n  TEMPERATURA.MEDIA.COMPENSADA..DIARIA..C. TEMPERATURA.MINIMA..DIARIA..C.\n1                                     24.1                           19.6\n2                                     25.3                           19.4\n3                                     25.7                           23.2\n4                                     27.5                           23.0\n5                                     26.2                           24.0\n6                                     27.1                           23.4\n  UMIDADE.RELATIVA.DO.AR..MEDIA.DIARIA...\n1                                    86.8\n2                                    80.8\n3                                    80.5\n4                                    71.3\n5                                    80.8\n6                                    77.5\n  UMIDADE.RELATIVA.DO.AR..MINIMA.DIARIA... VENTO..VELOCIDADE.MEDIA.DIARIA.m.s.\n1                                       63                                 0.5\n2                                       58                                 1.2\n3                                       61                                 1.9\n4                                       55                                 1.3\n5                                       51                                 2.5\n6                                       49                                 1.2\n   X\n1 NA\n2 NA\n3 NA\n4 NA\n5 NA\n6 NA",
+    "text": "5.9 ✍️ Prática\nAcessando planilha .csv",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo – Manipulação de Dados com R</span>"
     ]
   },
   {
-    "objectID": "capitulos/cap5-dados_vetoriais.html",
-    "href": "capitulos/cap5-dados_vetoriais.html",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "",
-    "text": "6.1 O que são dados vetoriais?\nEste capítulo apresenta o uso de dados espaciais vetoriais com o pacote geobr, integrando com dados climáticos simulados ou observados.\nDados vetoriais representam feições geográficas com pontos, linhas ou polígonos. No contexto meteorológico, podemos utilizar mapas vetoriais para:",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#o-que-são-dados-vetoriais",
-    "href": "capitulos/cap5-dados_vetoriais.html#o-que-são-dados-vetoriais",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "",
-    "text": "Visualizar estações meteorológicas por município (pontos)\nCruzar dados climáticos com unidades da federação (polígonos)\nMapear regiões com chuvas intensas ou secas (polígonos)",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#instalando-e-carregando-o-pacote-geobr",
-    "href": "capitulos/cap5-dados_vetoriais.html#instalando-e-carregando-o-pacote-geobr",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "\n6.2 Instalando e carregando o pacote geobr\n",
-    "text": "6.2 Instalando e carregando o pacote geobr\n\n\n# install.packages(\"geobr\")\nlibrary(geobr)\n\nWarning: pacote 'geobr' foi compilado no R versão 4.4.3\n\n\nCarregando namespace exigido: sf\n\nlibrary(ggplot2)\n\nWarning: pacote 'ggplot2' foi compilado no R versão 4.4.3",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#carregando-dados-geográficos",
-    "href": "capitulos/cap5-dados_vetoriais.html#carregando-dados-geográficos",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "\n6.3 Carregando dados geográficos",
-    "text": "6.3 Carregando dados geográficos\nVamos carregar o mapa dos municípios do Maranhão:\n\nmaranhao &lt;- read_municipality(code_muni = \"MA\", year = 2020)\n\nUsing year/date 2020\n\nplot(maranhao$geom)",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#simulando-dados-meteorológicos-por-município",
-    "href": "capitulos/cap5-dados_vetoriais.html#simulando-dados-meteorológicos-por-município",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "\n6.4 Simulando dados meteorológicos por município",
-    "text": "6.4 Simulando dados meteorológicos por município\n\nset.seed(123)\nchuva_mensal &lt;- data.frame(\n  code_muni = maranhao$code_muni,\n  precipitacao_mm = round(runif(nrow(maranhao), 50, 300), 1)\n)\n\n# Unir com o dado geográfico\nmaranhao_clima &lt;- merge(maranhao, chuva_mensal, by = \"code_muni\")",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#mapa-temático-com-precipitação",
-    "href": "capitulos/cap5-dados_vetoriais.html#mapa-temático-com-precipitação",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "\n6.5 Mapa temático com precipitação",
-    "text": "6.5 Mapa temático com precipitação\n\nggplot(data = maranhao_clima) +\n  geom_sf(aes(fill = precipitacao_mm)) +\n  scale_fill_viridis_c(option = \"C\") +\n  labs(title = \"Precipitação média simulada (mm) por município - MA\",\n       fill = \"mm/mês\") +\n  theme_minimal()",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulos/cap5-dados_vetoriais.html#prática",
-    "href": "capitulos/cap5-dados_vetoriais.html#prática",
-    "title": "\n6  Capítulo – Dados Vetoriais com o pacote geobr e integração com dados meteorológicos\n",
-    "section": "\n6.6 ✍️ Prática",
-    "text": "6.6 ✍️ Prática\n\n\n\n\n\n\nAgora faça você mesmo!\n\n\n\n\nCarregue os limites do seu estado de interesse com read_municipality().\nSimule dados de temperatura média.\nCrie um mapa temático com ggplot2 usando geom_sf().",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Dados Vetoriais com o pacote `geobr` e integração com dados meteorológicos</span>"
-    ]
-  },
-  {
     "objectID": "capitulos/cap7-fundamentos-python.html",
     "href": "capitulos/cap7-fundamentos-python.html",
-    "title": "7  Capítulo – Fundamentos de Programação com Python",
+    "title": "6  Capítulo – Fundamentos de Programação com Python",
     "section": "",
-    "text": "7.1 Introdução à Linguagem Python\nA linguagem Python foi desenvolvida por Guido van Rossum, e lançanda no início da década de 1990. Python é uma linguagem de alto nível interpretada, de código aberto e próposito geral. Sendo utilizada em vários setores como ciência de dados, matemática, geografia, física, medicina, big data, machine learning, detre outras.\nPython é uma linguagem multiplataforma, funciona em diferentes ambientes e sistemas operacionais, como Android, IOS, Linux, Windows e na nuvem.\nPara executar um programa escrito em Python, é preciso tê-lo instalado em seu computador, assim como também é necessário ter ferramentas para a escrita e execução de códigos. Essas ferramentas são chamadas de ambiente de desenvolvimento integrado (IDE, integrated development environment), com várias opções gratuitas (VSCode, Spyder, Positron).\nA plataforma Google Colab ou Colaboratory (este que você está acessando), permite que você escreva e execute códigos em Python no navegador, sem que seja “necessário” configurar ferramentas, além de possuir acesso gratuito à GPUs e compoartilhamento facilitado.\nCaracterísticas principais: - Simples e legível - Interpretada (sem necessidade de compilação) - Ampla comunidade científica e bibliotecas - Multiplataforma\nA linguagem Python, como a maioria das linguagens de programação, é formada por: - comandos; - tipos de dados; - variáveis; - expressões; - estrutura de dados; - funções; - bibliotecas (pacostes).\nOs arquivos (scripts, códigos) criado para executar no computador, devem ter a extensão .py (scrip_01.py) e necessitam que o interpretador da linguagem Python esteja instalado no computador que será utilizado.\nEm plataformas como o Google Colaboratory estes arquivos terão a extensão .ipynb (scrip_01.ipynb), denominados notebooks.",
+    "text": "6.1 Introdução à Linguagem Python\nA linguagem Python foi desenvolvida por Guido van Rossum, e lançanda no início da década de 1990. Python é uma linguagem de alto nível interpretada, de código aberto e próposito geral. Sendo utilizada em vários setores como ciência de dados, matemática, geografia, física, medicina, big data, machine learning, detre outras.\nPython é uma linguagem multiplataforma, funciona em diferentes ambientes e sistemas operacionais, como Android, IOS, Linux, Windows e na nuvem.\nPara executar um programa escrito em Python, é preciso tê-lo instalado em seu computador, assim como também é necessário ter ferramentas para a escrita e execução de códigos. Essas ferramentas são chamadas de ambiente de desenvolvimento integrado (IDE, integrated development environment), com várias opções gratuitas (VSCode, Spyder, Positron).\nA plataforma Google Colab ou Colaboratory (este que você está acessando), permite que você escreva e execute códigos em Python no navegador, sem que seja “necessário” configurar ferramentas, além de possuir acesso gratuito à GPUs e compoartilhamento facilitado.\nCaracterísticas principais: - Simples e legível - Interpretada (sem necessidade de compilação) - Ampla comunidade científica e bibliotecas - Multiplataforma\nA linguagem Python, como a maioria das linguagens de programação, é formada por: - comandos; - tipos de dados; - variáveis; - expressões; - estrutura de dados; - funções; - bibliotecas (pacostes).\nOs arquivos (scripts, códigos) criado para executar no computador, devem ter a extensão .py (scrip_01.py) e necessitam que o interpretador da linguagem Python esteja instalado no computador que será utilizado.\nEm plataformas como o Google Colaboratory estes arquivos terão a extensão .ipynb (scrip_01.ipynb), denominados notebooks.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
     ]
   },
   {
     "objectID": "capitulos/cap7-fundamentos-python.html#tipos-de-dados-básicos",
     "href": "capitulos/cap7-fundamentos-python.html#tipos-de-dados-básicos",
-    "title": "7  Capítulo – Fundamentos de Programação com Python",
-    "section": "7.2 Tipos de Dados Básicos",
-    "text": "7.2 Tipos de Dados Básicos\n# Números inteiros e decimais\na = 5           # int\nb = 3.14        # float\n\n# Texto (string)\nnome = \"Meteorologia\"\n\n# Booleanos\nchovendo = False\n\n# Verificando os tipos\nprint(type(a))\nprint(type(nome))",
+    "title": "6  Capítulo – Fundamentos de Programação com Python",
+    "section": "6.2 Tipos de Dados Básicos",
+    "text": "6.2 Tipos de Dados Básicos\n# Números inteiros e decimais\na = 5           # int\nb = 3.14        # float\n\n# Texto (string)\nnome = \"Meteorologia\"\n\n# Booleanos\nchovendo = False\n\n# Verificando os tipos\nprint(type(a))\nprint(type(nome))",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
     ]
   },
   {
     "objectID": "capitulos/cap7-fundamentos-python.html#estruturas-de-dados",
     "href": "capitulos/cap7-fundamentos-python.html#estruturas-de-dados",
-    "title": "7  Capítulo – Fundamentos de Programação com Python",
-    "section": "7.3 Estruturas de Dados",
-    "text": "7.3 Estruturas de Dados\n\n7.3.1 Listas\n\naplicada para dados como coordenadas geográficas. Ex.: (-15,-45).\nquando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).\n\ntemperaturas = [25.3, 27.8, 30.1]\nprint(temperaturas[0])       # Acessa o primeiro elemento\nprint(temperaturas[-1])      # Último elemento\n\n\n7.3.2 Dicionários\nExemplos: usado em paleta de cores, metadados de imagens\nestacao = {\n    \"nome\": \"Primavera\",\n    \"chuva_mm\": 120,\n    \"dias_quentes\": 20\n}\nprint(estacao[\"chuva_mm\"])\n\n\n7.3.3 Tuplas\n\naplicada para dados como coordenadas geográficas. Ex.: (-15,-45).\nquando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).\n\ny = (1,2,4,6,8)\nprint(y)\ntype(y)\n\n\n7.3.4 Array\nUsado para representar imagens (bidimensional).\nForma de estrutura mais importante para se trabalhar nos processamentos de imagens de satélite.\nimport numpy as np\n\narr = np.array([1,2,3,4,5,6,7,8])\ntype(arr)\n\narr = np.array([[1,2,3,4,5,6,7,8], [8,7,6,5,4,3,2,1]])\n\nprint(arr)\n\narr = np.array([1,2,3,4,5,6,7,8])\n\narr[-1]\n\n#Calculos\narr.min()\narr.mean()\n\nnp.median(arr)",
+    "title": "6  Capítulo – Fundamentos de Programação com Python",
+    "section": "6.3 Estruturas de Dados",
+    "text": "6.3 Estruturas de Dados\n\n6.3.1 Listas\n\naplicada para dados como coordenadas geográficas. Ex.: (-15,-45).\nquando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).\n\ntemperaturas = [25.3, 27.8, 30.1]\nprint(temperaturas[0])       # Acessa o primeiro elemento\nprint(temperaturas[-1])      # Último elemento\n\n\n6.3.2 Dicionários\nExemplos: usado em paleta de cores, metadados de imagens\nestacao = {\n    \"nome\": \"Primavera\",\n    \"chuva_mm\": 120,\n    \"dias_quentes\": 20\n}\nprint(estacao[\"chuva_mm\"])\n\n\n6.3.3 Tuplas\n\naplicada para dados como coordenadas geográficas. Ex.: (-15,-45).\nquando vamos fazer uma composição colorida de imagens: (3,2,1) #(R,G,B).\n\ny = (1,2,4,6,8)\nprint(y)\ntype(y)\n\n\n6.3.4 Array\nUsado para representar imagens (bidimensional).\nForma de estrutura mais importante para se trabalhar nos processamentos de imagens de satélite.\nimport numpy as np\n\narr = np.array([1,2,3,4,5,6,7,8])\ntype(arr)\n\narr = np.array([[1,2,3,4,5,6,7,8], [8,7,6,5,4,3,2,1]])\n\nprint(arr)\n\narr = np.array([1,2,3,4,5,6,7,8])\n\narr[-1]\n\n#Calculos\narr.min()\narr.mean()\n\nnp.median(arr)",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
     ]
   },
   {
     "objectID": "capitulos/cap7-fundamentos-python.html#estruturas-de-controle",
     "href": "capitulos/cap7-fundamentos-python.html#estruturas-de-controle",
-    "title": "7  Capítulo – Fundamentos de Programação com Python",
-    "section": "7.4 Estruturas de Controle",
-    "text": "7.4 Estruturas de Controle\n\n7.4.1 Condicional (if, elif, else)\ntemp = 29\n\nif temp &lt; 18:\n    print(\"Frio\")\nelif temp &lt;= 28:\n    print(\"Agradável\")\nelse:\n    print(\"Quente\")\n\n\n7.4.2 Repetição (for)\nfor t in temperaturas:\n    print(t)",
+    "title": "6  Capítulo – Fundamentos de Programação com Python",
+    "section": "6.4 Estruturas de Controle",
+    "text": "6.4 Estruturas de Controle\n\n6.4.1 Condicional (if, elif, else)\ntemp = 29\n\nif temp &lt; 18:\n    print(\"Frio\")\nelif temp &lt;= 28:\n    print(\"Agradável\")\nelse:\n    print(\"Quente\")\n\n\n6.4.2 Repetição (for)\nfor t in temperaturas:\n    print(t)",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
     ]
   },
   {
     "objectID": "capitulos/cap7-fundamentos-python.html#criando-funções",
     "href": "capitulos/cap7-fundamentos-python.html#criando-funções",
-    "title": "7  Capítulo – Fundamentos de Programação com Python",
-    "section": "7.5 Criando Funções",
-    "text": "7.5 Criando Funções\ndef amplitude_termica(tmax, tmin):\n    return tmax - tmin\n\nprint(amplitude_termica(31.4, 22.8))",
+    "title": "6  Capítulo – Fundamentos de Programação com Python",
+    "section": "6.5 Criando Funções",
+    "text": "6.5 Criando Funções\ndef amplitude_termica(tmax, tmin):\n    return tmax - tmin\n\nprint(amplitude_termica(31.4, 22.8))",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo – Fundamentos de Programação com Python</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html",
+    "href": "capitulos/cap8-estudo-casos.html",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "",
+    "text": "7.1 Introdução\nNeste capítulo, apresentaremos estudos de caso utilizando dados climáticos e meterológico.\nCada estudo de caso abordará uma situação prática comum em análises climáticas.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#estudo-de-caso-01-temperatura-média-mensal-a-partir-de-dados-de-uma-estação-meteorológica",
+    "href": "capitulos/cap8-estudo-casos.html#estudo-de-caso-01-temperatura-média-mensal-a-partir-de-dados-de-uma-estação-meteorológica",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.2 Estudo de caso 01: Temperatura média mensal a partir de dados de uma estação meteorológica",
+    "text": "7.2 Estudo de caso 01: Temperatura média mensal a partir de dados de uma estação meteorológica\nAs condições climatológicas influenciam desde a safra de grãos até a decisão de um vendedor ambulante levar seu carrinho para a praia ou não, sendo importante e influente na economia do país. Portanto aprender a coletar e elaborar análises de dados sobre o clima usando o Python (ou outra linguagem de programação) é fundamental para o profissional meteorologista.\nCondições como a temperatura, umidade, radiação e pressão atmosgérica podem influenciar diversos aspectos do nosso cotidiano, portanto, o monitoramento do clima pode ajudar a tomar melhores decisões.\nNo Brasil, uma das principais fontes de dados públicas sobre condições climática é o Instituto Nacional de Meterologia (INMET), que disponibiliza dados históricos com relativa atualização sobre:\n\nPrecipitação\nPressão atmosférica\nRadiação\nTemperatura\nUmidade\nVento\n\nOs dados são disponibilizados para nível de:\n\nRegiões\nEstados\nMunicípios\n\nEm uma granularidade de:\n\nData\nHora\n\nDessa forma, vamos práticar!\nNo primeiro estudo de caso vamos calcular e visualizar a temperatura média mensal para uma estação meteorológica do INMET.\nPara isso você deve baixar dados de uma estação no site do INMET\nEm seguida crie um novo notebook (código/script) no google colab (.ipynb) e comece os trabalhos.\nPara o exemplo do estudo de caso será utilizado dados da estação automática A203 localizada no município de São Luís-MA para o ano de 2024.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#criando-notebookscriptcódigo",
+    "href": "capitulos/cap8-estudo-casos.html#criando-notebookscriptcódigo",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.3 Criando notebook/script/código",
+    "text": "7.3 Criando notebook/script/código\n\nAcesse um navegador de internet (microsoft edge, google chrome, Opera, etc.).\nFaça o login na sua conta gmail, então acesse Google Colab.\nEntão crie um novo notebook:\n\n\n\n\n\n\nRenomei o arquivo, conecte o ambiente de trabalho e comece a construir o seu código com células de texto (explicando cada etapa) e célular de código (executando o acesso, manipulação e análise dos dados):",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#instalando-bibliotecas",
+    "href": "capitulos/cap8-estudo-casos.html#instalando-bibliotecas",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.4 Instalando bibliotecas",
+    "text": "7.4 Instalando bibliotecas\n#INSTALANDO BIBLIOTECAS\n\n!pip install seaborn -q",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#importando-bibliotecas",
+    "href": "capitulos/cap8-estudo-casos.html#importando-bibliotecas",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.5 Importando bibliotecas",
+    "text": "7.5 Importando bibliotecas\nimport pandas as pd \nimport matplotlib.pyplot as plt\nimport seaborn as sns",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#carregando-dados-da-estação-arquivo-csv",
+    "href": "capitulos/cap8-estudo-casos.html#carregando-dados-da-estação-arquivo-csv",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.6 Carregando dados da estação (arquivo csv)",
+    "text": "7.6 Carregando dados da estação (arquivo csv)\n#CARREGANDO E VISUALIZANDO TABELA DE DADOS\n\n# dados = pd.read_csv('/content/INMET_NE_MA_A203_SAO_LUIS_2024.csv', sep=';', skiprows= 8, decimal=',', encoding='latin1')\n\ndados = \"https://raw.githubusercontent.com/IzadoraSC/Disc_Computacao_II/main/Dados/INMET_NE_MA_A203_SAO%20LUIS_01-01-2024_A_31-12-2024.CSV\"\n\ndados = pd.read_csv(dados, sep = ';', skiprows = 8, decimal = ',',  encoding = 'latin1')\n\n#visualizando as primeiras linhas da tabela\ndados.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#manipulações-iniciais-dos-dados",
+    "href": "capitulos/cap8-estudo-casos.html#manipulações-iniciais-dos-dados",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.7 Manipulações iniciais dos dados",
+    "text": "7.7 Manipulações iniciais dos dados\n#VERIFICANDO TIPO DE DADOS EM CADA COLUNA \n\nprint(dados.dtypes)\n#VERIFICANDO NOMES DE COLUNAS\nprint(dados.columns)\n#RENOMEANDO COLUNAS\ndados = dados.rename(columns={\n    'PRECIPITAÇÃO TOTAL, HORÁRIO (mm)': 'Chuva',\n    'TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)': 'Temperatura'})\n\n#DELETANDO COLUNA\ndados = dados.drop(columns=['Unnamed: 19'])\n\ndados.columns\n#MUDAR TIPO DE DADO DA COLUNA 'Data'\n\ndados['Data'] = pd.to_datetime(dados['Data'], errors='coerce')\n\ndados.dtypes\n# SELECIONAR APENAS AS COLUNAS DESEJADAS\n\ndados_2 = dados[['Data', 'Chuva', 'Temperatura']]\n\ndados_2.head()\n# CRIANDO NOVAS COLUNAS ('Mes' e 'Dia') com as funções .dt.month e .dt.day\n\ndados_2['Mes'] = dados_2['Data'].dt.month\n\ndados_2['Dia'] = dados_2['Data'].dt.day\n\ndados_2.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#agrupar-por-mês-e-calcular-média-da-temperatura-máxima",
+    "href": "capitulos/cap8-estudo-casos.html#agrupar-por-mês-e-calcular-média-da-temperatura-máxima",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.8 Agrupar por mês e calcular média da temperatura máxima",
+    "text": "7.8 Agrupar por mês e calcular média da temperatura máxima\nNesta etapa serão utilizadas as funções .groupby para agrupar os dados por mês; .mean() para gerar a média.\n# AGRUPAR DADOS POR MÊS E CALCULAR MÉDIA MENSAL DA TEMPERATURA\n\nmedia_mensal = dados_2.groupby(\"Mes\")['Temperatura'].mean()\n\nmedia_mensal.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#gerando-gráfico",
+    "href": "capitulos/cap8-estudo-casos.html#gerando-gráfico",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "7.9 Gerando Gráfico",
+    "text": "7.9 Gerando Gráfico\n\n\n\n\n\n\n\nElemento\nDescrição\n\n\nsns.lineplot()\nCria o gráfico de linha\n\n\nmarker='o'\nAdiciona marcadores nos pontos\n\n\nlinewidth e color\nControlam espessura e cor da linha\n\n\nplt.xticks()\nSubstitui os números dos meses por nomes abreviados\n\n\nplt.figtext()\nAdiciona uma fonte abaixo do gráfico\n\n\n\n# GRÁFICO DE TEMPERATURA MÉDIA MENSAL\n\nplt.figure(figsize=(10, 6))\nsns.lineplot(data=media_mensal, x='Mes', y='Temperatura', marker='o', linewidth=2.5, color='green')\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Temperatura Média Mensal - São Luís-MA 2024\", fontsize=16)\nplt.xlabel(\"Mês\", fontsize=12)\nplt.ylabel(\"Temperatura (°C)\", fontsize=12)\nplt.grid(True, linestyle='--', alpha=0.5)\n\n# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES\n\nplt.xticks(media_mensal[\"Mes\"], [\"Jan\",\"Fev\",\"Mar\",\"Abr\",\"Mai\",\"Jun\",\"Jul\",\"Ago\",\"Set\",\"Out\",\"Nov\",\"Dez\"])\n\n# FONTE DOS DADOS\n\nplt.figtext(0.5, -0.05, \"Fonte: Estação Meteorológica A203 / INMET\",\n            ha=\"center\", fontsize=10, style='italic')\n\n# EXIBIR GRÁFICO\n\nplt.tight_layout()\n\n# SALVAR GRÁFICO\n\nplt.savefig(\"grafico_temperatura.png\", dpi=300, bbox_inches='tight')\n\nplt.show()\nResultado:\n\n\n\n\n\nPara mais configurações sobre a geração e possibilidades de alterações no gráfico acessar a documentação das bibliotecas Matplotlib e Seaborn\n\n7.9.1 Gráfico alternativo\n# AGRUPANDO POR MÊS PARA OBTER TEMPERATURA MÍNIMA, MÉDIA  E MÁXIMA\n\ntemp_mensal = dados_2.groupby(\"Mes\")[\"Temperatura\"].agg(\n    Tmin=\"min\",\n    Tmed=\"mean\",\n    Tmax=\"max\"\n).reset_index()\n\nprint(temp_mensal.head())\n# NOMES DOS MESES\n\nmeses = [\"Jan\", \"Fev\", \"Mar\", \"Abr\", \"Mai\", \"Jun\", \n         \"Jul\", \"Ago\", \"Set\", \"Out\", \"Nov\", \"Dez\"]\n\n# GRÁFICO DE TEMPERATURAS (MED, MIN E MAX) MENSAL\n\nplt.figure(figsize=(10, 6))\n\nplt.plot(meses, temperatura_mensal[\"Tmin\"], marker='o', color='blue', label='Temp. Mínima')\nplt.plot(meses, temperatura_mensal[\"Tmed\"], marker='o', color='green', label='Temp. Média')\nplt.plot(meses, temperatura_mensal[\"Tmax\"], marker='o', color='red', label='Temp. Máxima')\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Temperaturas Mensais - São Luís/MA (2024)\", fontsize=14)\nplt.xlabel(\"Mês\")\nplt.ylabel(\"Temperatura (°C)\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.legend()\n\n# FONTE DOS DADOS\n\nplt.figtext(0.5, -0.05, \"Fonte: Estação Meteorológica A203 / INMET\",\n            ha=\"center\", fontsize=9, style='italic')\n\n# EXIBIR GRÁFICO\n\nplt.tight_layout()\n\n# SALVAR GRÁFICO\n\nplt.savefig(\"grafico_temperatura_2.png\", dpi=300, bbox_inches='tight')\n\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#agrupar-por-mês",
+    "href": "capitulos/cap8-estudo-casos.html#agrupar-por-mês",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "8.1 Agrupar por mês",
+    "text": "8.1 Agrupar por mês\n# AGRUPAR POR MÊS E SOMAR A PRECIPITAÇÃO\nchuva_mensal = dados_2.groupby(\"Mes\")[\"Chuva\"].sum().reset_index()\n\nchuva_mensal.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#gerando-gráfico-1",
+    "href": "capitulos/cap8-estudo-casos.html#gerando-gráfico-1",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "8.2 Gerando Gráfico",
+    "text": "8.2 Gerando Gráfico\n# GRÁFICO DE PRECIPITAÇÃO ACUMULADA MENSAL\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=chuva_mensal, x=\"Mes\", y=\"Chuva\", color=\"darkblue\")\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Precipitação Acumulada Mensal - São Luís/MA (2024)\", fontsize=16)\nplt.xlabel(\"Mês\", fontsize=12)\nplt.ylabel(\"Precipitação (mm)\", fontsize=12)\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.5)\n\n# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES\n\nplt.xticks(chuva_mensal[\"Mes\"] -1, [\"Jan\",\"Fev\",\"Mar\",\"Abr\",\"Mai\",\"Jun\",\"Jul\",\"Ago\",\"Set\",\"Out\",\"Nov\",\"Dez\"])\n\n# FONTE DOS DADOS\n\nplt.figtext(0.5, -0.05, \"Fonte: Estação Meteorológica A203 / INMET\", \n            ha=\"center\", fontsize=9, style='italic')\n\n# EXIBIR GRÁFICO\n\nplt.tight_layout()\n\n# SALVAR GRÁFICO\n\nplt.savefig(\"precipitacao_mensal.png\", dpi=300, bbox_inches=\"tight\")\n\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
     ]
   }
 ]
