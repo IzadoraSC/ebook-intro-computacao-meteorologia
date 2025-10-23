@@ -20,7 +20,7 @@ book:
     - capitulos/cap2-fundamentos-programacao.qmd
     - capitulos/cap3-estruturas-dados.qmd
     - capitulos/cap4-manipulacao-dados.qmd
-    - capitulos/cap5-dados_vetoriais.qmd
+    # - capitulos/cap5-dados_vetoriais.qmd
     #- capitulos/cap6-exercicios-fixacao.qmd
     - capitulos/cap7-fundamentos-python.qmd
     - capitulos/cap8-estudo-casos.qmd
