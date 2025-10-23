@@ -227,6 +227,8 @@ ggplot(TMAX_UF, aes(x = reorder(UF, Tmax_anual),
 Acessando planilha .csv
 
 ```{r}
+#| eval: false
+#| include: false
 
 #Acessando tabela dos dados
 
