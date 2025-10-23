@@ -230,10 +230,10 @@ Acessando planilha .csv
 
 #Acessando tabela dos dados
 
-Sao_Luis <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
+# Sao_Luis <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
 
 
-Imperatriz <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
+# Imperatriz <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
 
 
 #Lendo os dados
