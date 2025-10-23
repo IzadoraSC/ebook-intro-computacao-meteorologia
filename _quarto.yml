@@ -23,6 +23,7 @@ book:
     - capitulos/cap5-dados_vetoriais.qmd
     #- capitulos/cap6-exercicios-fixacao.qmd
     - capitulos/cap7-fundamentos-python.qmd
+    - capitulos/cap8-estudo-casos.qmd
     
 lang: pt    
 

@@ -1,0 +1,365 @@
+# Capítulo – Estudos de Caso: Análise de Dados Meteorológicos
+
+## Introdução
+
+Neste capítulo, apresentaremos estudos de caso utilizando dados climáticos e meterológico.
+
+Cada estudo de caso abordará uma situação prática comum em análises climáticas.
+
+## Estudo de caso 01: Temperatura média mensal a partir de dados de uma estação meteorológica
+
+As condições climatológicas influenciam desde a safra de grãos até a decisão de um vendedor ambulante levar seu carrinho para a praia ou não, sendo importante e influente na economia do país. Portanto aprender a coletar e elaborar análises de dados sobre o clima usando o Python (ou outra linguagem de programação) é fundamental para o profissional meteorologista.
+
+Condições como a temperatura, umidade, radiação e pressão atmosgérica podem influenciar diversos aspectos do nosso cotidiano, portanto, o monitoramento do clima pode ajudar a tomar melhores decisões.
+
+No Brasil, uma das principais fontes de dados públicas sobre condições climática é o Instituto Nacional de Meterologia (INMET), que disponibiliza dados históricos com relativa atualização sobre:
+
+-   Precipitação
+
+-   Pressão atmosférica
+
+-   Radiação
+
+-   Temperatura
+
+-   Umidade
+
+-   Vento
+
+Os dados são disponibilizados para nível de:
+
+-   Regiões
+
+-   Estados
+
+-   Municípios
+
+Em uma granularidade de:
+
+-   Data
+
+-   Hora
+
+Dessa forma, vamos práticar!
+
+No primeiro estudo de caso vamos calcular e visualizar a temperatura média mensal para uma estação meteorológica do INMET.
+
+Para isso você deve baixar dados de uma estação no site do [INMET](https://portal.inmet.gov.br/)
+
+Em seguida crie um novo notebook (código/script) no google colab (.ipynb) e comece os trabalhos.
+
+Para o exemplo do estudo de caso será utilizado dados da estação automática A203 localizada no município de São Luís-MA para o ano de 2024.
+
+## Criando notebook/script/código
+
+-   Acesse um navegador de internet (microsoft edge, google chrome, Opera, etc.).
+
+-   Faça o login na sua conta gmail, então acesse Google Colab.
+
+-   Então crie um novo notebook:
+
+![](/imagens/cap8_fig1.png){fig-align="center" width="900"}
+
+Renomei o arquivo, conecte o ambiente de trabalho e comece a construir o seu código com células de texto (explicando cada etapa) e célular de código (executando o acesso, manipulação e análise dos dados):
+
+![](/imagens/cap8_fig2.png){fig-align="center" width="900"}
+
+## Instalando bibliotecas
+
+``` python
+#INSTALANDO BIBLIOTECAS
+
+!pip install seaborn -q
+```
+
+## Importando bibliotecas
+
+``` python
+import pandas as pd 
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+## Carregando dados da estação (arquivo csv)
+
+``` python
+#CARREGANDO E VISUALIZANDO TABELA DE DADOS
+
+# dados = pd.read_csv('/content/INMET_NE_MA_A203_SAO_LUIS_2024.csv', sep=';', skiprows= 8, decimal=',', encoding='latin1')
+
+dados = "https://raw.githubusercontent.com/IzadoraSC/Disc_Computacao_II/main/Dados/INMET_NE_MA_A203_SAO%20LUIS_01-01-2024_A_31-12-2024.CSV"
+
+dados = pd.read_csv(dados, sep = ';', skiprows = 8, decimal = ',',  encoding = 'latin1')
+
+#visualizando as primeiras linhas da tabela
+dados.head()
+```
+
+## Manipulações iniciais dos dados
+
+``` python
+#VERIFICANDO TIPO DE DADOS EM CADA COLUNA 
+
+print(dados.dtypes)
+```
+
+``` python
+#VERIFICANDO NOMES DE COLUNAS
+print(dados.columns)
+```
+
+``` python
+#RENOMEANDO COLUNAS
+dados = dados.rename(columns={
+    'PRECIPITAÇÃO TOTAL, HORÁRIO (mm)': 'Chuva',
+    'TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)': 'Temperatura'})
+
+#DELETANDO COLUNA
+dados = dados.drop(columns=['Unnamed: 19'])
+
+dados.columns
+```
+
+``` python
+#MUDAR TIPO DE DADO DA COLUNA 'Data'
+
+dados['Data'] = pd.to_datetime(dados['Data'], errors='coerce')
+
+dados.dtypes
+```
+
+``` python
+# SELECIONAR APENAS AS COLUNAS DESEJADAS
+
+dados_2 = dados[['Data', 'Chuva', 'Temperatura']]
+
+dados_2.head()
+```
+
+``` python
+# CRIANDO NOVAS COLUNAS ('Mes' e 'Dia') com as funções .dt.month e .dt.day
+
+dados_2['Mes'] = dados_2['Data'].dt.month
+
+dados_2['Dia'] = dados_2['Data'].dt.day
+
+dados_2.head()
+```
+
+## Agrupar por mês e calcular média da temperatura máxima
+
+Nesta etapa serão utilizadas as funções `.groupby` para agrupar os dados por mês; `.mean()` para gerar a média.
+
+``` python
+# AGRUPAR DADOS POR MÊS E CALCULAR MÉDIA MENSAL DA TEMPERATURA
+
+media_mensal = dados_2.groupby("Mes")['Temperatura'].mean()
+
+media_mensal.head()
+```
+
+## Gerando Gráfico
+
+|                       |                                                     |
+|:-------------------------------:|:-------------------------------------:|
+|     **Elemento**      |                    **Descrição**                    |
+|   `sns.lineplot()`    |               Cria o gráfico de linha               |
+|     `marker='o'`      |           Adiciona marcadores nos pontos            |
+| `linewidth` e `color` |         Controlam espessura e cor da linha          |
+|    `plt.xticks()`     | Substitui os números dos meses por nomes abreviados |
+|    `plt.figtext()`    |        Adiciona uma fonte abaixo do gráfico         |
+
+``` python
+# GRÁFICO DE TEMPERATURA MÉDIA MENSAL
+
+plt.figure(figsize=(10, 6))
+sns.lineplot(data=media_mensal, x='Mes', y='Temperatura', marker='o', linewidth=2.5, color='green')
+
+# PERSONALIZAÇÃO
+
+plt.title("Temperatura Média Mensal - São Luís-MA 2024", fontsize=16)
+plt.xlabel("Mês", fontsize=12)
+plt.ylabel("Temperatura (°C)", fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.5)
+
+# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES
+
+plt.xticks(media_mensal["Mes"], ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"])
+
+# FONTE DOS DADOS
+
+plt.figtext(0.5, -0.05, "Fonte: Estação Meteorológica A203 / INMET",
+            ha="center", fontsize=10, style='italic')
+
+# EXIBIR GRÁFICO
+
+plt.tight_layout()
+
+# SALVAR GRÁFICO
+
+plt.savefig("grafico_temperatura.png", dpi=300, bbox_inches='tight')
+
+plt.show()
+```
+
+Resultado:
+
+![](/imagens/cap8_fig3.png){fig-align="center" width="900"}
+
+Para mais configurações sobre a geração e possibilidades de alterações no gráfico acessar a documentação das bibliotecas [Matplotlib](https://br.matplotlib.net/stable/index.html) e [Seaborn](https://seaborn.pydata.org/tutorial.html)
+
+### Gráfico alternativo
+
+``` python
+# AGRUPANDO POR MÊS PARA OBTER TEMPERATURA MÍNIMA, MÉDIA  E MÁXIMA
+
+temp_mensal = dados_2.groupby("Mes")["Temperatura"].agg(
+    Tmin="min",
+    Tmed="mean",
+    Tmax="max"
+).reset_index()
+
+print(temp_mensal.head())
+```
+
+``` python
+# NOMES DOS MESES
+
+meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", 
+         "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+
+# GRÁFICO DE TEMPERATURAS (MED, MIN E MAX) MENSAL
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(meses, temperatura_mensal["Tmin"], marker='o', color='blue', label='Temp. Mínima')
+plt.plot(meses, temperatura_mensal["Tmed"], marker='o', color='green', label='Temp. Média')
+plt.plot(meses, temperatura_mensal["Tmax"], marker='o', color='red', label='Temp. Máxima')
+
+# PERSONALIZAÇÃO
+
+plt.title("Temperaturas Mensais - São Luís/MA (2024)", fontsize=14)
+plt.xlabel("Mês")
+plt.ylabel("Temperatura (°C)")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.legend()
+
+# FONTE DOS DADOS
+
+plt.figtext(0.5, -0.05, "Fonte: Estação Meteorológica A203 / INMET",
+            ha="center", fontsize=9, style='italic')
+
+# EXIBIR GRÁFICO
+
+plt.tight_layout()
+
+# SALVAR GRÁFICO
+
+plt.savefig("grafico_temperatura_2.png", dpi=300, bbox_inches='tight')
+
+plt.show()
+```
+
+![](/imagens/cap8_fig4.png){fig-align="center" width="900"}
+
+# Estudo de caso 02: Precipitação Acumulada Mensal
+
+Para gerar o gráfico de precipitação acumulada deve-se repetir as etapas iniciais até a etapa de manipulação dos dados e geração da tabela `dados_2`.
+
+## Agrupar por mês
+
+``` python
+# AGRUPAR POR MÊS E SOMAR A PRECIPITAÇÃO
+chuva_mensal = dados_2.groupby("Mes")["Chuva"].sum().reset_index()
+
+chuva_mensal.head()
+```
+
+## Gerando Gráfico
+
+``` python
+# GRÁFICO DE PRECIPITAÇÃO ACUMULADA MENSAL
+
+plt.figure(figsize=(10, 6))
+sns.barplot(data=chuva_mensal, x="Mes", y="Chuva", color="darkblue")
+
+# PERSONALIZAÇÃO
+
+plt.title("Precipitação Acumulada Mensal - São Luís/MA (2024)", fontsize=16)
+plt.xlabel("Mês", fontsize=12)
+plt.ylabel("Precipitação (mm)", fontsize=12)
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+
+# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES
+
+plt.xticks(chuva_mensal["Mes"] -1, ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"])
+
+# FONTE DOS DADOS
+
+plt.figtext(0.5, -0.05, "Fonte: Estação Meteorológica A203 / INMET", 
+            ha="center", fontsize=9, style='italic')
+
+# EXIBIR GRÁFICO
+
+plt.tight_layout()
+
+# SALVAR GRÁFICO
+
+plt.savefig("precipitacao_mensal.png", dpi=300, bbox_inches="tight")
+
+plt.show()
+```
+
+![](/imagens/cap8_fig5.png){fig-align="left" width="900"}
+
+# Estudo de caso 3: Climograma
+
+Neste estudo de caso vamos utilizar as tabelas `dados_2` (Estudo de Caso 01) e `chuva_mensal` (Estudo de Caso 02) para gerar o climograma, portante, realize as etapas para geração dessas tabelas.
+
+``` python
+# GRÁFICO CLIMOGRAMA
+
+fig, ax1 = plt.subplots(figsize=(12, 6))
+
+# BARRAS: PRECIPITAÇÃO
+
+sns.barplot(data=chuva_mensal, x="Mes", y="Chuva", color="darkblue")
+
+plt.xlabel("Mês", fontsize=12)
+plt.ylabel("Precipitação (mm)", fontsize=12)
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+
+
+# LINHA: TEMPERATURA (EIXO SECUNDÁRIO)
+ax2 = ax1.twinx()
+
+sns.lineplot(data=media_mensal, x="Mes", y="Temperatura", 
+             marker='o', color="red", linewidth=2.5, ax=ax2)
+ax2.set_ylabel("Temperatura Média do Ar (°C)", fontsize=12)
+ax2.tick_params(axis='y')
+
+# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES
+
+plt.xticks(chuva_mensal["Mes"] -1, ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"])
+
+# TÍTULO
+
+plt.title("Climograma - São Luís/MA (2024)", fontsize=16)
+
+# FONTE DOS DADOS
+
+plt.figtext(0.5, -0.05, "Fonte: Estação Meteorológica A203 / INMET",
+            ha="center", fontsize=10, style='italic')
+
+# EXIBIR GRÁFICO
+
+plt.tight_layout()
+
+# SALVAR GRÁFICO
+
+plt.savefig("climograma_slz_2024.png", dpi=300, bbox_inches="tight")
+
+plt.show()
+```
+
+![](/imagens/cap8_fig6.png){fig-align="center" width="900"}

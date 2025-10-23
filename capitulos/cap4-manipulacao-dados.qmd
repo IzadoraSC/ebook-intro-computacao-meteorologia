@@ -7,11 +7,13 @@ Neste capítulo, vamos explorar como importar, visualizar, limpar e transformar 
 ## Importando dados
 
 ```{r}
+#| warning: false
 
 library(readxl)
-library(dplyr)
-library(tidyr)
 library(tidyverse)
+#library(dplyr)
+#library(tidyr)
+
 
 #Normais Climatológicas (1991-2020) de Temperatura Máxima
 #Mensal obtidas do INMET
@@ -28,9 +30,9 @@ str(dados_nc)
 
 ```{r}
 
-#dim(dados_nc)
+dim(dados_nc)
 #summary(dados_nc)
-names(dados_nc)
+# names(dados_nc)
 
 ```
 
@@ -38,17 +40,17 @@ names(dados_nc)
 
 ```{r}
 #Verificar de tem valores NA
-# any(is.na(dados_nc))
+any(is.na(dados_nc))
 
 #Contar quantos valores NA existem no total
-sum(is.na(dados_nc))
+# sum(is.na(dados_nc))
 
 #Verificar o número de NAs por coluna
-colSums(is.na(dados_nc))
+# colSums(is.na(dados_nc))
 
 #ver linhas que contêm pelo menos um NA
-dados_nc  |> 
-  filter(if_any(everything(), is.na))
+# dados_nc  |> 
+  # filter(if_any(everything(), is.na))
 ```
 
 ```{r}
@@ -58,21 +60,26 @@ dados_nc  |>
 dados_limpos <- dados_nc  |> 
   drop_na()
 
+dim(dados_limpos)
+
 #De colunas específica
-dados_limpos <- dados_nc  |> 
-  drop_na(Janeiro, Fevereiro)
+# dados_limpos <- dados_nc  |> 
+  # drop_na(Janeiro, Fevereiro)
 ```
 
 ```{r}
 #Substituir (imputar) valores NA
 
 #Substituir NAs por zero
-dados_preenchidos <- dados_nc  |> 
-  mutate(across(everything(), ~replace_na(.x, 0)))
+# dados_preenchidos <- dados_nc  |> 
+  # mutate(across(everything(), ~replace_na(.x, 0)))
 
 #Substituir NAs por média da variável
 dados_preenchidos2 <- dados_nc  |> 
   mutate(across(where(is.numeric), ~ifelse(is.na(.), mean(., na.rm = TRUE), .)))
+
+any(is.na(dados_preenchidos2))
+
 ```
 
 ------------------------------------------------------------------------
@@ -117,7 +124,8 @@ TMAX_INMET <- dados_nc |>
     Nov = Novembro,
     Dez = Dezembro
   )
-TMAX_INMET
+
+head(TMAX_INMET)
 ```
 
 ```{r}
@@ -131,7 +139,8 @@ TMAX_longer <-
     names_to = 'Meses',  
     values_to = 'Tmax'
   )
-TMAX_longer
+
+head(TMAX_longer)
 ```
 
 ```{r}
@@ -196,7 +205,7 @@ TMAX_UF <-
   summarise(Tmax_anual = mean(Tmax, na.rm = T))
 
 
-TMAX_UF
+tail(TMAX_UF)
 ```
 
 ```{r}
@@ -209,7 +218,51 @@ ggplot(TMAX_UF, aes(x = reorder(UF, Tmax_anual),
        x = "Estado (UF)", y = "Temperatura Média Anual (°C)") +
   theme(
     axis.text.x = element_text(angle = 45)
-  )
+  ) +
   theme_bw()
+```
 
+## ✍️ Prática
+
+Acessando planilha .csv
+
+```{r}
+
+#Acessando tabela dos dados
+
+Sao_Luis <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
+
+
+Imperatriz <- 'https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/dados_82564_D_1991-01-01_2020-12-31.csv'
+
+
+#Lendo os dados
+
+df_slz <- read.csv2(
+  file = Sao_Luis,
+  na = 'null',
+  skip = 10
+)
+
+head(df_slz)
+colnames(df_slz)
+dados <-
+      df_slz |> mutate(Nome = "São Luís") |> 
+  select(
+    !X
+  ) |> 
+  rename(
+    "Data" = "Data.Medicao",
+    "Evap" = "EVAPORACAO.DO.PICHE..DIARIA.mm.",
+    'Insol' = "INSOLACAO.TOTAL..DIARIO.h.",
+    "Prec" = "PRECIPITACAO.TOTAL..DIARIO.mm.",
+    "TempMax" = "TEMPERATURA.MAXIMA..DIARIA..C.",
+    "Temp" = "TEMPERATURA.MEDIA.COMPENSADA..DIARIA..C.",
+    "TempMin" = "TEMPERATURA.MINIMA..DIARIA..C.",
+    "Umid" = "UMIDADE.RELATIVA.DO.AR..MEDIA.DIARIA...",
+    "Vent" = "VENTO..VELOCIDADE.MEDIA.DIARIA.m.s.",
+    "Nome" = "Nome"
+  )
+
+head(dados)
 ```
