@@ -538,5 +538,65 @@
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
     ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#estudo-de-caso-04-precipitação-mensal-e-anual",
+    "href": "capitulos/cap8-estudo-casos.html#estudo-de-caso-04-precipitação-mensal-e-anual",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.1 Estudo de caso 04: Precipitação Mensal e Anual",
+    "text": "9.1 Estudo de caso 04: Precipitação Mensal e Anual\nNeste estudo de caso, será realizada a análise da precipitação acumulada mensal e anual a partir de dados históricos de chuva registrados em uma estação pluviométrica disponíveis para download no Sistema Nacional de Informações sobre Recursos Hidrícos da ANA (Agência Nacional de Águas e Saneamento Básico).\n\nPara isso você deve baixar dados de uma estação no site do Portal HIDROWEB:\n\nEm seguida crie um novo notebook (código/script) no google colab (.ipynb) e comece os trabalhos.\n\nPara o exemplo do estudo de caso será utilizado dados da estação pluviométrica 447002 localizada no município de Imperatriz-MA.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#importando-bibliotecas-1",
+    "href": "capitulos/cap8-estudo-casos.html#importando-bibliotecas-1",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.2 Importando bibliotecas",
+    "text": "9.2 Importando bibliotecas\n# CARREGANDO BIBLIOTECAS\n\nimport pandas as pd \nimport matplotlib.pyplot as plt\nimport seaborn as sns",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#carregando-dados-da-estação-arquivo-.csv",
+    "href": "capitulos/cap8-estudo-casos.html#carregando-dados-da-estação-arquivo-.csv",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.3 Carregando dados da estação (arquivo .csv)",
+    "text": "9.3 Carregando dados da estação (arquivo .csv)\nObservação: antes de carregar (colocar no driver/colab) o arquivo .csv da estação, abra o arquivo em um bloco de notas e apague as primeiras linhas de metadados (informações), deixando apenas a partir do nome das colunas.\n#CARREGANDO E VISUALIZANDO TABELA DE DADOS\n\ndados = pd.read_csv('/content/447002_Chuvas_v2.csv', sep=';', decimal=',', encoding='latin1',\n                    usecols=['Data', 'Total'])\n\n# para rodar o exemplo pode carregar o arquivo disponível no github\n# dados = \"https://raw.githubusercontent.com/IzadoraSC/ebook-intro-computacao-meteorologia/refs/heads/main/dados/casos/447002_Chuvas_v2.csv\"\n# dados = pd.read_csv(dados, sep=';', decimal=',', encoding='latin1',\n                    # usecols=['Data', 'Total'])\n# VISUALIZANDO AS PRIMEIRAS LINHAS DA TABELA\n\ndados.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#manipulações-iniciais-dos-dados-1",
+    "href": "capitulos/cap8-estudo-casos.html#manipulações-iniciais-dos-dados-1",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.4 Manipulações iniciais dos dados",
+    "text": "9.4 Manipulações iniciais dos dados\n# VERIFICANDO DIMENSÕES DA TABELA\n\ndados.shape\n# VERIFICANDO DADOS AUSENTES\n\ndados.isnull().sum()\n#RENOMEANDO COLUNAS\n\ndados = dados.rename(columns={\n    'Total': 'Chuva'})\n\ndados.columns\n#VERIFICANDO TIPO DE DADOS EM CADA COLUNA\n\nprint(dados.dtypes)\nOBS: a data está na ordem dia/mês/ano, o padrão que a linguagem entende é ano/mês/dia (yy/mm/dd), portanto ao converter para a data para o tipo ‘datetime’ deve-se informar o parâmetro dayfirst=True\n#MUDAR TIPO DE DADO DA COLUNA 'Data'\n\ndados['Data'] = pd.to_datetime(dados['Data'], errors='coerce', dayfirst=True)\n\ndados.dtypes\n# CRIANDO NOVAS COLUNAS ('Mes' e 'Dia') com as funções .dt.month e .dt.day\n\ndados['Mes'] = dados['Data'].dt.month\n\ndados['Ano'] = dados['Data'].dt.year\n\ndados.head()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#gerando-gráficos---precipitação-mensal",
+    "href": "capitulos/cap8-estudo-casos.html#gerando-gráficos---precipitação-mensal",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.5 Gerando Gráficos - Precipitação Mensal",
+    "text": "9.5 Gerando Gráficos - Precipitação Mensal\n# GRÁFICO DE PRECIPITAÇÃO MENSAL (1984-2025)\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=dados, x=\"Mes\", y=\"Chuva\", color=\"royalblue\")\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Precipitação Mensal - Imperatriz-MA (1984-2025)\", fontsize=16,\n          fontweight=\"bold\")\nplt.xlabel(\"Mês\", fontsize=12)\nplt.ylabel(\"Precipitação (mm)\", fontsize=12)\n\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.6)\n\n# FONTE DOS DADOS\nplt.figtext(0.5, -0.05, \"Fonte: Estação 447002 / SNIRH-ANA\", ha=\"center\", \n            fontsize=10, style='italic')\n\n\n\n# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES\n\nplt.xticks(ticks=range(0,12), labels=[\"Jan\", \"Fev\", \"Mar\", \"Abr\", \"Mai\", \"Jun\",\n                                      \"Jul\", \"Ago\", \"Set\", \"Out\", \"Nov\", \"Dez\"])\n\n# EXIBIR GRÁFICO E SALVAR GRÁFICO\n\nplt.tight_layout()\nplt.savefig(\"chuva_mensal.png\", dpi=300, bbox_inches=\"tight\")\n\nplt.show()\n\n# SELECIONAR DADOS DE UM ÚNICO ANO\n\ndados_2025 = dados[dados['Ano'] == 2025]\ndados_2025.head(12)\n# GRÁFICO DE PRECIPITAÇÃO MENSAL (2025)\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=dados_2025, x=\"Mes\", y=\"Chuva\", color=\"royalblue\")\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Precipitação Mensal - Imperatriz-MA (2025)\", fontsize=16,\n          fontweight=\"bold\")\nplt.xlabel(\"Mês\", fontsize=12, fontweight=\"bold\")\nplt.ylabel(\"Precipitação (mm)\", fontsize=12, fontweight=\"bold\")\n\nplt.ylim(0, 450)\n\nplt.tick_params(axis='y', labelsize=12)\nplt.tick_params(axis='x', labelsize=12)\n\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.6)\n\n# FONTE DOS DADOS\nplt.figtext(0.5, -0.05, \"Fonte: Estação 447002 / SNIRH-ANA\", ha=\"center\", \n            fontsize=10, style='italic')\n\n\n\n# AJUSTAR OS RÓTULOS DOS MESES COM AS ABREVIAÇÕES DOS NOMES DOS MESES\n\nplt.xticks(ticks=range(0,5), labels=[\"Jan\", \"Fev\", \"Mar\", \"Abr\", \"Mai\"])\n\n# EXIBIR GRÁFICO E SALVAR GRÁFICO\n\nplt.tight_layout()\nplt.savefig(\"chuva_mensal_2025.png\", dpi=300, bbox_inches=\"tight\")\n\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/cap8-estudo-casos.html#gerando-gráficos---precipitação-anual",
+    "href": "capitulos/cap8-estudo-casos.html#gerando-gráficos---precipitação-anual",
+    "title": "7  Capítulo – Estudos de Caso: Análise de Dados Meteorológicos",
+    "section": "9.6 Gerando Gráficos - Precipitação Anual",
+    "text": "9.6 Gerando Gráficos - Precipitação Anual\n# GRÁFICO DE PRECIPITAÇÃO ANUAL (1984-2025)\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=dados_ano, x=\"Ano\", y=\"Chuva\", color=\"steelblue\")\n\n# PERSONALIZAÇÃO\n\nplt.title(\"Precipitação Acumulada Anual (mm) - Imperatriz-MA (1984-2025)\", fontsize=16,\n          fontweight=\"bold\")\nplt.xlabel(\"Ano\", fontsize=12, fontweight=\"bold\")\nplt.ylabel(\"Total (mm)\", fontsize=12, fontweight=\"bold\")\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.6)\n\nplt.tick_params(axis='y', labelsize=12)\nplt.tick_params(axis='x', labelsize=12)\nplt.xticks(rotation=90)\n\n# FONTE DOS DADOS\n\nplt.figtext(0.5, -0.05, \"Fonte: Estação 447002 / SNIRH\", ha=\"center\", \n            fontsize=10, style='italic')\n\n# EXIBIR GRÁFICO E SALVAR GRÁFICO\n\nplt.tight_layout()\nplt.savefig(\"chuva_anual.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()\n\n# CALCULANDO MÉDIA HISTÓRICA\n\nmedia_historica_chuva = dados_ano['Chuva'].mean()\nmedia_historica_chuva\n# GRÁFICO DE PRECIPITAÇÃO ANUAL (1984-2025) COM LINHA DE MÉDIA HISTÓRICA\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=dados_ano, x=\"Ano\", y=\"Chuva\", color=\"steelblue\")\n\n\n# PERSONALIZAÇÃO\n\nplt.xlabel(\"Ano\", fontsize=12, fontweight=\"bold\")\nplt.ylabel(\"Precipitação Acumulada Anual (mm)\", fontsize=12, fontweight=\"bold\")\nplt.grid(axis=\"y\", linestyle=\"--\", alpha=0.6)\n\nplt.tick_params(axis='y', labelsize=12)\nplt.tick_params(axis='x', labelsize=12)\nplt.xticks(rotation=90)\n\n# ADICIONANDO LINHA DE MÉDIA HISTÓRICA\nplt.axhline(media_historica_chuva, color='red', linestyle='--', \n            label=f'Média Histórica ({media_historica_chuva:.2f} mm)')\nplt.legend()\n\n# FONTE DOS DADOS\n\nplt.figtext(0.5, -0.05, \"Fonte: Estação 447002 / SNIRH\", ha=\"center\", \n            fontsize=10, style='italic')\n\n# EXIBIR GRÁFICO E SALVAR GRÁFICO\n\nplt.tight_layout()\nplt.savefig(\"precipit_anual_2.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo – Estudos de Caso: Análise de Dados Meteorológicos</span>"
+    ]
   }
 ]
