@@ -161,7 +161,7 @@ media_mensal.head()
 ## Gerando Gráfico
 
 |                       |                                                     |
-|:-------------------------------:|:-------------------------------------:|
+|:--------------------:|:-----------------------------------------------:|
 |     **Elemento**      |                    **Descrição**                    |
 |   `sns.lineplot()`    |               Cria o gráfico de linha               |
 |     `marker='o'`      |           Adiciona marcadores nos pontos            |
@@ -364,7 +364,7 @@ plt.show()
 
 ![](/imagens/cap8_fig6.png){fig-align="center" width="900"}
 
-## Estudo de caso 04: Precipitação Mensal e Anual
+# Estudo de caso 04: Precipitação Mensal e Anual
 
 Neste estudo de caso, será realizada a análise da **precipitação acumulada mensal e anual** a partir de dados históricos de chuva registrados em uma estação pluviométrica disponíveis para download no Sistema Nacional de Informações sobre Recursos Hidrícos da ANA ([Agência Nacional de Águas e Saneamento Básico](https://www.gov.br/ana/pt-br)).
 
@@ -634,3 +634,224 @@ plt.show()
 ```
 
 ![](/imagens/cap8_fig13.png){width="900"}
+
+# Estudo de caso 05: Umidade Relativa (%)
+
+Este estudo de caso será baseado em dados do repositório do [Copernicus Climate Data Store (CDS)](https://cds.climate.copernicus.eu/), especificamente do produto: **"Agrometeorological indicators from 1979 to present derived from reanalysis".**
+
+Esse produto fornece indicadores úteis para a agricultura, como temperatura, evapotranspiração, e **umidade relativa do ar**, com cobertura global e dados disponíveis em resoluções mensais. Acesse o site CDS, faça o seu login e baixa o dado de umidade relativa do ar.
+
+![](/imagens/cap8_fig14.png){width="900"}
+
+![](/imagens/cap8_fig15.png){width="900"}
+
+![](/imagens/cap8_fig16.png)
+
+![](/imagens/cap8_fig17.png){width="900"}
+
+![](/imagens/cap8_fig18.png)
+
+![](/imagens/cap8_fig19.png)
+
+![](/imagens/cap8_fig20.png)
+
+## Usando bibliotecas "earthkit" e "cartopy"
+
+Documentação "earthkit": <https://earthkit.ecmwf.int/>
+
+Documentação "cartopy": <https://cartopy.readthedocs.io/stable/>
+
+## Instalando bibliotecas
+
+``` python
+# INSTALANDO BIBLIOTECAS
+
+!pip install cffi -q
+!pip install earthkit -q
+!pip install cartopy -q
+```
+
+## Importando bibliotecas
+
+``` python
+#CARREGANDO BIBLIOTECAS
+
+import earthkit
+
+import xarray as xr
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+import cartopy.feature as cfeature
+```
+
+## Carregando dado
+
+``` python
+# CARREGAR O ARQUIVO .NC (netCDF)
+dado = earthkit.data.from_source(
+    "file",
+    "/content/Relative-Humidity-2m-12h_C3S-glob-agric_AgERA5_20230101_final-v1.1.nc")
+```
+
+``` python
+# Conversão para estrutura xarray
+xr_dado = dado.to_xarray()
+xr_dado
+```
+
+``` python
+# VISUALIZAR VARIÁVEL DISPONÍVEL
+
+xr_dado.data_vars
+```
+
+``` python
+# SELECIONANDO A VARIÁVEL
+
+umid = xr_dado["Relative_Humidity_2m_12h"]
+
+# VISUALIZAÇÃO EXPLORATÓRIA DO DADO
+
+umid.plot()
+```
+
+## Gerando Mapa
+
+``` python
+# GERANDO VISUALIZAÇÃO COM EARTHKIT
+
+# Define um estilo personalizado para o gráfico
+# - 'colors' define a paleta de cores (cividis invertida)
+# - 'levels' define os intervalos (de 0 a 100%, de 5 em 5)
+
+style = earthkit.plots.styles.Style(
+    colors="cividis_r",
+    levels=range(0, 101, 5),
+)
+
+# Cria um mapa com projeção de Robinson (ideal para visualizações globais)
+chart = earthkit.plots.Map(crs=ccrs.Robinson())
+
+# Plota os dados rapidamente usando a função 'quickplot'
+# Aplica o estilo definido anteriormente
+chart.quickplot(umid, style=style)
+
+# Adiciona uma imagem de fundo padrão (ex. oceano e continente sombreado)
+chart.stock_img()
+
+# Adiciona contornos dos continentes e das linhas costeiras
+# Usa resolução média para melhor qualidade
+chart.coastlines(resolution="medium")
+
+# Insere linhas de grade (latitude e longitude)
+chart.gridlines()
+
+# Define o título do gráfico automaticamente com nome longo e data formatada
+chart.title("Umidade Relativa do Ar (%) {time:%Y-%m-%d}")
+
+# Adiciona legenda com rótulo
+chart.legend(label="Umidade Relativa do Ar (%)")
+
+
+# Exibe o gráfico na tela
+chart.show()
+```
+
+![](/imagens/cap8_fig21.png)
+
+## Outra forma de carregar o arquivo
+
+``` python
+# CARREGAR O ARQUIVO .NC (netCDF)
+
+ds = xr.open_dataset("/content/Relative-Humidity-2m-12h_C3S-glob-agric_AgERA5_20230101_final-v1.1.nc")
+
+ds
+```
+
+``` python
+# Ver variáveis no arquivo
+print(ds.data_vars)
+    
+# Ver coordenadas (lat, lon, time)
+print(ds.coords)
+```
+
+``` python
+# SELECIONANDO A VARIÁVEL
+
+umidade = ds["Relative_Humidity_2m_12h"]
+```
+
+``` python
+# GERANDO VISUALIZAÇÃO COM CARTOPY
+
+# CRIAR FIGURA E EIXO COM PROJEÇÃO GEOGRÁFICA
+fig = plt.figure(figsize=(12, 6))
+ax = plt.axes(projection=ccrs.PlateCarree())  # Pode usar outras projeções, Ex.: Robinson, Mercator
+
+# PLOTAR DADO
+plot = umidade.plot(
+    ax=ax,
+    transform=ccrs.PlateCarree(),  # Sistema de coordenadas dos dados
+    cmap="cividis_r",
+    levels=21,
+    cbar_kwargs={'label': 'Umidade Relativa do Ar (%)'}
+)
+
+# ADICIONAR ELEMENTOS AO MAPA
+ax.coastlines(resolution='110m')
+ax.add_feature(cfeature.BORDERS, linestyle=':')
+ax.add_feature(cfeature.LAND, facecolor='lightgray', alpha=0.5)
+ax.gridlines(draw_labels=True)
+
+# ADICIONAR TÍTULO
+plt.title("Umidade Relativa do Ar (%) - 01/01/2023",
+          fontsize=14)
+          
+# SALVAR FIGURA DO MAPA COMO ARQUIVO .PNG
+plt.savefig("mapa_umidade.png", dpi=300)
+
+# EXIBIR O MAPA
+plt.show()
+```
+
+![](/imagens/cap8_fig22.png)
+
+``` python
+# GERANDO MAPA APENAS NA REGIÃO DO BRASIL
+
+# Aqui, é selecionado a faixa de latitude entre 5°N e 35°S e longitude entre 85°W e 25°W, 
+# que delimita aproximadamente a região que compreende o Brasil.
+umid_br = umidade.sel(lat=slice(5, -35), lon=slice(-85, -25)) 
+
+
+# CRIAR A FIGURA E OS EIXOS COM PROJEÇÃO GEOGRÁFICA
+fig = plt.figure(figsize=(10, 6))
+ax = plt.axes(projection=ccrs.PlateCarree())
+
+# PLOTAR OS DADOS DE UMIDADE PARA O BRASIL
+umid_br.plot(
+    ax=ax,
+    transform=ccrs.PlateCarree(),
+    cmap="cividis_r",
+    levels=21,
+    cbar_kwargs={'label': 'Umidade Relativa do Ar (%)'}
+)
+
+# ADICIONAR DETALHES GEOGRÁFICOS
+ax.coastlines()
+ax.add_feature(cfeature.BORDERS, linestyle=':')
+ax.gridlines(draw_labels=True)
+
+# SALVAR FIGURA DO MAPA COMO ARQUIVO .PNG
+plt.savefig("mapa_umidade_br.png", dpi=300)
+
+# ADICIONAR TÍTULO
+plt.title("Umidade Relativa do Ar (%) - Brasil")
+
+# EXIBIR O MAPA
+plt.show()
+```
+
+![](/imagens/cap8_fig23.png)
