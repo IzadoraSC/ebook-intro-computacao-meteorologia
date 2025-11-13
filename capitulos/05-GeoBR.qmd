@@ -1,0 +1,11 @@
+# Capítulo 5 – GeoBR
+
+
+# From CRAN
+install.packages("geobr")
+library(geobr)
+
+# ou use os comandos para instalar direto do do repositõrio do github
+utils::remove.packages('geobr')
+remotes::install_github("ipeaGIT/geobr", subdir = "r-package")
+library(geobr)
